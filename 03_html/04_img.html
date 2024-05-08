@@ -12,15 +12,57 @@
     <!-- img요소는 display가 inline이다 -->
     <!-- 이미지는 가로로 배치된다 -->
 
+    <h2>상대경로</h2>
 
-    <h2>이미지 경로(폴더/폴더/파일명)</h2>
 
     <!-- html 문서와 이미지가 같은 폴더에 있으면 파일명만 쓴다. -->
     <!-- html 문서(04_img.html)는 03_html폴더에 들어있고 / 이미지는 assets폴더에 들어있다  -->
-    <img src="evan/instagram.png" alt="">
-    <img src="../assets/facebook.png" alt="">
-    <img src="../twitter.png" alt="">
+    <!-- (html과 img가) 같은 폴더 / html을 기준으로 이미지가 상위 폴더,부모(포함하고있는) : ./../파일명 -->
+    <!-- html 문서를 기준으로 이미지가 하위 폴더,자식(속해있는) : ./폴더명/파일이름 -->
+    <!-- 작업영역폴더 = 최상위 폴더 -->
+    <!-- 패런트 차일드 등등 : 자바스크립트 '돔' 개념 -->
+    <!-- 기호 ./ (현재위치) ../ (상위위치) / (루트 root 또는 폴더와 폴더 구분) -->
+    <!-- ./ 와 -->
+    <!-- 일단 ./부터 찍고 판단 -->
+
+    <h3>폴더명/파일명 방법</h3>
+
     <img src="figma.png" alt="">
     
+    <img src="../assets/facebook.png" alt=""> 
+    
+   
+    <img src="evan/instagram.png" alt="">
+    
+
+    <img src="evan/assets/twitter.png" alt="">
+
+
+    <h3>./를 이용한 방법</h3>
+
+    <img src="./evan/assets/twitter.png" alt="">
+    <img src="./figma.png" alt="">
+    <img src="./../assets/facebook.png" alt=""> 
+    <img src="./evan/instagram.png" alt=""> 
+
+    <h3>root (/) 를 이용한 방법 - 실무활용 </h3>
+
+    <p>html 문서 위치에 상관없이 적용된다 / 이미지가 어딨는가가 중요 / 로컬에서 안보임</p>
+    <p>서버에서만 확인 가능하다 (라이브서버도 가상서버)</p>
+    <img src="/03_html/figma.png" alt="">
+    <img src="/assets/facebook.png" alt="">
+    <img src="/03_html/evan/instagram.png" alt="">
+    <img src="/03_html/evan/assets/twitter.png" alt="">
+
+    <h2>절대경로</h2>
+    <!-- 이미지 주소 복사 / 막힌것 , 안막힌것 -->
+    <p>http://~, https://~</p>
+    <!-- 이상한 글씨 : 전부 인코딩된 것 -->
+    <img src="https://blogcodestates.com/wp-content/uploads/2023/04/%EC%BD%94%EB%93%9C%EC%8A%A4%ED%85%8C%EC%9D%B4%EC%B8%A0_UXUI%EB%B6%80%ED%8A%B8%EC%BA%A0%ED%94%84_%ED%94%BC%EA%B7%B8%EB%A7%88%EC%82%AC%EC%9A%A9%EB%B2%95_%ED%94%BC%EA%B7%B8%EB%A7%88%EB%A1%9C%EA%B3%A0.png?fit=1906%2C1081&ssl=1" width="200" alt="" >
+    
+    
+
+
+
 </body>
 </html>
