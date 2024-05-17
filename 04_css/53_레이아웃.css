@@ -98,9 +98,65 @@
 }
 
 /* 레이아웃 유형2 : flexible */
+body{
+    margin :0 auto;
+    width: 1200px;
+}
 
 .container4 {
     display:flex;
+    margin: 0 auto;
+    width: 1200px;
 
 }
 
+/* 레이아웃 유형3: 가로+세로 */
+
+.container4 .header{
+    width: 200px;
+    height: 850px;
+    background-color:palevioletred;
+}
+
+.container4 .contents{
+    width: 1000PX;
+    height: 700px;
+    background-color: blueviolet;
+}
+
+.container4 .header2{
+    width: 1000px;
+    height: 400px;
+    background-color: aqua;
+}
+
+.container4 .section{
+    width: 1000px;
+    height: 200px;
+    background-color: chartreuse;
+}
+
+.container4 .banner{
+    width: 1000px;
+    height: 250px;
+    background-color: rgb(252, 126, 80);
+}
+
+.footer{
+    width: 1200px;
+    height: 100px;
+    background-color: gold;
+  
+
+}
+
+/* 사용한 클래스명 */
+/* container , boxSize, div1~7 */
+
+/* 선택자  */
+/* 1.요소 태그 타입
+    2.클래스
+    3.하위선택자 자손선택자(구별하기위해 또는 여러개의 헤더 섹션 등등을 하나씩만 적용시킬때) 
+    : 부모요소 쓰고 자손(자식,손자)요소 
+    ex) .container4 .contents (자식)
+        .container4 .banner (손자)  */
