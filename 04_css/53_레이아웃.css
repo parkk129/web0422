@@ -64,7 +64,10 @@
      /* div5~7는 레이아웃 유형2의 각 박스 크기와 배경색  */
      /* 레이아웃 유형2:inline-block */
      /* 표기법 boxSize box-size box_size */
-
+.df{
+    display : flex ;
+    
+}
 .boxSize{
     width: 400px;
     height: 200px;

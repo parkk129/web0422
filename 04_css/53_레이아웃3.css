@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+/* @=엣 */
+
+/* 선택자
+1 클래스 : .
+2 그룹 : ,
+3 태그,타입,요소 : 태그명
+4 하위 선택자(부모-자식-손자) :  공백 */
+
+
+.wrap {
+    /* 플렉스 컨테이너: 자동 가로크기 생성
+    width auto (=창 꽉채운 가로크기) */
+    display:flex;
+
+
+}
+/* 헤더와 라이트 랩은 랩의 자식 */
+/* 플렉스 아이템: width auto (=내용 만큼)  */
+.header{
+    width: 200px;
+    background: #999;
+}
+/* 부모에 display-flex를 지정하면
+부모는 플렉스 컨테이너가 되고
+자식은 플렉스 아이템(플렉스에 영향을 받는,
+부모의 css에 영향을 받는)이 된다
+(but 손자는 플렉스와 관계가 없다) */
+
+.right_wrap{
+    /* 인라인 성격:콘텐츠 만큼만 가로크기 생성
+    따라서 직접 가로크기 지정해줘야함 */
+    width: 1000px;
+    background: yellow;   
+background: red;
+}
+
+.slide{
+    height: 400px;
+    background: #eee;
+
+}
+
+.banner{
+    height: 200px;
+    background: #ccc;
+
+}
+
+.notice{
+    height: 250px;
+    background: #aaa;
+
+}
