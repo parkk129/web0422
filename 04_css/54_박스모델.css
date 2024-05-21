@@ -1,0 +1,53 @@
+@charset "utf-8" ;
+
+/* 
+박스모델
+width:auto > 블록레벨 100% 인라인 내용크기에 따라
+height:auto > 블록 인라인 모두 내용크기에 따라
+border : 테두리
+border-style : 선 종류 > 실선 점선 대시선
+border-width : 선 굵기
+border-color : 선 색상
+padding : 박스 안쪽 여백 / 패딩이라 부름 /  컨텐츠 내부 자체의 여백 / 
+margin : 박스 바깥쪽 여백 / 여백이라 부름 / 컨텐츠와 컨텐츠 사이의 여백
+box-sizing : content-box ; (기본값)
+> 박스의 겉 크기 : width+border+padding
+box-sizing : border-box ;
+> 박스의 겉 크기 : width (안쪽으로만 패딩 보더 커짐)
+보더와 패딩의 크기 합이; width 절반 크기보다 작아야한다
+>계산하기 어려우면 box-sizing : border-box ; 사용 / 자동계산
++패딩 보더는 두배로 계산 / 상하좌우로 크기가 들어가기 때문
+ */
+
+body{
+margin:0
+}
+
+/* 테두리를 지정하려면 스타일은 반드시 기록해야한다 */
+/* 그룹핑 요소는  box-sizing : border-box ;을 사용해
+보더와 패딩 크기가 위드 하이에 포함되게 해준다
+포함 안되면 위드 하이 크기보다 더 커짐 */
+div{
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: blueviolet;
+    background: yellow;
+    padding:70px;
+    margin:100px;
+    box-sizing : border-box ;
+}
+
+/* 인라인요소는 width height 가 적용되지 않는다 */
+span{
+    width: 200px;
+    height: 200px;
+    /* border : 값1 값2 값3 ...(속기형) */
+    border: solid 5px blue;
+    background: greenyellow;
+    /* padding : 박스 안의 텍스트.콘텐츠 가로 세로 가운데로만 배치 가능 (블록과 다른)*/
+    padding:80px;
+    /* 인라인의 margin은 좌우만 적용 (블록과 다른) */
+    margin:100px
+}

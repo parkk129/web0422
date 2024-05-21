@@ -1,0 +1,87 @@
+@charset "utf-8" ;
+
+/* 
+
+margin-left
+margin-right
+margin-top
+margin-bottom
+
+
+여백
+margin : 값1 > 상하 좌우 모두 값1
+margin : 값1 값2 > 상하 값1 좌우 값2
+margin : 0 auto
+margin : 값1 값2 값3 > 상 값1 하 값3 좌우 값2
+margin : 값1 값2 값3 값4 > 상 값1 하 값3 좌 값4 우 값2 (상우하좌) 시계방향으로 돌아감
+
+
+margin : 10px > 상하 좌우 모두 10
+margin : 10px 20px > 상하 10 좌우 20
+margin : 10px 20px 30px > 상 10 좌우 20 하 30
+margin : 10px 20px 30px 40px > 상 10 우 20 하 30 좌 40
+
+
+패딩
+
+padding : 상하좌우
+padding : 상하 좌우
+padding : 상 좌우 하
+padding : 상 우 하 좌
+
+padding-left
+padding-right
+padding-top
+padding-bottom
+
+
+
+padding
+*/
+
+body{
+margin:0;
+}
+
+.wrap{
+    display:flex;
+    width:1100px;
+    margin:auto;
+}
+
+.wrap div{
+    width: 340px;
+    height: 620px;
+    background: red;
+}
+
+
+/* 마진 여백은 8의배수가 적당함! */
+
+
+/* '위아래'(상하) 여백은 마진 값 중에서 큰 쪽으로 지정된다 */
+/* 좌우 여백은 그대로 적용된다 */
+/* 마진은 "2/1"로 생각하고 적기 
+왼족콘텐츠의 마진과 오른족 콘텐츠의 마진이 만나서 합쳐보이기 때문 */
+
+.box1{
+    /* 속기형 */
+
+    margin: 0 20px 0 0;
+
+    /* 일반형 */
+
+    margin-right: 20px;
+}
+
+.box2{
+    margin: 0 20px;
+    margin-right:20px ; margin-left:20px ;
+}
+
+.box3{
+    margin: 0 0 0 20px;
+    margin-left:20px;
+}
+
+
