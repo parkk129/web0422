@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+div{
+    width: 100px;
+    height: 100px;
+    border:1px solid red;
+    margin: 20px;;
+}
+/* 선택자(태그) :nth-of-type(숫자/n번째) */
+
+div:nth-of-type(1){
+    border-radius: 20px;
+}
+
+div:nth-of-type(2){
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+
+}
+div:nth-of-type(3){
+    /* 왼쪽 상단 오른쪽 하단 : 10px
+       오른쪽 상단 왼쪽 하단 : 20px */
+    border-radius: 10px 20px;
+}
+
+div:nth-of-type(4){
+    border-radius: 10px 20px 30px;
+
+}
+
+div:nth-of-type(5){
+    border-radius: 10px 20px 30px 40px
+
+}
+
+div:nth-of-type(6){
+    border-radius: 100px;
+}
+
+div:nth-of-type(7){
+    width:50px;
+    border-radius: 75px 0 0 75px;
+}
+
+div:nth-of-type(8){
+    width:50px;
+    height: 50px;
+    border-radius: 75px 0 0 0;
+}
+
+
