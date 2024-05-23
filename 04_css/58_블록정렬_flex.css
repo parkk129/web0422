@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+/* display:flex;인 부모요소의 지정할수 있는 속성
+1. flex-direction
+2. flex-wrap
+3. 주축(교차축)정렬
+flex-direction:row이면 주축이 가로(교차축은 세로)
+flex-direction:column이면 주축이 세로(교차축은 가로)
+justify-content: flex-start, flex-end, center, space-between, space-around, align-item */
+
+/* justify-content : 주축에 대한 정렬 */
+/* align-items : 교차축에대한 정렬 */
+
+.box{
+    background: yellow;
+    height: 200px;
+    margin:12px;
+}
+
+.box:nth-of-type(1) div{
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.box:nth-of-type(2) div{
+    justify-content: flex-end;
+}
+
+.box:nth-of-type(3) div{
+    justify-content: center;
+}
+
+
+.box div{
+    width: 100px;
+    height: 50px;
+    background:black;
+   
+}

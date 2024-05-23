@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+/* 전체 선택자 */
+/* *는 모든 요소를 가리킨다(html도 전부 포함) */
+
+body *{
+    outline: 1px solid lime;
+}
+
+body{
+    margin:0;
+}
+
+nav{height: 100px;}
+header{height: 200px;}
+section{width: 940px; margin: 0 auto;}
+.home-card{display:flex;}
+.home-icon{width: 100px; height: 100px;}
+.home-description{width: 790px; height: 140px;}
