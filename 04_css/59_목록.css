@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+/* 개별형
+list-style-type
+list-style-position
+list-style-image */
+/* 속기형
+list-style:none ; */
+
+ul{
+    /* ul은 list style 쪽에 살짝 왼쪽 패딩이 있다 위아래 여백도 있다 */
+    /* ul에 지정할수 있는 list style은 disc(기본값),circle,square가 있다 나머지는 전부 ol  */
+    /* ol에 지정할수 있는 list style은 decimal,decimal-leading-zero,lower-alpha,upper-alpha,lower-roman,upper-roman */
+    /* ul li 모두 list style : none; 사용 가능 */
+    padding-left: 40px;
+    margin:16px 0;
+    border:1px solid;
+}
+
+li{
+    border:1px solid red;
+    color:blue;
+}
+
+li:nth-of-type(1){
+    
+    list-style-type: disc;
+    /* 기본값 : outside */
+    list-style-position: inside;
+    /* list-style-image : url (폴더/파일명) */
+    
+}
+
+li:nth-of-type(2){
+    list-style-type: square;
+}
+
+li:nth-of-type(3){
+    list-style-type: circle;
+    list-style-image:url(../Polygon\ 1.svg)
+}
