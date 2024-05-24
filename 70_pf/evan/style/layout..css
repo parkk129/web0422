@@ -3,23 +3,56 @@
 /* 전체 선택자 */
 /* *는 모든 요소를 가리킨다(html도 전부 포함) */
 
-body *{
-    outline: 1px solid lime;
-}
 
-body{
+
+
+/* reset 초기화 */
+
+body,ul,h1,h2{
     margin:0;
 }
 
-nav{height: 100px;}
-header{
-    background: url(https://parkk129.github.io/web0422/70_pf/evan/assets/bg-light.png);
-    height: 200px;
+ul{
+    padding:0;
+    list-style-type: none;
 }
+
+a{
+    /* 텍스트 밑줄 제거 */
+    text-decoration: none;
+}
+
+
+/* layout 배치 */
+/* 박스모델 속성, display, position */
+nav{height: 100px;}
+nav section{align-items: center;}
+header{height: 200px;/* 높이와 같은 값을 준다 */ line-height:200px;}
 section{width: 940px; margin: 0 auto;}
-.home-card{display:flex;}
+.home-card{display:flex; justify-content: space-between;}
 .home-icon{width: 100px; height: 100px;}
 .home-description{width: 790px; height: 140px;}
+
+nav li{display: inline-block; line-height:100px;}
+ul{text-align: right;}
+
+
+/* header */
+header{
+    background: url(https://parkk129.github.io/web0422/70_pf/evan/assets/bg-light.png);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* font 
 - color
