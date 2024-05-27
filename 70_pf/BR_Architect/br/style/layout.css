@@ -27,11 +27,16 @@ h2{
 
 /* 섹션1 */
 .s1{
+    display: flex;
     height: 745px;
+    align-items:center;
+    justify-content: center;
+   
+    
 }
 .s1 h2{
     border:none;
-    margin-top: 0;
+    margin-top:0;
 }
 /* 섹션2 */
 .s2 ul{
@@ -49,9 +54,33 @@ h2{
     margin:0;
 }
 
+.s2 h2{
+    margin-top:30px
+}
+
 .s2 h3{
     display: inline-block
+}
+
+.s3 h3{
+    width: 40px;
+}
+
+.s3 li{
+    display:inline-block;
+    width: 360px;
+    height: 240px;
+    margin-right: 12px;
+    background: #000;
 }
 /* 섹션3 */
 /* 섹션4 */
 /* 푸터 */
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background:#b3acac;
+}
