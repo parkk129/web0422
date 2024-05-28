@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../04_css/61_가상클래스,nth-of-type.css">
+    <style>
+        /* 자식선택자(무조건 부모가 있는 태그여야 적용 가능) : nth-of-type(n) */
+
+        /* div의 첫번째 자식요소 */
+
+        /* nth-of-type : div의 첫번째 p요소를 선택 (타입.태그.요소를 구분함 같은 태그끼리만 순서 매김) */
+        /* nth-child : di의 첫번째 요소를 선택 (타입.태그.요소를 구분하지 않는다) 무조건 순서 그대로 */
+       
+
+        /* h2:first-child{
+            color: yellow;
+        } */
+
+        /* p:nth-of-type(1){
+            color:red
+        } */
+    </style>
+</head>
+<body>
+    <!-- <h1>가상 클래스</h1>
+    <!-- ~of-type , ~child -->
+    <!-- <p> :first-of-type , :last-of-type , :nth-of-type(n) , :first-child,  :last-child , :nth-child(n) 
+        , nth-last-of-type(n)
+    </p>
+    <p>괄호안에 n은 숫자,수열</p>
+    <p>부모 자식 관계에서 몇 번째(=n번째) 자식 요소인지를 선택</p> -->
+
+    <div>
+        <h2>선택자(1)</h2>
+        <p>나는 1번째 단락이다.(2)</p>
+        <p>나는 2번째 단락이다.(3)</p>
+        <p>나는 3번째 단락이다.(4)</p>
+        <p>나는 4번째 단락이다.(5)</p>
+        <p>나는 5번째 단락이다.(6)</p>
+        <p>나는 6번째 단락이다.(7)</p>
+        <p>나는 7번째 단락이다.(8)</p>
+        <p>나는 8번째 단락이다.(9)</p>
+    </div>
+
+</body>
+</html>

@@ -8,16 +8,19 @@
 
 /* reset 초기화 */
 
-body,ul,h1,h2{
-    margin:0;
+body,
+ul,
+h1,
+h2 {
+    margin: 0;
 }
 
-ul{
-    padding:0;
+ul {
+    padding: 0;
     list-style-type: none;
 }
 
-a{
+a {
     /* 텍스트 밑줄 제거 */
     text-decoration: none;
 }
@@ -25,21 +28,65 @@ a{
 
 /* layout 배치 */
 /* 박스모델 속성, display, position */
-nav{height: 100px;}
-nav section{align-items: center;}
-header{height: 200px;/* 높이와 같은 값을 준다 */ line-height:200px;}
-section{width: 940px; margin: 0 auto;}
-.home-card{display:flex; justify-content: space-between;}
-.home-icon{width: 100px; height: 100px;}
-.home-description{width: 790px; height: 140px;}
+nav {
+    height: 100px;
+}
 
-nav li{display: inline-block; line-height:100px;}
-ul{text-align: right;}
+nav section {
+    align-items: center;
+}
+
+nav li:first-child::after {
+    content: "";
+    display: inline-block;
+    border-radius: 50px;
+    width: 6px;
+    height: 6px;
+    margin: 0 8px 4px;
+    background: #bbb;
+}
+
+header {
+    height: 200px;
+    /* 높이와 같은 값을 준다 */
+    line-height: 200px;
+}
+
+section {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.home-card {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-icon {
+    width: 100px;
+    height: 100px;
+}
+
+.home-description {
+    width: 790px;
+    height: 140px;
+}
+
+nav li {
+    display: inline-block;
+    line-height: 100px;
+}
+
+ul {
+    text-align: right;
+}
+
+
 
 
 /* header */
-header{
-    background: url(https://parkk129.github.io/web0422/70_pf/evan/assets/bg-light.png);
+header {
+    background: url(../assets/bg-light.png)
 }
 
 
@@ -86,25 +133,50 @@ body : 15px, line-height 1.5 23px (150~200%)
 
 /* 글자의 속성은 상속받는다 */
 
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
 }
 
-h1,h2,h3,nav a{
+h1,
+h2,
+h3,
+nav a {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
 }
-h1{font-size: 50px;color:white;}
-h2{font-size: 30px;}
-h3{font-size: 22.5px;}
-nav a {font-size: 20px; color: #444444;}
+
+h1 {
+    font-size: 50px;
+    color: white;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 22.5px;
+}
+
+nav a {
+    font-size: 20px;
+    color: #444444;
+}
 
 
 
 
 /* bg-color */
 
-nav{background:#eee;}
-.home-icon{background: #eee;}
-.home-description{background: #ccc;}
+nav {
+    background: #eee;
+}
+
+.home-icon {
+    background: #eee;
+}
+
+.home-description {
+    background: #ccc;
+}
