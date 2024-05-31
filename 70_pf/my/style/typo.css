@@ -44,6 +44,9 @@ nav a {
     font-style: italic;
     text-decoration: none;
 }
+p{
+    font-size: 15px;
+}
 a{
     color:#444;
     text-decoration: underline;

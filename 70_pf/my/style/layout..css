@@ -5,6 +5,10 @@
 
 /* layout 배치 */
 /* 박스모델 속성, display, position */
+html{
+    scroll-behavior: smooth;
+}
+/* navigation */
 nav {
     height: 100px;
 }
@@ -23,6 +27,11 @@ nav li:first-child::after {
     background: #bbb;
 }
 
+nav li {
+    display: inline-block;
+    line-height: 100px;
+}
+
 header {
     height: 200px;
     /* 높이와 같은 값을 준다 */
@@ -30,6 +39,11 @@ header {
     background:url(../assets/bg-light.png) no-repeat 50% 50%/cover fixed;
 }
 
+/* main */
+
+main{
+    padding-bottom: 200px;
+}
 section {
     width: 940px;
     margin: 0 auto;
@@ -46,6 +60,7 @@ h2 {
 .home-card {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 30px;
 }
 
 .home-icon {
@@ -58,11 +73,14 @@ h2 {
 
 }
 
-nav li {
-    display: inline-block;
-    line-height: 100px;
-}
 
 ul {
     text-align: right;
 }
+
+/* footer */
+footer{
+    text-align: center;
+}
+
+
