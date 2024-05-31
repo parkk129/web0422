@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* font 
+- color
+- size : 크기
+-famliy : 글꼴
+-style(기울기) : italic 
+-weight : 굵기 100 200 900 단위 없음
+text-align : 맞춤 정렬
+line-height : 줄 간격 
+
+style guide(스타일 가이드 /주로 쓰는 폰트)
+영문 제목:Georgia
+영문 본문:Arial
+한글 제목: Noto Sans KR
+한글 본문: Noto Sans KR
+
+Georgia + italic : h1~h3 Nav a
+Arial : body p 
+
+단위 : rem, em, px, %
+
+<실무>
+h1 : 50px , 700, line-height 60px
+h2 : 30px , 700 , line-height 36px
+h3 : 22.5PX , 400 , line-height 33.75px
+h3 span : 22.5px , line-height 33.75px 
+Nav a : 20px , line-height 100px
+body : 15px, line-height 1.5 23px (150~200%)
+
+*/
+
+/* 글자의 속성은 상속받는다 */
+html{font-size: 10px;}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em/1.5;
+}
+
+h1,
+h2,
+h3,
+nav a {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    text-decoration: none;
+}
+p{
+    font-size: 15px;
+}
+a{
+    color:#444;
+    text-decoration: underline;
+    
+}
+
+h1 {
+    font-size: 3rem;
+    color: white;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 2.25rem;
+}
+
+nav a {
+    font-size: 2rem;
+    color: #444444;
+}
