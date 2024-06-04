@@ -8,40 +8,45 @@
     <style>
         @import url(reset.css);
         @import url(typo.css);
-        *{
+
+        * {
             box-sizing: border-box;
         }
+
         body {
             outline: 1px solid lime;
         }
 
         header {
             display: flex;
-            align-items: flex-start;
-            justify-content:flex-end;
+            align-items:center;
+            justify-content:right;
             /* 블록레벨요소의 가로 가운데 배치 (가로크기 지정 후 가운데 배치) */
-            margin:0 auto;
+            margin: 0 auto;
             width: 1200px;
             height: 100px;
             border: 1px solid;
-            
+
         }
 
         .gnb {
+            display: flex;
             border: 1px solid;
-            background:red;
+            background:#000;
+            text-align: right;
         }
 
         /* 1depth */
         .main {
             display: flex;
+            text-align: right;
         }
 
         .main>li {
             width: 160px;
             height: 32px;
             text-align: center;
-            line-height:30px;
+            line-height: 30px;
         }
 
         .main>li:hover {
@@ -53,20 +58,53 @@
             height: 0;
             background: rgba(0, 0, 0, .5);
             border: 1px solid red;
-            padding:10px 0 20px;
+            padding: 10px 0 20px;
             overflow: hidden;
             visibility: hidden;
-            transition:0.3s;
-            line-height:24px;
+            transition: 0.3s;
+            line-height: 24px;
         }
 
-        .main>li:hover .sub {
-            height: 120px;
+        .main:hover .sub {
+            height: 150px;
             visibility: visible;
+            opacity: 1;
+        }
+
+        .sub li a {
+            padding: 4px 16px;
         }
 
         .sub li:hover {
             background: #111;
+        }
+
+        .gnb {
+            position: relative;
+            border: 1px solid red;
+        }
+
+        .main {
+            border: 1px solid;
+            height: 30px;
+        }
+
+        .main::before {
+            content: "";
+            position: absolute;
+            top: 30px;
+            right: 0;
+            display: block;
+            width: 1200px;
+            height: 0px;
+            opacity: 0;
+            transition: .3s;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .main:hover::before {
+            height: 150px;
+            opacity: 1;
         }
     </style>
 </head>

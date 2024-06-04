@@ -17,8 +17,8 @@
 
         header {
             display: flex;
-            align-items: flex-start;
-            justify-content:flex-end;
+            align-items: flex-end;
+            justify-content:flex-start;
             /* 블록레벨요소의 가로 가운데 배치 (가로크기 지정 후 가운데 배치) */
             margin:0 auto;
             width: 1200px;
@@ -61,10 +61,13 @@
         }
 
         .main>li:hover .sub {
-            height: 120px;
+            height: 150px;
             visibility: visible;
+            opacity:1;
         }
-
+        .sub li a{
+            padding: 4px 16px;
+        }
         .sub li:hover {
             background: #111;
         }

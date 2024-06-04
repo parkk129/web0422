@@ -11,12 +11,12 @@ body{
 
 .main li a{
     font-size: 1.6em;
-    color:#999
+    color:#999;
 }
 
 .sub li a{
     font-size: 1.4rem;
-    color:#333
+    color:#333;
 }
 
 :root{
