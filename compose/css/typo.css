@@ -25,9 +25,23 @@ body{
     font-family: "Lexend Deca", sans-serif;
 }
 
-h2{
+h1,h2{
+    font-size: 50px;
     font-family: 'Pretendard-Regular';
 }
+.new{
+    font-size: 30px;
+}
 .new,.new2{
+    font-family: 'Pretendard-Regular';
+}
+
+.new2 div{
+    font-size: 24px;
+}
+
+h2{font-size: 40px;}
+
+.s3 p{
     font-family: 'Pretendard-Regular';
 }

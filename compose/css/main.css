@@ -72,6 +72,7 @@ header{
 
 /* 2depth 네비게이션 서브메뉴 */
 .sub{
+    padding-top: 20px;
     font-size: 15px;
     width:100%;
     justify-content: center;
@@ -81,7 +82,7 @@ header{
 }
 .main:hover .sub {
     transition:0.3s;
-    height: 150px;
+    height: 170px;
     visibility: visible;
     opacity: 1;
 }
@@ -100,6 +101,9 @@ margin-top:-50px;
 
 /* section2 */
 
+.s2{
+    margin-bottom: 150px;
+}
 .s2 h1{
     margin-top: 100px;
     text-align: center;
@@ -112,20 +116,10 @@ margin-top:-50px;
 
 }
 
-.new div:nth-of-type(1){
+.new div{
     border:1px solid black;
     margin:20px;
-    padding: 18px;
-}
-.new div:nth-of-type(2){
-    border:1px solid black;
-    margin:20px;
-    padding: 18px;
-}
-.new div:nth-of-type(3){
-    border:1px solid black;
-    margin:20px;
-    padding: 18px;
+    padding:18px 90px 18px 90px;
 }
 
 .new2{
@@ -134,9 +128,38 @@ margin-top:-50px;
 
 .new2 img{
     position: relative;
+    margin-top: -100px;
     margin-left: 200px;
 }
 .new2 div{
     margin-top: 100px;
 }
 
+/* section3 */
+
+.s3{
+    display: flex;
+}
+
+.s3 img{
+    margin-left: 580px;
+}
+
+.slogo{
+    z-index: 999;
+    left:-250px;
+    position: absolute;
+}
+
+.compose{
+    position: relative;
+    top:30px;
+}
+
+.s3tab{
+    text-align: center;
+    align-content: center;
+    border:1px solid black;
+    height: 40px;
+    padding:18px 90px 18px 90px;
+}
