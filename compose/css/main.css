@@ -91,7 +91,7 @@ header{
     font-weight: 700;
 }
 
-/* section1 */
+/* section 1 */
 
 .s1{
 display: flex;
@@ -99,7 +99,7 @@ justify-content: center;
 margin-top:-50px;
 }
 
-/* section2 */
+/* section 2 */
 
 .s2{
     margin-bottom: 150px;
@@ -135,10 +135,11 @@ margin-top:-50px;
     margin-top: 100px;
 }
 
-/* section3 */
+/* section 3 */
 
 .s3{
     display: flex;
+    margin-bottom: 200px;
 }
 
 .s3 img{
@@ -155,11 +156,39 @@ margin-top:-50px;
     position: relative;
     top:30px;
 }
-
+.s3text{
+    margin-left: 100px;
+    margin-top: 300px;
+}
 .s3tab{
+    position: absolute;
+    left:1385px;
+    margin-left:-150px ;
+    margin-top:540px;
     text-align: center;
     align-content: center;
     border:1px solid black;
     height: 40px;
     padding:18px 90px 18px 90px;
+}
+
+/* section 4 */
+.s4{
+    margin-top: 250px;
+}
+.s4logo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+}
+
+li{
+    width: 355px;
+    margin-left: 20px;
+    
 }

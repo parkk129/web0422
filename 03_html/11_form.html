@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>폼</h1>
+    <p>input태그(입력란 확인란 라디오 버튼 전송 버튼 초기화 버튼)의 22가지 종류</p>
+    <p>input태그는 인라인 요소이다</p>
+    <p>종료태그가 없다 br img input 등등 </p>
+    <p>
+        웹 언어
+        1.클라이언트 언어 - 프론트엔드 개발자, 디자이너, 퍼블리셔
+        html css javascript(js)
+        2.서버 언어 - 백엔드 개발자 (php)
+        Java(jsp) php asp
+        
+    </p>
+    
+        <form action="login.php">
+            <label for="user_id">로그인</label>
+            <input id="user_id" type="text" name="텍스트상자" placeholder="아이디를 입력하시오."><br>
+            <!-- 중요 가장 기본적으로 사용하는것/ "한 줄"입력 -->
+            <!-- ㅇ -->
+            <label for="pw">비밀번호</label>
+            <input id="pw"type="password">
+            <!-- 중요 자주 사용하는 것 -->
+            <hr>
+            <input type="button" value="안녕하세요">
+            <!-- value는 버튼의 이름 -->
+            <input type="date">
+            <!-- 년 월 일 오전 시:분 -->
+            <input type="datetime-local">
+            <input type="email">
+            <input type="file">
+            
+            <input type="hidden">
+            <!-- 코딩 내용으로 넣는/ 화면에는 드러나지 않는 텍스트 입력 -->
+            
+            <input type="image" src="../compose/assets/기타버튼.svg">
+            <!-- 전송과 초기화를 제외한 의미의 이미지 버튼 -->
+            <input type="month">
+            
+            <input type="number">
+            <!-- 스핀버튼, 카운트 -->
+            <hr>
+            <label><input type="checkbox" name="체크" value="rule1">회칙1</label>
+            <label><input type="checkbox" name="체크" value="rule2">회칙2</label>
+            <label><input type="checkbox" name="체크" value="rule3">회칙3</label>
+            <!-- 네모 선택모양 : 여러개 선택가능 -->
+            <hr>
+            <input type="radio" name="radiogroup">
+            <!-- 동그라미 선택모양 : 한개만 선택가능 -->
+            
+            <hr>
+            
+            <input type="range">
+            <!-- 범위 -->
+            <input type="reset">
+            <!-- 초기화 -->
+            <input type="search">
+            <!-- 검색어 입력 -->
+            <input type="submit" value="회원가입/로그인">
+            <!-- 전송,제출 입력된 아이디 패스워드 전송시켜주는 값이 제출되는 것 -->
+            <input type="tel">
+            <!-- 전화번호 입력 -->
+            <input type="time">
+            <input type="url">
+            <!-- 웹주소 입력 -->
+            <input type="week">
+            <input type="color">
+            
+            <button>전송버튼</button>
+            </div>
+
+            <select name="" id="">
+                <option value>국제전화코드</option>
+                <option value="">한국(+82)</option>
+                <option value="">일본(+81)</option>
+                <option value="">중국(+86)</option>
+                <option value="">미국(+1)</option>
+            </select>
+            
+        </form>
+</body>
+</html>
