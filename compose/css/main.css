@@ -15,7 +15,8 @@ margin-top:0;
     margin-left: 900px;
 }
 .top_link3{
-    margin-left:-30px;
+    margin-left:-90px;
+    margin-right:30px;
 }
 .top a{
     margin-left: 30px;
@@ -36,6 +37,9 @@ header {
     align-items: center;
     width: 440px;
     margin:0 auto;
+}
+.tlogo div{
+    height: 10px;
 }
 .gnb{
     margin-top: 20px;
@@ -64,7 +68,31 @@ header{
 }
 
 .main>li:hover{
+    content:"";
+    /* width: 1900px; */
+    margin:0 auto;
+    border:1px solid black;
     border-bottom: 3px solid black;
+}
+
+.main::before {
+    content: "";
+    position: absolute;
+    top:185px;
+    right:300px;
+    left:1px;
+    margin:0 auto;
+    display: block;
+    width: 1900px;
+    height: 100px;
+    opacity: 0;
+    transition: 0.3s;
+    background:#fff;
+}
+
+.main:hover::before {
+    height: 150px;
+    opacity: 1;
 }
 
 .main li a {
@@ -96,6 +124,7 @@ header{
 
 .s1{
 display: flex;
+width: 1897px;
 justify-content: center;
 margin-top:-50px;
 }
