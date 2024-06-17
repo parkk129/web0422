@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* transition 속성 - property 속성명.트랜지션 효과 넣는 범위 설정기능,
+         duration 동작시간, timing-fuction 가속도, delay 지연시간 */
+        /* transiton-property:all,background,font-size;
+        transition-duration:1s;
+        transition-timing-function:ease,ease-in;
+        transition-delay:0s 
+        속기형 transition :  background 1s(duration) ease 0s(delay) fontsize 0.5s(duration) erase-in 1s(delay); */
+
+        /* 호버 전 */
+        /* 호버전에 트래지션(일반적 주로) : 호버 전 후 다 적용 가능 */
+        div{background:red;
+            transition: 1s;}
+        /* 호버 후 */
+                /* 호버후에 트래지션 : 호버 후 만 적용 가능 */
+        div:hover{
+            background:blue;
+        
+            /* 1초 2초 3초 ... */
+        }
+    </style>
+</head>
+<body>
+    <h1>전환transition</h1>
+    <div>색변환</div>
+</body>
+</html>

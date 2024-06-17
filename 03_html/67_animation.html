@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            animation-name:balloon;
+            animation-duration:2s;
+            animation-iteration-count:infinite;
+            animation-timing-function: ease-out;
+            animation-delay:1s;
+        }
+
+        @keyframes balloon{
+            0%{margin-top: -20px;animation-timing-function: ease-out;}
+            50%{margin-top: 0px;animation-timing-function: ease-in;}
+            100%{margin-top: -20px;animation-timing-function: ease-our;}
+        }
+        /* animation속성-name(애니메이션 이름),duration(동작 시간),timing-function(가속도),
+        delay(지연시간),direction(방향),iteration-count(반복횟수) */
+        /* 속기형 animation: 네임 듀레이션 딜레이 반복횟수 방향 가속도  */
+        /* 애니메이션 작성 형식 */
+        /* 
+        선택자 {
+        animation-name:이름;
+        animation-duration:
+        }
+
+        @keyframes 이름{
+        from{속성:값} // 애니메이션의 시작 동작을 의미
+        to{속성:값}  // 애니메이션의 끝 동작 의미
+        } 
+
+        키프레임이란? 요소가 들어있는 프레임
+
+        @keyframes 이름{
+        0%{속성:값}
+        25%{속성:값} 
+        50%{속성:값} 
+        75%{속성:값} 
+        100%{속성:값} 
+        } 
+        */
+        </style>
+</head>
+<body>
+    <!-- 호버는 마우스를 갖다대야 움직이지만 
+    애니메이션은 마우스를 갖다대지 않아도 스스로 혼자 계속 움직이는 동작 -->
+    <h1>애니메이션</h1>
+    <p>관련 속성에는 @keyframes, animation, animation-name, animation-duration,
+    animation-timing-function, animation-delay, animation-iteration-count, animation-direction 등이 있다.</p>
+    <div>
+        <img src="../bg-main0-5.png" alt="벌룬">
+    </div>
+</body>
+</html>
