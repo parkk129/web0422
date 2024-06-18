@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+/* reset */
+body,
+ul {
+  margin: 0;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+html {
+  font-size: 10px;
+}
+body {
+  font: 400 1.5rem/1.5 "Noto Sans KR", sans-serif;
+}
+
+:root {
+  --w: 500px;
+  --h: 150px;
+}
+/* 슬라이드 */
+.slide {
+  position: relative;
+  width: var(--w);
+  height: var(--h);
+  margin: 20px;
+  overflow: hidden;
+}
+.slide ul {
+    display: flex;
+    flex-direction: column;
+  position: absolute;
+  width:400px;
+  height:150px;
+}
+.slide li {
+  flex: 0 0 25%;
+}
+
+/* animation */
+.slide ul {
+  animation: slide 9s infinite;
+}
+@keyframes slide {
+  0% {
+    transform:translateY(0%)
+  }
+  10% {
+    transform:translateY(-25%)
+  }
+  33% {
+    transform:translateY(-25%)
+  }
+  43% {
+    transform:translateY(-50%)
+  }
+  66% {
+    transform:translateY(-50%)
+  }
+  76% {
+    transform:translateY(-75%)
+  }
+  99.99% {
+    transform:translateY(-75%)
+  }
+  100% {
+    transform:translateY(-0%)
+  }
+}
+
+/* typo */
+.slide li {
+  font-size: calc(var(--w) / 5);
+  text-align: center;
+  line-height: calc(var(--h) - 20px);
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <ul>
+          <li><img src="../07_slide/slide1.jpg" alt=""></li>
+          <li><img src="../07_slide/slide2.jpg" alt=""></li>
+          <li><img src="../07_slide/slide3.jpg" alt=""></li>
+          <li><img src="../07_slide/slide1.jpg" alt=""></li>
+        </ul>
+      </div>
+</body>
+</html>
