@@ -259,14 +259,25 @@ margin-top:-50px;
     margin-bottom: 0;
 
 }
-.footer div{
+.footer_line{
+    display: flex;
+    align-items: center;
     background:#F0CD00;
     height: 60px;
 }
+
+.footer_line p{
+    margin-left: 320px;
+}
+
 .footer p{
+    font-weight:500;
     position: absolute;
+    display: flex;
+    align-items: center;
+    line-height:24.16px;
     color:#989B98;
     font-size: 14.5px;
-    left:50px;
+    left:320px;
     top:90px;
 }
