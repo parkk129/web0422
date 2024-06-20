@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,
+        h1 {
+            margin: 0;
+        }
+
+        /* 풀페이지 레이아웃(fullpage layout) */
+        .wrap {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 헤더 */
+        header {
+            height: 200px;
+            background: #ccc;
+        }
+
+        /* 내비게이션 */
+        .gnb {
+            height: 40px;
+            background: yellow;
+        }
+
+        /* 슬라이드 */
+        .slide {
+            height: calc(100% - 340px);
+        }
+
+        /* 푸터 */
+        footer {
+            height: 100px;
+            background: #333;
+            text-align: center;
+            color:white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- 헤더: 로고 -->
+        <header>
+            <h1 class="logo"><a href="#">로고</a></h1>
+        </header>
+        <!-- 내비게이션 -->
+        <div class="gnb">내비게이션</div>
+        <!-- 슬라이드 -->
+        <div class="slide">슬라이드</div>
+        <!-- 푸터 -->
+        <footer>
+            <p>Copyright 2024. Vallery Festival. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
