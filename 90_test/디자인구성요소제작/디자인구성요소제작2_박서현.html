@@ -60,7 +60,7 @@
 
         h1 {
             margin: 0 auto;
-            animation: box 3s 1;
+            animation: logo 3s 1;
             position: absolute;
             left: 780px;
             animation-direction: normal;
@@ -185,6 +185,17 @@
         .slide ul {
             animation: slide 12s infinite;
         }
+
+        @keyframes logo {
+            0% {
+                left: 0;
+            }
+
+            100% {
+                left: 780px;
+            }
+        }
+
 
         @keyframes slide {
             0% {
