@@ -417,13 +417,18 @@ header {
 
 .footer p {
     font-weight: 500;
-    display: flex;
-    align-items: center;
     line-height: 24.16px;
     color: #989B98;
     font-size: 14.5px;
-    left: 320px;
+    right:900px;
     top: 100px;
+}
+
+.footer pre{
+    color:#909090;
+    position: absolute;
+    top:50px;
+    left:900px;
 }
 
 .s4_text p{
@@ -442,4 +447,6 @@ header {
     display: flex;
     justify-content: center;
 }
+
+
 
