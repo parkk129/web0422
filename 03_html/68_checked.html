@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 선택자
+        1. class와 id 선택자 : . , #
+        2. 선택자 선택자 : 부모,자식,손자 다 포함
+        3. 선택자>선택자 : 바로 밑에 있는 요소만 포함
+        ------------------------------------------------------------
+        4. :nth-child(), :nth-of-type() : 형제관계 같은 관계 선택자
+        5. 선택자(형)+선택자(동생) : 인접형제관계 , 가까운 , 바로 옆에있는 태그
+        6. 선택자(형)~선택자(같은 종류의 동생들) : 형제관계 , 동생들 다 선택
+        html 문서에서 위에 먼저 쓰여있는 태그가 형 / 아래 쓰여있는 태그가 동생
+        :nth-of-type()은 줄줄이 써야하기 때문에 형제선택자는 훨씬 간추려서 쓸수있음
+        ------------------------------------------------------------
+        7. :checked (앞에 콜론기호가 붙으면:기호 "가상"클래스 ::기호 가상요소) */
+
+        label:nth-of-type(2){
+            color: blue;
+        }
+        #sub{
+            visibility: hidden;
+            margin:0;
+        }
+        #sub+label::before{
+            content:"";
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            background-repeat: no-repeat;
+            background-image:url(../chk_b.svg);
+        }
+
+        #sub:checked+label::before{
+            content:"";
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            background-image:url(../chk_a.svg);
+        }
+
+        input:checked{
+            /* :checked : input의 checked 속성이 써있는 애들만 선택하는 기능 */
+            margin:40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>확인란과 라디오</h1>
+    <p>필수 속성 : type, name(개발자 연관 속성), value(개발자 연관 속성) </p>
+    <p>선택 속성 : checked(""필요없음), class </p>
+    <p>id는 꾸미기 기능 + 연결 기능 가능</p>
+    <p>class는 연결역할을 못함</p>
+    <!-- 체크박스 , 라디오 모두  "타입" "네임"은 필수속성이다 -->
+    <!-- 체크박스 : 여러개 중 여러개 선택 가능 -->
+
+    <!-- 라벨 : for와 id를 연결시켜줌 -->
+    <!-- 버튼 근처를 누르면 체크되는기능 : for-id , 라벨 태그로 감싸기 -->
+    
+    <!-- id와 for가 연결한다 -->
+    <input type="checkbox" name="checkgroup" id="sub" checked>
+    <label for="sub">html</label>
+    <input type="checkbox" name="checkgroup" id="sub2" checked>
+    <label for="sub2">css</label>
+    <input type="checkbox" name="checkgroup" id="sub3" checked>
+    <label for="sub3">js</label>
+    <!-- 라디오 : 여러개 중 한 개만 선택 가능 -->
+    <!-- 네임 속성으로 그룹핑하면 한 개만 선택 가능하게 됨 -->
+    
+    <!-- 라벨을 감싸는것 : for 속성이 필요없어짐 -->
+    <label><input type="radio" name="radiogroup">html</label>
+    <label><input type="radio" name="radiogroup">css</label>
+    <label><input type="radio" name="radiogroup">js</label>
+
+    <!-- checked : 이미 체크되어있는 기능 -->
+    <label for=""><input type="radio" name="radiogroup" checked>동의함</label>
+    <label for=""><input type="radio" name="radiogroup" checked>동의하지 않음</label>
+</body>
+</html>

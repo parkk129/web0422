@@ -351,7 +351,7 @@ header {
 /* section 4 */
 .s4 {
     margin-top: 250px;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
 }
 
 .s4logo {
@@ -415,12 +415,22 @@ header {
     margin-left:320px;
 }
 
+.footer_sns img{
+    position: relative;
+    left:655px;
+    bottom:100px;
+    margin-right:5px;
+    margin-left:0;
+}
+
 .footer p {
+    display: flex;
+    position:absolute;
     font-weight: 500;
     line-height: 24.16px;
     color: #989B98;
     font-size: 14.5px;
-    right:900px;
+    left:320px;
     top: 100px;
 }
 
@@ -428,7 +438,7 @@ header {
     color:#909090;
     position: absolute;
     top:50px;
-    left:900px;
+    right:320px;
 }
 
 .s4_text p{
@@ -438,7 +448,7 @@ header {
 }
 
 .s4_text div{
-    margin-top:50px;
+    margin-top:20px;
     margin-left:875px;
     width: 164px;
     line-height:50px;
