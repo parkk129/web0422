@@ -54,8 +54,12 @@ body{font-family: 'Pretendard-Regular';}
     display: flex;
     flex-direction: column;
     width: 436px;
-    height: 59px;
     margin:0 auto;
+    margin-bottom:100px;
 }
 
+.button button{
+    height: 59px;
+    margin-bottom:20px;
+}
 
