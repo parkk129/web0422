@@ -434,11 +434,19 @@ header {
     top: 100px;
 }
 
-.footer pre{
+.footer_right{
+    display: flex;
+    position: relative;
+    left:1000px;
+    top:50px;
+    margin:10px;
     color:#909090;
     position: absolute;
-    top:50px;
-    right:320px;
+}
+
+.footer_right ul li{
+    margin-right:30px;
+    margin-top:10px;
 }
 
 .s4_text p{
