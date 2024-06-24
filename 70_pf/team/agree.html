@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/signup.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/agree.css">
 
 </head>
 <body>
@@ -50,21 +51,55 @@
     </div>
 
     <div class="text">
-        <h1>회원가입</h1>
-        <p>컴포즈 회원가입하시면 회원 전용 혜택을</p>
-        <p>누리실 수 있어요!</p>
+        <h1>약관동의</h1>
+        <p>본인은 만 14세 이상이며, 약관에 동의합니다.</p>
     </div>
 
-    <div class="button">
-        <a href="./agree.html">컴포즈 회원가입</a>
-        <a href="https://accounts.kakao.com/login/?continue=https%3A%2F%2Fkauth.kakao.com%2Foauth%2Fauthorize%3Fproxy%3DeasyXDM_Kakao_c5ioqtrsazq_provider%26ka%3Dsdk%252F1.43.5%2520os%252Fjavascript%2520sdk_type%252Fjavascript%2520lang%252Fko-KR%2520device%252FWin32%2520origin%252Fhttps%25253A%25252F%25252Fmembers.ediya.com%26origin%3Dhttps%253A%252F%252Fmembers.ediya.com%26response_type%3Dcode%26redirect_uri%3Dkakaojs%26state%3Ducmc17na50kk6lsze1a83%26through_account%3Dtrue%26client_id%3Dc08f64b141abd0c7bf2990e6b842a4ac&talk_login=hidden#login"><img src="./assets/kakaotalk.svg" alt=""target="_blank">&nbsp;&nbsp;카카오 1초 회원가입/로그인</a>
-        <a href="#"><img src="./assets/naver.svg" alt="">&nbsp;&nbsp;네이버 1초 회원가입/로그인</a>
-    </div>
+    <form>
+        <input type="radio" id="btn">
+        <label for="btn">전체 동의</label>
+        <input type="radio" id="btn">
+        <label for="btn">이디야멤버스 서비스 이용약관 동의(필수)</label>
+        <input type="radio" id="btn">
+        <label for="btn">개인정보 수집 및 이용약관 동의(필수)</label>
+        <input type="radio" id="btn">
+        <label for="btn">개인정보 처리 방침(필수)</label>
+        <input type="radio" id="btn">
+        <label for="btn">마케팅 활용 동의(선택)</label>
+        <input type="radio" id="btn">
+        <label for="btn">광고성 정보 수신 동의(선택)</label><br>
+
+        <div>
+            <input type="radio" id="btn">
+        <label for="btn">app알림</label>
+            <input type="radio" id="btn">
+        <label for="btn">문자</label>
+            <input type="radio" id="btn">
+        <label for="btn">이메일</label>
+            <input type="radio" id="btn">
+        <label for="btn">카카오톡</label>
+        </div>
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     <div class="footer_line">
         <p>이용약관 &emsp; 개인정보처리방침</p>
     </div>
-
     <div class="footer">
         <img src="./assets/footer_logo.png" alt="">
         <div class="footer_sns">

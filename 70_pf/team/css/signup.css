@@ -35,6 +35,8 @@ body{font-family: 'Pretendard-Regular';}
 
 .top2{
     display: flex;
+    font-weight: 700;
+    color:#363535
 }
 
 .top2 li{
@@ -50,6 +52,11 @@ body{font-family: 'Pretendard-Regular';}
     align-items: center;
 }
 
+.text p:nth-of-type(2){
+    margin-top:-20px;
+    margin-bottom:35px;
+}
+
 .button{
     display: flex;
     flex-direction: column;
@@ -58,8 +65,31 @@ body{font-family: 'Pretendard-Regular';}
     margin-bottom:100px;
 }
 
-.button button{
+.button a{
+    font-weight: 900;
     height: 59px;
     margin-bottom:20px;
+    text-align: center;
+    align-content: center;
+}
+
+.button img{
+    width: 20px;
+}
+
+.button a:nth-of-type(1){
+    background:#FFC120;
+    border-radius: 7px;
+    color:#1A1919
+}
+.button a:nth-of-type(2){
+    background:#FEE500;
+    border-radius: 7px;
+    color:#391B1B;
+}
+.button a:nth-of-type(3){
+    background:#03C75A;
+    border-radius: 7px;
+    color:white;
 }
 
