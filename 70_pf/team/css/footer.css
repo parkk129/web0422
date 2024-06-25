@@ -45,6 +45,10 @@ body{font-family: 'Pretendard-Regular';}
 
 }
 
+.footer_right a{
+    color:#909090;
+}
+
 .footer_line {
     display: flex;
     align-items: center;
