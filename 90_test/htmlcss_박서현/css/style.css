@@ -115,6 +115,7 @@ header {
 
 /* 2depth */
 .sub {
+    margin-left:25px;
     height: 0;
     padding: 10px 0 20px;
     overflow: hidden;
@@ -141,20 +142,27 @@ header {
 
 .main::before {
     content: "";
-    position: absolute;
-    left:10px;
     top: 30px;
-    width: 1200px;
-    height: 0px;
+    /*   absolute 기능은 부모 지정해야함 부모 기준으로 움직이기 때문
+    부모 지정 안되어있으면 창 기준으로 움직임 */
+    position: absolute;
+    left:-900px;
+    width: 2000px;
     opacity: 0;
-    transition: .3s;
-    background: rgba(255, 255, 255);
-}
+    height: 200px;
+    /*   인라인은 크기 지정 불가 */
+    visibility: hidden;
+    transition: 0.3s;
+  }
 
-.main:hover::before {
-    height: 150px;
+  .main:hover::before {
+    /*   .main에 마우스 올렸을때 ::before를 나타나게 해라! */
+    visibility: visible;
+    height: 200px;
     opacity: 1;
-}
+    background:#fff;
+  }
+  
 
 /* 슬라이드 */
 * {
