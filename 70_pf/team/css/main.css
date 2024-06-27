@@ -274,7 +274,7 @@ body {
 
 .tabs {
     position: relative;
-    left:500px;
+    left:465px;
     top:50px;
     width: 1920px;
     height: 200px;
@@ -283,27 +283,26 @@ body {
 }
 /* 탭 메뉴 */
 .tabs label {
+    border-radius: 8px;
+    text-align: center;
+    font-size:23px;
+    font-weight: 700;
+    width: 200px;
     margin:30px;
     z-index: 99;
     position: relative;
-    left:30px;
+    left:-50px;
     display: inline-block;
-    padding: 50px 30px;
-    background: #999;
+    padding: 20px 50px 20px 50px;
+    background:#F0E9E1;
     color: #777;
     cursor: pointer;
 }
 /* 탭의 내용,컨텐츠 */
 .tabs div {
-    margin-left:-500px;
-    border:1px solid #ccc;
     display: none;
     position: absolute;
-    width: calc(100% - 4px);
-    height:600px;
-    margin-bottom:800px;
-    padding: 16px;
-    
+    padding: 100px;
 }
 
 .tabs input {
@@ -313,8 +312,10 @@ body {
 /* .tabs 안의 하위요소인 체크된 input 아래 동생 label을 선택 */
 /* 실시간으로 체크되어있는 라벨의 변화 상태 */
 .tabs input:checked+label {
+    box-shadow: 1px 4 #1a1a1a;
+    width: 200px;
     border:1px solid #ccc;
-    background: #fff;
+    background:#F1D112;
     color:black;
     border-bottom: none;
 }
@@ -345,8 +346,8 @@ span{
 .tab2 li{
     display: flex;
     justify-content: space-evenly;
-    width: 150px;
-    height: 100px;
+    width: 1200px;
+    height: 500px;
     background:#999;
 }
 
@@ -359,7 +360,6 @@ span{
 
 .tab3 li{
     line-height:30px;
-    border-bottom:1px solid black;
     margin-right:30px;
 }
 
