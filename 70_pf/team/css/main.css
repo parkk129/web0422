@@ -333,6 +333,11 @@ h1 {
     display: block;
 }
 
+.tab1:checked div{
+    transition: 3s;
+}
+
+
 span {
     margin-right: 60px;
 }
@@ -513,7 +518,7 @@ span {
     text-align: center;
     align-content: center;
     height: 40px;
-    padding: 5px 100px 5px 100px;
+    padding: 5px 30px 5px 30px;
 }
 
 /* section 4 */
