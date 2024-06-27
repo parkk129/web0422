@@ -5,17 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        @import url(../../style/reset.css);
-        @import url(../../style/typo.css);
-
-
-    </style>
+        section{
+            width: 1480px;
+            margin:0 auto;
+            padding: 96px 0;
+        }
+        h2{
+            border-bottom: 1px  solid #111;
+            padding-bottom:24px;
+            margin-bottom: 24px;
+        }
+        p{
+            margin-bottom:24px;
+        }
+        input{
+            display: block;
+        }
     </style>
 </head>
 <body>
     <section>
-        <h2>여행지</h2>
+        <h2>고객센터</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, ipsa!</p>
+        <form action="custom.jsp">
+            <input type="text" type="" placeholder="이름을 입력하세요">
+            <input type="text" type="" placeholder="이메일을 입력하세요">
+            <input type="text" type="" placeholder="제목을 입력하세요">
+            <input type="text" type="" placeholder="내용을 입력하세요">
+            <button>메시지 전송하기</button>
+        </form>
+        <div class="map">
+            <!-- 지도 -->
+        </div>
     </section>
-
 </body>
 </html>

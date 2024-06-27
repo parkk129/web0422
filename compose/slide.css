@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+
+.section input[id="slide"]{
+    display:none; /*slide를 화면에서 보이지 않게 하기*/
+    }
+    .section .slidewrap{
+    width:1200px;
+    margin: 0 auto; /*크기지정*/
+    overflow: hidden; /*뒤에 있는 슬라이드 안보이게 하기*/
+    }
+    .section .slidelist{
+    white-space:nowrap; /* 안쪽 inline 요소의 줄바꿈을 없얨*/
+    font-size:0; /*안쪽 빈 영역을 없얨*/
+    }
+    .section .slidelist > li {
+    display:inline-block; /*정렬*/
+    vertical-align:middle; /*세로정렬을 가운데로*/
+    width:100%; /*가로값은 부모요소 100%*/
+    transition: all .5s; /*슬라이드 자연스러운 시간*/
+    }
+    .section .slidelist > li > a {
+    display:block; /*안쪽 컨텐츠를 다 담을 수 있게 함*/
+    position:relative; /*버튼인 lable태그를 자유롭게 배치 시킬려고 하는데 그의 기준점*/
+    }
+    .section .sildelist > li > a img{
+    width:100% /*태그 안쪽에 오는 이미지를 100%로 주면 반응형으로 사용할 수 있다.*/
+    }
+    .section .slidelist lable{
+    position:absolute; /*자율배치 포지션*/
+    z-index:10; /*우선순위 10*/
+    top:50%; /*lable을 50% 내림*/
+    transform: translateY(-50%); /*자신을 기준으로 위쪽으로 반만큼 올려 중앙에 오도록 위치*/
+    padding:50px; /*클릭범위 넓어짐*/
+    cursor:pointer; /*커서*/
+    }
+    .section .slidelist .left{
+    left:30px; /*왼쪽에서 오른쪽으로 30px 당기기*/ 
+    background:url('화살표 이미지') center center / 100% no-repeat;
+    } /*여기 이미지는 넘기는 < 의 이미지*/
+    .section .slidelist .right{
+    right:30px; /*오른쪽에서 왼쪽으로 30px 당기기*/
+    background:url('화살표이미지') center center / 100% no-repeat;
+    }  /*여기 이미지는 넘기는 > 의 이미지*/
+    .section[id="slide01"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
+    .section[id="slide02"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
+    .section[id="slide03"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);}
+    
