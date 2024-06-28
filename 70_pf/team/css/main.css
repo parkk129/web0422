@@ -310,11 +310,21 @@ h1 {
 
 /* 탭의 내용,컨텐츠 */
 .tabs div {
-
     display: none;
     position: absolute;
     margin-top: 150px;
+    animation: new 3s 1;
+    animation-direction:normal;
 }
+
+@keyframes new {
+    0% {
+      top: 990px;
+    }
+    25% {
+      top: 1005px;
+    }
+  }
 
 .tabs input {
     display: none;
@@ -330,6 +340,7 @@ h1 {
 }
 
 .tabs input:checked+label+div {
+
     display: block;
 }
 
@@ -352,6 +363,10 @@ span {
     width: 170px;
     height: 45px;
     background: #F0CD00;
+}
+
+.new_more a{
+    color:#1C1C1B;
 }
 
 /* section 3 */
@@ -497,7 +512,19 @@ span {
     z-index: 99;
     left: 70px;
     position: relative;
+    animation-direction: normal;
+    animation: s3logo 3s 1;
 }
+
+@keyframes s3logo {
+    0% {
+      left: 0px;
+    }
+    100% {
+      left: 70px;
+    }
+  }
+
 
 .compose {
     position: relative;
@@ -532,21 +559,7 @@ span {
     display: flex;
     justify-content: center;
     margin-bottom: 60px;
-    animation: box 3s 1;
-}
-
-.s4logo:nth-of-type(1) {
-    animation-direction: normal;
-}
-
-@keyframes box {
-    0% {
-        left: -300px;
-    }
-
-    100% {
-        left: 0px;
-    }
+    animation: s4logo 3s 1;
 }
 
 .s4 ul {
@@ -583,12 +596,14 @@ span {
     border: 1px solid black;
     margin-right: 20px;
     border-radius: 10px;
+    font-size:17px;
 }
 
 .border2 {
     transition: 0.3s;
     border: 1px solid black;
     border-radius: 10px;
+    font-size:17px;
 }
 
 .border3 {
@@ -596,6 +611,7 @@ span {
     margin-left: 20px;
     border: 1px solid black;
     border-radius: 10px;
+        font-size:17px;
 }
 
 .s4_text p {
@@ -613,6 +629,11 @@ span {
     width: 170px;
     height: 45px;
     background: #F0CD00;
+    margin-bottom:100px;
+}
+
+.s4_text a{
+    color:#1C1C1B;
 }
 
 /* footer */
@@ -634,6 +655,9 @@ span {
 }
 
 .footer_line p {
+    color:#1C1C1B;
+    font-size:18px;
+    font-weight: 700;
     margin-left: 320px;
     margin-right: -290px;
 }

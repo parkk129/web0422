@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 선택자 */
+        /* 1. id 2. class 3. 태그 */
+    </style>
+</head>
+
+<body>
+    <h1>요소 찾기</h1>
+    <ul>
+        <li id="orange">목록1</li>
+        <li class="red">목록2 index 0 </li>
+        <li class="red">목록2 index 1 </li>
+        <li class="red">목록2 index 2 </li>
+        <li>목록3 </li>
+        <li id="green">목록1</li>
+        <li class="aqua">목록2</li>
+        <li>목록3</li>
+    </ul>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        // 변수 = 값;
+        // 오른쪽의 값은 왼쪽에 할당하다
+
+        // $() 문서의 아이디가 orange인 요소를 가져와서 
+        // .css() 글자색을 orange로 지정한다
+        // 아이디는 한 문서 내에서 유일해야한다
+
+        // eq선택자가 있고 eq메소드가 있다
+        // eq()의 index는 0번 부터 시작
+
+                // 형식
+        // $(선택자).메소드(숫자)
+        // 메소드 형식(단일속성) 1 $(선택자).메소드(속성,값); 
+        // 메소드 형식(여러개 속성) 2 $(선택자).메소드({속성:값, 속성:값, 속성:값,...})
+        // $(document) >> 내장객체는 문자열로 처리하면 안된다 ""'' 사용불가
+
+        // 아이디
+        $("#orange").css("color", "orange");
+        // 클래스 : 문서에서 클래스가 첫번째 red인 요소를 가져와서 글자색을 red로 지정
+        $(".red:eq(0)").css("color", "red");
+        // 태그
+        $("li").eq(5).css("borderTop", "1px solid");
+        // 속성은 border-top처럼 css형식으로 쓰는것이 아닌 borderTop 카멜 표기법으로 쓴다
+
+        // 단일 요소(태그) 선택
+        $("ul").css("borderLeft", "5px solid");
+        // 같은 요소(태그)가 여러개 있을때
+        $("ul").eq(0).css("borderTop", "1px solid");
+
+
+        // 객체.메소드.속성
+        // 객체(html) : $("문자열")
+        // 메소드 : css("문자열","문자열") 무조건 2개의 문자열만 사용 , eq(숫자) 
+        // 괄호가 들어있으면 메소드 / = id가()인 요소를 가져오는 동작 (동사)
+
+        // 기본적인 형식 : 객체.style.css속성
+
+        // 문장의 끝은 세미콜론;으로 끝난다
+
+        // css의 선택자와 같은 역할
+        // getElementById는 하나의 단어 취급
+        // 단어와 단어는 .(도트)로 구분한다
+        // 자바스크립트 단어는 대소문자를 구별한다
+        // 자바스크립트는 카멜표기법을 쓴다
+        // 자바스크립트 "문장" 내의 "문자열"은 반드시 " " '' 로 묶는다
+    </script>
+</body>
+
+</html>

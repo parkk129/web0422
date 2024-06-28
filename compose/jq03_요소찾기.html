@@ -19,21 +19,16 @@
         <li class="red">목록2 <!-- index 1 --> </li>
         <li class="red">목록2 <!-- index 2 --> </li>
         <li>목록3 </li>
-        <li id="green">아이디 그린</li>
-        <li class="aqua">클래스 아쿠아</li>
+        <li id="green">목록1</li>
+        <li class="aqua">목록2</li>
         <li>목록3</li>
     </ul>
-
-    <p class="aqua">나는 유엘밖의 아쿠아</p>
-
     <script>
         // 변수 = 값;
         // 오른쪽의 값은 왼쪽에 할당하다
 
         // 문서의 아이디가 orange인 요소를 가져와서 글자색을 orange로 지정한다
         // 아이디는 한 문서 내에서 유일해야한다
-
-
 
         // 아이디
         document.getElementById("orange").style.color="orange";
@@ -45,9 +40,8 @@
 
         // 단일 요소(태그) 선택
         document.querySelector("ul").style.borderBottom="1px solid";
-        document.querySelector("#green").style.color="yellowgreen";
-        // 같은 요소(태그)가 여러개 존재할경우 그 여러개중 하나 선택하려할떄
-        document.querySelectorAll(".aqua")[1].style.color="blue";
+        // 같은 요소(태그)가 여러개 있을때
+        document.querySelectorAll("orange").style.color="orange";
 
 
         // 객체.메소드.속성
