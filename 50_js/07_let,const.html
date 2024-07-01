@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>변수와 상수</h1>
+    <p>변수는 변하는 값 상수는 고정 값</p>
+    <script>
+        // 일반적으로 const 사용 갱신이 필요하면 let 사용
+        // 키워드 : var => let, const (기본적으로 const 값의 갱신이 필요할땐 let)
+        // 표현식 : 결과 값이 있는 식
+        // 문(statement)
+        
+        // 변수 선언 및 할당
+        // 변수 = 값;
+        // 변수 = 변수;
+
+        // const = constant variable.= 상수형 변수 : 상수를 저장하는 변수, 재할당 불가 , 갱신 불가
+
+        const a = 5;
+        // 렛이 아닌 콘스트 사용했을때 오류 : TypeError: Assignment to constant variable.
+        // 업데이트,갱신 = 재할당
+        // a = 2;
+        console.log("a=",a);
+
+        let b = 2;
+        b = 7;
+        console.log("b=",b);
+        
+        // const는 재선언 할 수 없다 재할당도 불가
+        // const a = 7;
+
+        // let은 재선언 할 수 없다 재할당은 가능
+        // let b = 4;
+
+        // 출력
+        console.log("a=",a,"b=",b);
+
+    </script>
+</body>
+</html>

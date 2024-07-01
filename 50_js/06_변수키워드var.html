@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="v">변수'var'iable</h1>
+    <p>변수는 데이터(=값)를 저장하는 공간이다</p>
+    <script>
+        // 변수란? 값을 저장하고 유지하는 것
+        // 변수 형식 : 키워드 식별자(구별해주는 이름,모두 이름이 달라야함) =(대입.할당연산자) 값;
+        // 식별자 : 첫글자는 영문자, 두번째 글자는 숫자,대소문자 구별
+        // 키워드 : var let const
+        // 표현식 : 결과 값이 있는 식
+        // 문(statement)
+
+        
+        // 변수 선언 및 할당
+        // 변수 = 값;
+        // 변수 = 변수;
+
+        // 변수는 어떤 값을 저장하는가?
+        var a = 5;
+        var a2 = "오";
+        var a3 = true;
+        var a4 = function(){};
+
+        var a5 = document.querySelector('h1')
+        a5.style.color = "red";
+        a5.style.fontSize = "10px";
+        a5.style.border="1px solid hotpink"
+
+        document.querySelector('p').style.color = "blue";
+        document.querySelector('p').style.border = "1px solid red";
+
+        var a6 = a2;
+        console.log("a6",a6);
+
+        
+        // 변수 = 표현식;
+        var a7 = 5 + 2;
+        console.log("a7=",a7);
+        var a8 = a + b;
+        console.log("a8=",a8);
+        console.log("b=",b);
+        
+        var b =7;
+
+
+
+
+        // 재할당
+        var a;
+        a = 2;
+
+        // b를 변수로 선언하다
+        var b;
+        // b에 2를 할당한다
+        b = 2
+
+        // 한번에 간단하게 변수 매기는 것
+        var c = 5, d = 2, e, f;
+        // 길게 일일이 쓰는것
+        // e,f는 undefined로 할당된다
+        var c = 5;
+        var d = 2;
+        var e;
+        var f;
+
+        // 등등등...
+
+        console.log("a=",a);
+        console.log("b=",b);
+        console.log("c=",c);
+        console.log("d=",d);
+        console.log("e=",e);
+        console.log("f=",f);
+
+
+    </script>
+</body>
+</html>

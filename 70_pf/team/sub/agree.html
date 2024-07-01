@@ -7,6 +7,31 @@
     <link rel="stylesheet" href="../css/signup.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/agree.css">
+    <style>
+        @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css);
+        .text p{
+            font-size:20px;
+        }
+        input{
+            position:relative;
+            top:-15px;
+            margin-right:-85px;
+        }
+        label{
+            margin:5px;
+            font-size:16px;
+
+        }
+        .button{
+            width: 440px;
+            margin-top:30px;
+        }
+        i{
+            position: relative;
+            top:-30px;
+            left:210px;
+        }
+    </style>
 
 </head>
 <body>
@@ -56,30 +81,29 @@
     </div>
 
     <form>
-        <input type="radio" id="btn">
-        <label for="btn">전체 동의</label>
-        <input type="radio" id="btn">
-        <label for="btn">이디야멤버스 서비스 이용약관 동의(필수)</label>
-        <input type="radio" id="btn">
-        <label for="btn">개인정보 수집 및 이용약관 동의(필수)</label>
-        <input type="radio" id="btn">
-        <label for="btn">개인정보 처리 방침(필수)</label>
-        <input type="radio" id="btn">
-        <label for="btn">마케팅 활용 동의(선택)</label>
-        <input type="radio" id="btn">
-        <label for="btn">광고성 정보 수신 동의(선택)</label><br>
-
-        <div>
-            <input type="radio" id="btn">
-        <label for="btn">app알림</label>
-            <input type="radio" id="btn">
-        <label for="btn">문자</label>
-            <input type="radio" id="btn">
-        <label for="btn">이메일</label>
-            <input type="radio" id="btn">
-        <label for="btn">카카오톡</label>
-        </div>
+        <label for="r1">컴포즈 멤버스 서비스 이용약관 동의(필수)</label>
+        <input type="radio" id="r1">
+        <i class="fa-solid fa-chevron-right fa-xs"></i>
+        <label for="r2">개인정보 수집 및 이용약관 동의(필수)</label>
+        <input type="radio" id="r2">
+        <i class="fa-solid fa-chevron-right fa-xs"></i>
+        <label for="r3">개인정보 처리 방침(필수)</label>
+        <input type="radio" id="r3">
+        <i class="fa-solid fa-chevron-right fa-xs"></i>
+        <label for="r4">위치기반 서비스 이용약관 동의(선택)</label>
+        <input type="radio" id="r4">
+        <i class="fa-solid fa-chevron-right fa-xs"></i>
+        <label for="r5">마케팅 활용 동의(필수)</label>
+        <input type="radio" id="r5">
+        <i class="fa-solid fa-chevron-right fa-xs"></i>
+        <label for="r6">광고성 정보 수신 동의(필수)</label>
+        <input type="radio" id="r6">
+        <i class="fa-solid fa-chevron-right fa-xs"></i>
     </form>
+
+    <div class="button">
+        <a href="https://nice.checkplus.co.kr/cert/main/menu">다음</a>
+    </div>
 
 
 

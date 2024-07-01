@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/typo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.css">
 </head>
 
 <body>
@@ -97,19 +98,35 @@
             </ul>
         </nav>
 
-
     </header>
 
-    <div class="section s1">
-        <!-- 슬라이드 -->
-        <ul>
-            <li><img src="assets/images/section1.png" alt=""></li>
-            <li><img src="assets/images/section1_2.png" alt=""></li>
-            <li><img src="assets/images/section1_3.png" alt=""></li>
-            <li><img src="assets/images/section1.png" alt=""></li>
-        </ul>
-
+    <div class="s1">
+        <div class="bxslider">
+            <div><img src="./assets/images/section1.png" /></div>
+            <div><img src="./assets/images/section1_2.png" /></div>
+            <div><img src="./assets/images/section1_3.png" /></div>
+        </div>
     </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js"></script>
+    <script>
+        $('.bxslider').bxSlider({
+            auto: true,
+            autoControls:false,
+            stopAutoOnClick: true,
+            pager: true,
+            slideWidth:1920
+        });
+    </script>
+
+        <div class="tothetop">
+            <a href="">img</a>
+            <a href="">img</a>
+            <a href="#top">img</a>
+        </div>
+
     <h1>신메뉴</h1>
     <div class="tabs">
         <!-- 탭1 공지사항-->

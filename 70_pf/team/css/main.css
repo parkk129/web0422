@@ -155,114 +155,38 @@ header {
 }
 
 /* section 1 */
-
-.s1 i {
-    z-index: 999;
+.s1{
+    position:relative;
+    top:-45px;
+    margin-bottom:100px;
 }
 
-.s1 {
-    top: -40px;
-    display: flex;
-    position: relative;
-    width: 1909px;
-    height: 669px;
-    margin: 0 auto;
-    overflow: hidden;
-    margin-bottom: 50px;
+/* tothetop */
+html {
+    scroll-behavior: smooth;
+  }
+
+.tothetop{
+    position: fixed;
+  bottom: 200px;
+  right: 100px;
+  height: 50px;
+  width: 70px;
 }
 
-.s1 ul {
-    left: -100px;
-    position: absolute;
-    display: flex;
-    width: 400%;
-    height: 100%;
+.tothetop a{
+    margin:10px;
+    display: block;
+    height: 50px;
+    /*   텍스트 숨기기 */
+    text-indent: -9999em;
+    background: url(../assets/images/tothetop.png);
 }
 
-/* 슬라이드 */
-.s1 ul {
-    animation: slide 15s infinite;
+.tothetop a:nth-of-type(2){
+    background: url(../assets/images/tothetop2.png);
 }
-
-.s1 img {
-    display: flex;
-    justify-content: space-between;
-    z-index: 999;
-}
-
-@keyframes slide {
-    0% {
-        left: 0%;
-    }
-
-    10% {
-        left: -108%;
-    }
-
-    33% {
-        left: -108%;
-    }
-
-    43% {
-        left: -208%;
-    }
-
-    66% {
-        left: -208%;
-    }
-
-    76% {
-        left: -308%;
-    }
-
-    99.99% {
-        left: -308%;
-    }
-
-    100% {
-        left: 0%;
-    }
-}
-
-:root {
-    --w: 1909px;
-    --h: 669px;
-}
-
-@keyframes slide {
-    0% {
-        left: 0%;
-    }
-
-    10% {
-        left: -100%;
-    }
-
-    33% {
-        left: -100%;
-    }
-
-    43% {
-        left: -200%;
-    }
-
-    66% {
-        left: -200%;
-    }
-
-    76% {
-        left: -300%;
-    }
-
-    99.99% {
-        left: -300%;
-    }
-
-    100% {
-        left: 0%;
-    }
-}
-
+/* section 2 */
 /* 탭 */
 
 body {
@@ -289,6 +213,7 @@ body {
 h1 {
     display: flex;
     justify-content: center;
+
 }
 
 /* 탭 메뉴 */
@@ -370,7 +295,6 @@ span {
 }
 
 /* section 3 */
-
 /* 페이드 시작 */
 
 :root {
@@ -501,7 +425,7 @@ span {
 /* 페이드 끝 */
 
 .s3 {
-    margin-top: 680px;
+    margin-top: 700px;
     display: flex;
     justify-content: center;
     margin-bottom: 200px;
@@ -550,7 +474,7 @@ span {
 
 /* section 4 */
 .s4 {
-    margin-top: 250px;
+    margin-top: 200px;
     margin-bottom: 70px;
 }
 
