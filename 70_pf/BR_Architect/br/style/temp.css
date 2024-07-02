@@ -3,7 +3,9 @@
 
 
 header{background: #ccc;}
-.s1{background: #777;}
+
 .s2 li{background: palevioletred;}
 
-h3{background: #a9a9a9;}
+h3{
+    background: #ccc;
+}
