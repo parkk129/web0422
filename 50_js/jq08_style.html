@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>js로 요소에 css(스타일) 적용하기</h1>
+    <div>박스1</div>
+    <div>박스2</div>
+    <style>
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        /* 스타일은 속성이기도 하면서 객체다 */
+        /* 자바스크립트 : element=모든 html 태그들 */
+        // 제이쿼리 : element.css(속성명,속성값)
+        //            객체.메소드(인수,인수)
+        // 인수(속성명 속성값)는 메소드마다 정해져있다
+        // 인수의 개수는 무조건 2개
+
+        /* 자바스크립트 : element(요소,태그).style.속성명(카멜표기법) = 속성값; */
+
+        // 제이쿼리 요소 찾기
+        // 자바스크립트 : document.querySelectorAll("선택자")[0]
+        // 제이쿼리 : $('선택자').eq(숫자)
+        // 제이쿼리 element.css("속성", "값");
+
+        // 변수 선언
+        const ele = $('div').eq(0);
+        const ele2 = $('div').eq(1);
+
+        // 실행코드
+        // (객체 형식)
+        ele.css({width:100, height:100, backgroundColor:"red", borderRadius:10});
+        ele2.css({width:100, height:100, backgroundColor:"blue"});
+        // ele2.css("width", "100px");
+        // ele.css("height", "100px");
+        // ele2.css("height", "100px");
+        // ele.css("backgroundColor", "red");
+        // ele2.css("backgroundColor", "blue");
+
+    </script>
+
+    <!-- 객체 {속성:값, 속성:값 ...} -->
+    <!-- 객체는 속성과 메소드를 가지고있다 -->
+    <!-- 함수를 값으로한 속성을 메소드라고 한다 -->
+    <!-- element { length:30, css:function ... } -->
+    <!-- 객체 { 속성:값, 속성:값, ...} -->
+    <!-- 속성들 중에 특별이 그 값이 함수인 속성을 메소드라고 말한다 -->
+    <!-- css속성명으로 기록하면 ""를 사용하고 카멜표기법으로 표기하면 ""을 생략할수 있다 -->
+
+    방법1 : element.css("속성")
+</body>
+
+</html>

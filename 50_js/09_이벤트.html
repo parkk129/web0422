@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>이벤트</h1>
+    <p>이벤트(Event)는 어떤 사건을 의미합니다. 브라우저에서의 사건이란 사용자가 "클릭을 했을 때", "스크롤을 했을 때", "무언가 입력했을 때" 등의 상호작용으로 인해 일어나는 사건을 의미한다.</p>
+    
+    <div class="box1">박스1</div>
+    <div class="box2">박스2</div>
+    <div class="box3">박스3</div>
+    <div class="box4">박스4</div>
+    <p>여기에 표시됩니다</p>
+
+    <script>
+        // 이벤트란? 브라우저에서 발생하는 사용자 상호작용이다
+        // 이벤트 핸들러란? 이벤트가 발생했을때 실행되는 함수 = function(){실행코드}
+
+        // element.on이벤트 = function(){실행코드};
+        // element.onclick = function(){};
+        // element.addEventListener("이벤트", 함수);
+        // 이벤트 전파: 자식 >> 부모 (bubbling)
+
+        // 이벤트 종류: click, mouseenter, mouseleave, resize, scroll
+
+        // 변수 선언
+        const ele1 = document.querySelector('.box1');
+        const ele2 = document.querySelector('.box2');
+
+        // 요소에 스타일 적용
+        ele1.style.width = "100px";
+        ele1.style.height = "100px";
+        ele1.style.border = "solid 10px red";
+
+        ele2.style.width = "100px";
+        ele2.style.height = "100px";
+        ele2.style.border = "solid 10px blue";
+
+        // 이벤트 처리 (밑에쓴게 먼저 적용됨)
+
+        // 선언적 함수
+        ele1.onmouseleave= function(){
+            ele1.style.background = "";
+            console.log(ele1.style.background);
+        };
+
+        ele1.onmouseenter = reset;
+        function reset(){
+            ele1.style.background = "yellow";
+        };
+
+        ele2.onclick = function(){
+            ele2.style.background = "skyblue";
+        };
+
+        ele2.addEventListener("mouseenter",function(){
+            ele1.style.border = "10px solid blue";
+        });
+
+        ele2.addEventListener("mouseleave", reset2);
+
+        function reset2(){
+            ele1.style.border = "10px solid green";
+        }
+        
+    </script>
+</body>
+</html>

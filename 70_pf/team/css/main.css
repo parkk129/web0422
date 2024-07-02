@@ -183,6 +183,9 @@ html {
     background: url(../assets/images/tothetop.png);
 }
 
+.tothetop a:nth-of-type(1){
+    background: url(../assets/images/tothetop3.png);
+}
 .tothetop a:nth-of-type(2){
     background: url(../assets/images/tothetop2.png);
 }
@@ -478,6 +481,12 @@ span {
     margin-bottom: 70px;
 }
 
+.s4 .text1{
+    display: flex;
+    justify-content: center;
+    font-size:23px;
+    color:#1C1C1B;
+}
 .s4logo {
     position: relative;
     display: flex;
@@ -517,7 +526,7 @@ span {
 
 .border1 {
     transition: 0.3s;
-    border: 1px solid black;
+    border: 1px solid rgb(204, 204, 204);
     margin-right: 20px;
     border-radius: 10px;
     font-size:17px;
@@ -525,7 +534,7 @@ span {
 
 .border2 {
     transition: 0.3s;
-    border: 1px solid black;
+    border: 1px solid rgb(204, 204, 204);
     border-radius: 10px;
     font-size:17px;
 }
@@ -533,7 +542,7 @@ span {
 .border3 {
     transition: 0.3s;
     margin-left: 20px;
-    border: 1px solid black;
+    border: 1px solid rgb(204, 204, 204);
     border-radius: 10px;
         font-size:17px;
 }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>js로 요소에 css(스타일) 적용하기</h1>
+    <div>박스1</div>
+    <div>박스2</div>
+    <style>
+        
+    </style>
+    <script>
+          /* 스타일은 속성이기도 하면서 객체다 */
+        /* element=모든 html 태그들 */
+        /* element(요소,태그).style.속성명(카멜표기법) = 속성값; */
+
+        const ele = document.querySelectorAll('div')[0];
+        const ele2 = document.querySelectorAll('div')[1];
+        ele.style.width = "100px";
+        ele2.style.width = "100px";
+        ele.style.height = "100px";
+        ele2.style.height = "100px";
+        ele.style.backgroundColor = "red";
+        ele2.style.backgroundColor = "blue";
+    </script>
+</body>
+</html>
