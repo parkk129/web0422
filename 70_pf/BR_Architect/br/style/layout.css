@@ -31,8 +31,7 @@ h2{
     height: 745px;
     align-items:center;
     justify-content: center;
-   
-    
+    background-image:src("../../하나투어/slide.png");
 }
 .s1 h2{
     border:none;
