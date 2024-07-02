@@ -3,8 +3,14 @@
 @import url(typo.css);
 @import url(section.css);
 
+/* typo */
+
 /* layout 배치 */
 /* 박스모델 속성, display, position */
+img{
+    width: 100px;
+    height: 100px;
+}
 html{
     scroll-behavior: smooth;
 }
@@ -28,6 +34,8 @@ nav li:first-child::after {
 }
 
 nav li {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
     display: inline-block;
     line-height: 100px;
 }
@@ -36,9 +44,15 @@ header {
     height: 200px;
     /* 높이와 같은 값을 준다 */
     line-height: 200px;
-    background:url(../assets/bg-light.png) no-repeat 50% 50%/cover fixed;
+    background:url(../70_pf/my/assets/bg-light.png) no-repeat 50% 50%/cover fixed;
 }
 
+header h1{
+    font-size:50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight:700;
+}
 /* main */
 
 main{
@@ -50,6 +64,9 @@ section {
 }
 
 h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight:700;
     margin: 56px 0;
 }
 
