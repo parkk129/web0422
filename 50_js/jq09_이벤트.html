@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border: solid;
+            margin:5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>이벤트</h1>
+    
+    <div class="box1">박스1</div>
+    <div class="box2">박스2</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        // 이벤트란? 브라우저에서 발생하는 사용자 상호작용이다
+        // 이벤트 핸들러란? 이벤트가 발생했을때 실행되는 함수 = function(){실행코드}
+
+        // element.이벤트 = 함수;
+        // element.onclick = function(){};
+        // onclick >> click on제거로 변경!!
+        // element.addEventListener("이벤트", 함수);
+        // addEventListener >> on 으로 변경!!!
+        // element.on("이벤트", 함수);
+
+        // 이벤트 종류: click, mouseenter, mouseleave, resize, scroll
+
+        // 변수 선언
+        const ele1 = $('.box1');
+        const ele2 = $('.box2');
+
+        // 이벤트 처리 (밑에쓴게 먼저 적용됨)
+        ele1.on("mouseenter", reset);
+        function reset(){
+            ele1.css("background","red");
+        }
+        ele1.on("mouseleave", reset2);
+        function reset2(){
+            ele1.css("background","white");
+        }
+        ele1.on("click", reset3);
+        function reset3(){
+            ele1.css("background","green");
+        }
+        // 객체 = {속성:값,속성:값,...}
+    </script>
+</body>
+</html>
