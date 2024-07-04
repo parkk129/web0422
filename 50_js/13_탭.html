@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            font-size:50px;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1>탭</h1>
+
+    <div class="tabs">
+
+        <p class="tab1">첫번째 콘텐츠</p>
+        <p class="tab2">두번째 콘텐츠</p>
+
+            <ul>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">갤러리</a></li>
+            </ul>
+
+    </div>
+    
+
+
+    <script>
+        // 버튼 1을 클릭하면 p를 숨김 버튼 2를 클릭하면 p가 나타나게
+        // 클래스 리스트 사용하여
+
+        // 버튼 1을 클릭하면 p를 선택하여 글자의 색상을 red로 지정
+        // 버튼 2를 클릭하면 p를 선택하여 글자의 색상을 black으로 지정
+        // p를 선택해서 글자의 색상을 red로 지정
+
+        // 요소찾기
+        const p = document.querySelector('p');
+        const li = document.querySelectorAll('ul li')[0];
+        const li2 = document.querySelectorAll('ul li')[1];
+        const btn = document.querySelectorAll('a')[0];
+        const btn2 = document.querySelectorAll('a')[1];
+        console.log(btn);
+        console.log(btn2);
+
+
+        // p.style.color = "red";
+        
+        // p에 on클래스를 추가한다
+        btn.onclick = function(){
+            // p.style.color = "red";
+
+            // p에 클래스 .on을 추가한다
+
+            // 한번 클래스 사용하고 또 다른 클래스를 사용하려면
+            // 지우고 써야한다
+            // 안그럼 계속 적용 유지됨 사라지지 않음
+            p.classList.add('on');
+            p.classList.remove('on');
+        }
+        btn2.onclick = function(){
+            // p.style.color = "blue";
+
+            // p에 클래스 .on을 추가한다
+            p.classList.remove('on');
+            p.classList.add('on2');
+        }
+    </script>
+</body>
+</html>

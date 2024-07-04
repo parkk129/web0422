@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>요소의 콘텐츠를 수정하거나 가져오기</h1>
+    <p class="p1">나는 첫번째 단락입니다</p>
+    <p class="p2">나는 두번째 단락입니다</p>
+    <p class="p3">나는 세번째 단락입니다</p>
+    <p class="p4">나는 네번째 단락입니다</p>
+    <!-- 
+    문 statements
+    1.명령문
+    2.제어문
+    -->
+
+    <!-- 제이쿼리 라이브러리 넣어야 제이쿼리 작동 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        // 객체.innerHTML = "값" : html태그를 인식한다, 태그를 쓰면 태그로 처리
+        // 객체.textContent = "값": html태그를 인식하지 못한다 , 모두 문자열로 처리
+        // 값이 숫자 : 쿼테이션 제거
+
+        // 첫번째 두번째 내용을 가져와서
+        // 세번째 네번째 내용을 변경하다
+
+        // 1 요소찾기
+        const p1Tag = $('.p1');
+        const p2Tag = $('.p2');
+        const p3Tag = $('.p3');
+        const p4Tag = $('.p4');
+
+        // 2 콘텐츠 가져오기
+        // 객체.innerHTML
+        // 객체.textContent
+
+        // jq
+        // 객체.html("값");
+        // 객체.text("값");
+        let getp1 = p1Tag.html()
+        let getp2 = p2Tag.text()
+
+        // 3 콘텐츠 변경하기
+        // 객체.innerHTML = "값"
+        // 객체.textContent = "값"
+        p1Tag.innerHTML = '<a href="#">네이버</a>';
+        p2Tag.textContent = '<a href="#">네이버</a>';
+        p3Tag.html("getp1"); /* "문자열"로 변경 */
+        p4Tag.text(getp2); /* p4Tag에 p2Tag내용 똑같이 넣기 */
+
+    // 새로운 태그를 넣을떄 >> 싱글 쿼테이션
+    // 내용을 바꿀때 >> 더블 쿼테이션
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 100%;
+            height: 100%;
+            vertical-align: top;
+            object-fit: cover;
+        }
+        .cont{
+            width: 900px;
+            height: 300px;
+        }
+        .gallery{
+            width: 900px;
+            height: 300px;
+        }
+        .btn{
+            display:flex;
+        }
+        .btn div{
+            position:relative;
+            top:100px;
+            left:40px;
+            margin:2px;
+            display: flex;
+            width: 3px;
+            height: 3px;
+            background: #ededed;
+            border-radius:50%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <div class="btn">
+            <a href="#">이미지1</a>
+            <a href="#">이미지2</a>
+            <a href="#">이미지3</a>
+        </div>
+        <div class="cont">
+            <img src="../assets2/KakaoTalk_20240703_141418063_01.jpg" alt="이미지1">
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        // 요소 찾기
+        // 반복해서 사용할거라면 요소를 변수로 넣는다!
+        const btn = $('a').eq(0);
+        const btn2 = $('a').eq(1);
+        const btn3 = $('a').eq(2);
+        const cont = $('.cont');
+
+        // 이벤트 처리
+        btn.click() = function(){
+            // .cont의 컨텐츠 변경하기
+            cont.html('<img src="../assets2/KakaoTalk_20240703_141418063_01.jpg" alt="이미지1">');
+        }
+        btn2.click(change);
+        
+        function change(){
+            // .cont의 컨텐츠 변경하기
+            cont.html('<img src="../assets2/KakaoTalk_20240703_141418063_02.jpg" alt="이미지2">');
+        }
+        btn3.on('click',function(){
+            // .cont의 컨텐츠 변경하기
+            cont.html('<img src="../assets2/KakaoTalk_20240703_141418063_03.jpg" alt="이미지3">');
+        });
+    </script>
+</body>
+</html>

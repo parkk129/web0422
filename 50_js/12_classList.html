@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            font-size:50px;
+        }
+
+        p.on{
+            color: red;
+        }
+
+        p.on2{
+            color:blue;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h1>html요소에 class를 추가 또는 제거</h1>
+    <p>나는 단락이다.</p>
+    <div>
+        <button>버튼1</button>
+        <button>버튼2</button>
+    </div>
+
+
+    <script>
+        // 버튼 1을 클릭하면 p를 선택하여 글자의 색상을 red로 지정
+        // 버튼 2를 클릭하면 p를 선택하여 글자의 색상을 black으로 지정
+        // p를 선택해서 글자의 색상을 red로 지정
+
+        // 요소찾기
+        const p = document.querySelector('p');
+        const btn = document.querySelectorAll('button')[0];
+        const btn2 = document.querySelectorAll('button')[1];
+
+
+        // p.style.color = "red";
+        
+        // p에 on클래스를 추가한다
+        btn.onclick = function(){
+            // p.style.color = "red";
+
+            // p에 클래스 .on을 추가한다
+
+            // 한번 클래스 사용하고 또 다른 클래스를 사용하려면
+            // 지우고 써야한다
+            // 안그럼 계속 적용 유지됨 사라지지 않음
+            p.classList.add('on');
+            p.classList.remove('on2');
+        }
+        btn2.onclick = function(){
+            // p.style.color = "blue";
+
+            // p에 클래스 .on을 추가한다
+            p.classList.remove('on');
+            p.classList.add('on2');
+        }
+    </script>
+</body>
+</html>
