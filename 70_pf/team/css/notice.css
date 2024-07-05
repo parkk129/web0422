@@ -2,6 +2,63 @@
 /* @import url(common.css); */
 @import url(reset.css);
 @import url(typo.css);
+body {
+    font-family: 'Pretendard-Regular';
+}
+.s1 h1 {
+    /* letter-spacing: 4px; */
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 96px;
+    font-weight: normal;
+    color: #ffd900;
+}
+
+/* typo */
+.s2 h1{
+    font-size:35px;
+}
+
+.s2 .new{
+    font-size:23px;
+}
+
+.new2 div{
+    font-size:23px;
+}
+
+select {
+    font-family: 'Pretendard-Regular';
+    font-weight: 700;
+    font-size: 16px;
+}
+
+input {
+    font-family: 'Pretendard-Regular';
+    font-size: 18px;
+    color: #d6d6d6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body,h1,h2,ul,li,p {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+    /* background (흰색)꼭지정해야 한다. 아니면 투명이고 다른사람이 바꿀수있다. */
+body {
+    background: #fff;
+}
 
 
 html {scroll-behavior: smooth;}
