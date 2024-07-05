@@ -1,0 +1,169 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css);
+
+/* typo */
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Pretendard-Regular';
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #1b1b1b;
+}
+
+h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 4.8rem;
+    font-weight: 600;
+    position: relative;
+    right:500px;
+}
+
+span {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+a {
+    color: #111;
+}
+
+#s2>.inner>p {
+    color: #111;
+}
+
+#s2 #tabs>ul a {
+    color: #111;
+}
+
+/* reset */
+* {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+ul,
+p {
+    margin: 0;
+}
+
+body {
+    background: #fff;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+/* css */
+.inner {
+    width: 1120px;
+    margin: 0 auto;
+}
+
+/* 섹션2 */
+#s2 {
+    width: 100%;
+    padding: 72px 0;
+}
+
+#s2>.inner>h2 {
+    text-align: center;
+}
+
+/* 탭 공통 */
+#s2 #tabs {
+    text-align: left;
+}
+
+#s2 #tabs ul {
+    display: flex;
+    align-items: flex-end;
+}
+
+/* 탭의 버튼 */
+#s2 #tabs>ul {
+    margin:-15px;
+    margin-top:40px;
+    margin-bottom:50px;
+}
+
+#s2 #tabs>ul>li {
+    border-radius: 30px;;
+    border:1px solid #e5e5e5;
+    padding:10px 30px 10px 30px;
+    background: #ffffff;
+    margin:0px 8px 0px 8px;
+}
+
+#tabs li>a{
+    width: 200px;
+    height: 100px;
+}
+
+#tabs h3{
+    margin-top:40px;
+}
+
+#s2 #tabs>div ul li {
+    margin-left:-25px;
+}
+
+/* 탭 콘텐츠 크기 */
+#s2 #tabs>div a {
+    display: block;
+    margin:0px 20px 0px 20px;
+    width: 290px;
+    height: 300px;
+}
+
+#s2 #tabs>div {
+    display: none;
+}
+
+#s2 #tabs>div.on {
+    display: block;
+}
+
+.line{
+    margin-top:-200px;
+    width: 1065px;
+    height: 5px;
+    background: #000;
+}
+.end{
+    display: flex;
+}
+
+.icon{
+    position: relative;
+    top:-205px;
+    left:50px;
+
+}
