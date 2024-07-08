@@ -3,33 +3,84 @@
     @import url(css/common/reset.css);
     @import url(css/common/typo.css);
 
+    @font-face {
+        font-family: 'Pretendard-Regular';
+        src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+    }
 
     body {
-        margin-left:0;
-        margin-top:0;
-        margin:0;
+        font-family: 'Pretendard-Regular';
     }
-    
+
+    .s2 h1 {
+        font-size: 35px;
+    }
+
+    .s2 .new {
+        font-size: 23px;
+    }
+
+    .new2 div {
+        font-size: 23px;
+    }
+
+    /* reset */
+    body {
+        margin-left: 0;
+        margin-top: 0;
+        margin: 0;
+    }
+
     a {
         /* 텍스트 밑줄 제거 */
         text-decoration: none;
     }
+
     body,
     ul,
     h1,
     h2 {
         margin: 0;
     }
-    
+
     ul {
         padding: 0;
         list-style-type: none;
     }
-    
-    .s4 li{
-        margin-left:0;
+
+    .s4 li {
+        margin-left: 0;
     }
-    
+
+    body {
+        margin-left: 0;
+        margin-top: 0;
+        margin: 0;
+    }
+
+    a {
+        /* 텍스트 밑줄 제거 */
+        text-decoration: none;
+    }
+
+    body,
+    ul,
+    h1,
+    h2 {
+        margin: 0;
+    }
+
+    ul {
+        padding: 0;
+        list-style-type: none;
+    }
+
+    .s4 li {
+        margin-left: 0;
+    }
+
     /* header */
     .top {
         font-size: 15px;
@@ -41,68 +92,68 @@
         align-items: center;
         margin-top: 0;
     }
-    
+
     .top_link {
         margin: 30px;
     }
-    
+
     .top_link a {
         margin-right: 30px;
     }
-    
+
     .top_link2 {
         padding: 0;
         margin-left: 0;
     }
-    
+
     .top_link2 a {
         margin-left: 30px;
     }
-    
+
     .top_link2 :nth-of-type(5) {
         margin-left: 15px;
     }
-    
+
     .top_link2 :nth-of-type(6) {
         margin-left: 5px;
     }
-    
+
     .top_link2 :nth-of-type(7) {
         margin-left: 5px;
     }
-    
+
     .top_link2 :nth-of-type(8) {
         margin-right: 30px;
         margin-left: 5px;
     }
-    
+
     .top a {
         color: white
     }
-    
+
     .top img {
         margin-left: 5px;
     }
-    
-    
+
+
     header {
-    
+
         margin: 0 auto;
         width: 1100px;
         height: 100px;
     }
-    
+
     .tlogo {
-    
+
         align-items: center;
         width: 375px;
         margin: 0 auto;
     }
-    
+
     .tlogo div {
         height: 20px;
     }
-    
+
     .gnb {
         z-index: 9999;
         margin-top: 20px;
@@ -110,11 +161,11 @@
         display: flex;
         justify-content: center;
     }
-    
+
     header {
         margin-top: 0;
     }
-    
+
     /* 1depth 네비게이션 메인메뉴 */
     .main {
         font-size: 18px;
@@ -122,19 +173,19 @@
         text-align: center;
         /* border:1px solid black; */
     }
-    
+
     .main>li {
         width: 160px;
         height: 32px;
         text-align: center;
         line-height: 30px;
     }
-    
+
     .main>li:hover {
         margin: 0 auto;
         background: #F0CD00;
     }
-    
+
     .main::before {
         z-index: 9999;
         content: "";
@@ -150,16 +201,16 @@
         transition: 0.4s;
         background: #fff;
     }
-    
+
     .main:hover::before {
         height: 150px;
         opacity: 1;
     }
-    
+
     .main li a {
         color: #1a1a1a;
     }
-    
+
     /* 2depth 네비게이션 서브메뉴 */
     .sub {
         z-index: 9999;
@@ -170,30 +221,29 @@
         position: relative;
         opacity: 0;
     }
-    
+
     .main:hover .sub {
         transition: 0.3s;
         height: 150px;
         visibility: visible;
         opacity: 1;
     }
-    
+
     .sub li:hover {
         font-weight: 700;
         background: rgb(239, 238, 238);
     }
-/* 섹션 */
 
-#s1 div {
+    /* 섹션 */
+
+    #s1 div {
         width: 1180px;
         margin: 0 auto;
     }
 
     #s1 section {
-
-    
+        margin-left: 65px;
         padding: 0 auto;
-    
     }
 
     #s1 h2 {
@@ -223,15 +273,16 @@
 
     }
 
-    #s1 li>p {position: relative;
-    
-        bottom:4px; 
-        margin-top:110px;
-        margin-right:2px;
+    #s1 li>p {
+        position: relative;
+
+        bottom: 4px;
+        margin-top: 110px;
+        margin-right: 2px;
         font-size: 23px;
-        font-weight:800px;
-        font-family:initial;
-        
+        font-weight: 800px;
+        font-family: initial;
+
 
     }
 
@@ -248,27 +299,27 @@
     }
 
     #s1 span>a {
-        padding:0 auto;
+        padding: 0 auto;
         color: white;
         font-size: 16px;
         font-weight: 200px;
         text-decoration: none;
         text-align: center;
-    
-        
+
+
     }
 
     #s1 span {
         display: inline-block;
         width: 110px;
         height: 35px;
-        margin-top: 4px;
-        margin-left: 60px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        margin-left: 900px;
         text-align: center;
-        background-color:#243c84;
+        background-color: #243c84;
         border-radius: 22px;
-
-     }
+    }
 
 
     /* footer */
@@ -290,52 +341,49 @@
 
     .footer_line p {
         margin-left: 320px;
-        margin-right:-290px;
+        margin-right: -290px;
     }
 
 
-    .footer img{
-        margin-top:60px;
-        margin-left:320px;
+    .footer img {
+        margin-top: 60px;
+        margin-left: 320px;
     }
 
-    .footer_sns img{
+    .footer_sns img {
         position: relative;
-        left:655px;
-        bottom:100px;
-        margin-right:5px;
-        margin-left:0;
+        left: 655px;
+        bottom: 100px;
+        margin-right: 5px;
+        margin-left: 0;
     }
 
     .footer p {
         display: flex;
-        position:absolute;
+        position: absolute;
         font-weight: 500;
         line-height: 24.16px;
         color: #989B98;
         font-size: 14.5px;
-        left:320px;
+        left: 320px;
         top: 100px;
     }
 
-    .footer_right{
+    .footer_right {
         display: flex;
         position: relative;
-        left:1000px;
-        top:50px;
-        margin:10px;
-        color:#909090;
+        left: 1000px;
+        top: 50px;
+        margin: 10px;
+        color: #909090;
         position: absolute;
     }
 
-    .footer_right a{
-        color:#909090;
+    .footer_right a {
+        color: #909090;
     }
 
-    .footer_right ul li{
-        margin-right:30px;
-        margin-top:10px;
+    .footer_right ul li {
+        margin-right: 30px;
+        margin-top: 10px;
     }
-
-
-

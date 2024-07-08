@@ -1,9 +1,25 @@
     @charset "utf-8";
 
-    @import url(./reset.css);
-    @import url(./typo.css);
-
-
+    @font-face {
+        font-family: 'Pretendard-Regular';
+        src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+    }
+    
+    body{font-family: 'Pretendard-Regular';}
+    
+    .s2 h1{
+        font-size:35px;
+    }
+    
+    .s2 .new{
+        font-size:23px;
+    }
+    
+    .new2 div{
+        font-size:23px;
+    }
     body {
         margin-left:0;
         margin-top:0;
@@ -186,14 +202,7 @@
     /*세션영역  */
     div ul li {margin: 0;}
 
-    div {
-        width: 1920px;
-        margin: 0 auto;
-    }
-
     section { 
-
-
         /* margin-left: 200px; */
         margin-left:130px;
         
@@ -202,7 +211,7 @@
     h2 {
         font-size: 50px;
         text-align: center;
-        margin-top: 140px;
+        margin-top: 30px;
         margin-bottom: 100px;
 
         opacity: 1;
@@ -241,7 +250,7 @@
 
 
 
-    li {
+    .menu li {
         display: inline-block;
     
         margin: 0 10px 10px 0;
@@ -291,69 +300,91 @@
 
     }
 
-    /* footer */
-    .footer {
-        width: 100%;
-        height: 253.5px;
-        position: absolute;
-        background: #212121;
-        margin-bottom: 0;
+/* footer */
+.footer {
+    width: 100%;
+    height: 253.5px;
+    position: absolute;
+    background: #212121;
+    margin-bottom: 0;
 
-    }
+}
 
-    .footer_line {
-        display: flex;
-        align-items: center;
-        background: #F0CD00;
-        height: 60px;
-    }
+.footer_line {
+    display: flex;
+    align-items: center;
+    background: #F0CD00;
+    height: 60px;
+}
 
-    .footer_line p {
-        margin-left: 320px;
-        margin-right:-290px;
-    }
+.footer_line p {
+    margin-left: 320px;
+    margin-right:-290px;
+}
 
 
-    .footer img{
-        margin-top:60px;
-        margin-left:320px;
-    }
+.footer img{
+    margin-top:60px;
+    margin-left:320px;
+}
 
-    .footer_sns img{
-        position: relative;
-        left:655px;
-        bottom:100px;
-        margin-right:5px;
-        margin-left:0;
-    }
+.footer_sns img{
+    position: relative;
+    left:655px;
+    bottom:100px;
+    margin-right:5px;
+    margin-left:0;
+}
 
-    .footer p {
-        display: flex;
-        position:absolute;
-        font-weight: 500;
-        line-height: 24.16px;
-        color: #989B98;
-        font-size: 14.5px;
-        left:320px;
-        top: 100px;
-    }
+.footer p {
+    display: flex;
+    position:absolute;
+    font-weight: 500;
+    line-height: 24.16px;
+    color: #989B98;
+    font-size: 14.5px;
+    left:320px;
+    top: 100px;
+}
 
-    .footer_right{
-        display: flex;
-        position: relative;
-        left:1000px;
-        top:50px;
-        margin:10px;
-        color:#909090;
-        position: absolute;
-    }
+.footer_right{
+    display: flex;
+    position: relative;
+    left:1000px;
+    top:50px;
+    margin:10px;
+    color:#909090;
+    position: absolute;
+}
 
-    .footer_right a{
-        color:#909090;
-    }
+.footer_right a{
+    color:#909090;
+}
 
-    .footer_right ul li{
-        margin-right:30px;
-        margin-top:10px;
-    }
+.footer_right ul li{
+    margin-right:30px;
+    margin-top:10px;
+}
 
+/* typo */
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{font-family: 'Pretendard-Regular';}
+
+.s2 h1{
+    font-size:35px;
+}
+
+.s2 .new{
+    font-size:23px;
+}
+
+.new2 div{
+    font-size:23px;
+}

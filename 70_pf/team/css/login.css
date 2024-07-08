@@ -1,6 +1,187 @@
 @charset "utf-8";
 
-@import url(common.css);
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin-left:0;
+    margin-top:0;
+    margin:0;
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+h1,
+p,
+h2,
+h3,
+ul {
+    margin: 0;
+}
+
+ul, li {
+    padding: 0;
+    list-style-type: none;
+}
+
+.s4 li {
+    margin-left: 0;
+}
+
+/* 로그인 */
+button {
+    border: none;
+}
+
+
+/* 타이포 */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: "Pretendard-Regular", 'Lexend Deca';
+}
+/* 헤더 */
+.s2 h1{
+    font-size:35px;
+}
+
+.s2 .new{
+    font-size:23px;
+}
+
+.new2 div{
+    font-size:23px;
+}
+
+/* 메뉴 섹션1 */
+
+.main_tt {
+    font-size: 48px;
+    font-weight: 100;
+    color: #fff;
+}
+
+.con_tt {
+    font-size: 28px;
+    color: #fff;
+}
+
+.menu_section1 ul li {
+    font-size: 16px;
+    color: #fff;
+}
+/* //섹션1 */
+
+/* 메뉴 섹션2 */
+.menu_section2 h2 {
+    font-size: 44px;
+    color: #3E3A39;
+}
+
+.menu_section2 .Big_menu {
+    font-size: 26px;
+    color: #757575;
+}
+.sub_menu {
+    font-size: 26px;
+    color: #757575;
+}
+.tt div>b {
+    font-size: 20px;
+    color: #3E3A39;
+}
+
+.tt div>p {
+    font-size: 16px;
+    color: #757575;
+    opacity: 80%;
+}
+
+.look a {
+    font-size: 20px;
+    color: #757575;
+}
+
+/* 로그인 페이지 */
+input,
+button,
+label {
+    font-family: "Pretendard-Regular";
+}
+
+.login_section input {
+    font-weight: 400;
+    font-style: normal;
+}
+
+.login_section>h2 {
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.login_section span {
+    color: #FFD900;
+}
+
+/* 로그인 */
+.login_1>input::placeholder {
+    font-size: 14px;
+    color: #757575;
+}
+
+/* 로그인 입력 */
+.login_button span{
+    font-size: 14px;
+    font-weight: 600;
+    color: #1D1D1D;
+}
+
+/* 자동로그인(체크박스) */
+.login_checkbox span {
+    font-size: 13px;
+    color: #000;
+}
+
+.login_look a{
+    font-size: 12px;
+    color: #757575;
+}
+
+/* 간편 로그인 */
+.login_2 span {
+    font-weight: 600;
+    font-size: 14px;
+    color: #000;
+}
+
+/* 회원가입 유도 */
+.login_3>h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+}
+
+.login_3 span {
+    font-weight: 600;
+    color: #FFD900;
+}
+
+.login_3 a {
+    font-size: 14px;
+    color: #1D1D1D;
+}
 
 body {
     margin: 0 auto;
@@ -170,6 +351,7 @@ header {
 
 .login_section h2 {
     margin-bottom: 40px;
+    line-height: 1.6;
 }
 
 /* 로그인 박스 크기 공통 */
@@ -235,11 +417,11 @@ input:focus {
     height: 24px;
     margin: -1px 5px 0 15px;
     cursor: pointer;
-    background-image: url(../assets/images/자동로그인_호버전.png);
+    background-image: url(../assets/images/login_hover1.png);
 }
 
 #check1:checked+label::before {
-    background-image: url(../assets/images/자동로그인_호버후.png);
+    background-image: url(../assets/images/login_hover2.png);
 }
 
 .login_checkbox span {
