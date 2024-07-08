@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-@import url(common.css);
-
 /* 리셋 */
 
 * {
@@ -90,7 +88,7 @@ body {
 
 /* 메뉴 섹션2 */
 .menu_section2 h2 {
-    font-size: 44px;
+    font-size: 40px;
     color: #3E3A39;
 }
 
@@ -186,7 +184,6 @@ label {
     font-size: 14px;
     color: #1D1D1D;
 }
-
 :root {
     scroll-behavior: smooth;
 }
@@ -416,7 +413,7 @@ header {
     content: "";
     position: absolute;
     width: 1500px;
-    bottom: 46px;
+    bottom: 45px;
     left: 211px;
     border: 1px solid #D9D9D9;
     opacity: 0.5;
@@ -439,7 +436,7 @@ header {
     content: "";
     position: absolute;
     width: 100%;
-    top: -29px;
+    top: -30px;
     height: 2px;
     background: #9E6F57;
     opacity: 0.7;
@@ -456,7 +453,6 @@ header {
     list-style: none;
     width: 1292px;
     justify-content: space-between;
-    margin-top: 23px;
 }
 
 .sub_menu a {
