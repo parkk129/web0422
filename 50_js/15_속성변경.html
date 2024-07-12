@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            margin-top: 40px;
+            width: 300px;
+        }
+        a{
+            text-decoration: none;
+            border:1px solid black;
+            padding:4px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <H1>html 속성 변경하기 가져오기</H1>
+    <div>
+        <a href="#">이전</a>
+        <a href="#">다음</a>
+    </div>
+    <img src="../assets2/KakaoTalk_20240703_141418063_02.jpg" alt="나무가 무성한 멋진 산" title="자연1">
+    <script>
+        //요소찾기
+        const btn0 = document.querySelectorAll("a")[0];
+        const btn1 = document.querySelectorAll("a")[1];
+        const img = document.querySelector("img");
+
+        //html 속성 가져오기
+        const tit = img.alt;
+        console.log(tit);
+        //html 속성 변경하기
+        img.title = tit;
+
+        //이벤트 처리
+        
+        btn0.onclick = function(){
+            img.src = "../assets2/KakaoTalk_20240703_141418063_02.jpg";
+            img.alt = "자연1";
+        };
+        btn1.onclick = function(){
+            img.src = "../assets2/KakaoTalk_20240703_141418063_03.jpg";
+            img.alt = "자연2";
+        };
+
+        //속성변경
+
+        //img.setAttribute = ("src","값");
+    </script>
+</body>
+</html>
