@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>타이밍 함수</h1>
+    <p>날짜와 시간을 표시</p>
+    <script>
+
+        // setInterval( 함수 , 1000 )
+        // 1초 = 1000
+
+        
+        const p = document.querySelector("p");
+        
+        function clock(){
+            const d = new Date();
+            p.innerHTML = d;
+        }
+        clock();
+        
+        //1초마다 함수를 실행시킨다
+        setInterval(clock,1000)
+
+    </script>
+</body>
+</html>
