@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>제어문</h1>
+    <h2>반복문</h2>
+    <div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <script>
+        //요소찾기
+        // html 컬렉션(여러개를 그룹핑) >> NodeList
+        const li = document.querySelectorAll("li");
+        console.log(li);
+        // 요소(html컬렉션).[숫자]
+        // 요소(html컬렉션).item(숫자)
+
+        // for의 형식
+        // 문장 끝은 세미콜론 없다
+        // for(문장(표현식);문장(표현식);문장(표현식)) {}
+        // for(초기값;조건식;증가감소증감식) {}
+
+        // 1을 화면에 10번 출력하기
+        //초기식 조건식 증감식은 안에 있는 실행코드를 몇번 반복할것인지를 정하는 것
+        // i++는 i를 1씩 증가시킨다
+        // i--는 i를 1씩 감소시킨다
+        // 여러개의 li를 바꿔가며 사용하기떄문에 let을 사용
+        for(let i = 0;i<10;i++){
+            li[i].innerHTML= `<img src="../${i+1}.jpg" alt="이미지${i+1}">`;
+        }
+        for(let i = 0;i<1000;i++){
+            document.write(i+"<br>");
+        }
+
+    </script>
+</body>
+</html>
