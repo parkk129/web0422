@@ -26,7 +26,9 @@ section {
     background: #06D0DA;
 }
 
+
 .bx-wrapper .bx-next {
+    border:1px solid;
     right: 10px;
     background: url(./next1.png) -43px -32px no-repeat;
 }
