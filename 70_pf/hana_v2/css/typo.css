@@ -13,3 +13,8 @@ a { color: #111;}
 #s2>.inner>p {color: #777;}
 #s2 #tabs>ul a {color: #777;}
 #s2 h3.rank1 { font-size: 4rem; font-weight: 600; } 
+
+#s4 h3{
+    font-size:64px;
+    text-transform:capitalize;
+}

@@ -26,3 +26,9 @@ section{
     width: 560px;
     background: #a3acff;
 }
+
+#s4 .link a {
+    display: flex;
+    padding: 16px 24px;
+    background: #4d0686;
+}
