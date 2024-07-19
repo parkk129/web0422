@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 2000px;
+        }
+        p{
+            position: fixed;
+        }
+    </style>
+    <script>
+        //자바스크립트를 바디 위에 썼을때
+        // load ~ 이미지 동영상을 포함해 html 요소 플러스로 모든것을 다 읽었을때(동작속도 느림)
+        // DOMContentLoaded ~ 돔(=html 요소만을 전부 읽었을때) 내용이 모두 읽혀졌을때 함수 실행코드가 실행된다(동작속도 빠름)
+        window.addEventListener("DOMContentLoaded",function(){
+
+            const p = document.querySelector("p");
+            //스크롤 이벤트
+            window.addEventListener("scroll",function(){
+                p.innerHTML = Math.floor(pageYOffset);
+                // pageYOffset : 스크롤양
+                if(pageYOffset >= 300) {
+                document.body.style.background = "yellow";
+            } else{
+                document.body.style.background = "pink";
+            }
+            })
+
+        });
+        //요소찾기
+    </script>
+</head>
+<body>
+    <h1>스크롤 이벤트</h1>
+    <p>스크롤하면 배경색이 바뀐다</p>
+</body>
+</html>
