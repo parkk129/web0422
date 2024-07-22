@@ -1,0 +1,456 @@
+@charset "utf-8";
+@import url(typo.css);
+@import url("https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css");
+@import url(https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css);
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* reset */
+
+body,
+ul {
+    font-family: 'Pretendard-Regular';
+    margin: 0;
+}
+
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* fullpage */
+/* fullpage - 왼쪽 하단에 있는 메뉴 */
+#hana_nav {
+    z-index: 9999;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+/* 푸터에 있는 p의 높이 */
+.fp-auto-height div {
+    height: 200px;
+    color: white;
+    background: #000;
+}
+
+/* 푸터 영역 - 오른쪽 중앙에 있는 인디케이션 숨김 */
+#fp-nav.right li:last-child {
+    display: none;
+}
+
+/* common */
+.ibx {
+    width: 1120px;
+    margin: 0 auto;
+}
+
+/* header */
+header {
+    z-index: 9999;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    background: rgb(255, 255, 255);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    outline: 1px solid lime;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    /* 블록레벨요소의 가로 가운데 배치 (가로크기 지정 후 가운데 배치) */
+    margin: 0 auto;
+    width: 100%;
+    height: 100px;
+}
+
+.tlogo {
+    position: absolute;
+    left: 100px;
+}
+
+.gnb {
+    display: flex;
+    background: #000;
+    text-align: right;
+    margin-right: 100px;
+}
+
+/* 1depth */
+.main {
+    display: flex;
+    text-align: right;
+}
+
+.main>li {
+    width: 160px;
+    height: 32px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.main>li:hover {
+    background: #b1b0b033;
+}
+
+.main li a {
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+/* 2depth */
+.sub {
+    background: #fff;
+    height: 0;
+    padding: 10px 0 20px;
+    overflow: hidden;
+    visibility: hidden;
+    transition: 0.4s;
+    line-height: 24px;
+}
+
+.main:hover .sub {
+    height: 150px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.sub li a {
+    font-size: 15px;
+    padding: 9px 16px;
+}
+
+.sub li:hover {
+    transition: 0.3s;
+    border-bottom: 1px solid;
+}
+
+.gnb {
+    background: #ffffff;
+}
+
+.main {
+    height: 30px;
+}
+
+.main::before {
+    z-index: -999;
+    content: "";
+    position: absolute;
+    top: 65px;
+    right: 0;
+    display: block;
+    width: 100%;
+    height: 0px;
+    opacity: 0;
+    transition: 0.4s;
+    background: rgb(255, 255, 255);
+}
+
+.main:hover::before {
+    height: 150px;
+    opacity: 1;
+}
+
+/* 섹션1 */
+
+/* 슬라이드 */
+.bx-wrapper {
+    box-shadow: none;
+    border: none;
+    margin-bottom: 0;
+    margin-top: 100px;
+}
+
+.bx-wrapper .bx-controls-auto,
+.bx-wrapper .bx-pager {
+    bottom: 30px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+    background: #fff;
+    margin: 0 18px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+    transform: scale(1, 1);
+    background: #4b4b4b;
+}
+
+.bx-wrapper .bx-controls-direction a {
+    width: 40px;
+    height: 80px;
+}
+
+.bx-wrapper .bx-prev {
+    left: 160px;
+    background: url(../assets/prev.png) no-repeat 0px 0px;
+}
+
+.bx-wrapper .bx-next {
+    right: 160px;
+    background: url(../assets/next.png) no-repeat 0px 0px;
+}
+
+/* next 버튼 호버시 사라지는 현상 초기화 */
+.bx-wrapper .bx-next:focus,
+.bx-wrapper .bx-next:hover {
+    background-position: 0 0;
+}
+
+
+/* 섹션2 */
+#s2 .ibx h2 {
+    margin-top: -200px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* 탭 공통 */
+#s2 #tabs {
+    position: relative;
+}
+
+#s2 #tabs ul {
+    display: flex;
+    align-items: flex-end;
+}
+
+/* 탭의 버튼 */
+#s2 #tabs>ul {
+    position: absolute;
+    right: -280px;
+    width: 1200px;
+}
+
+#s2 #tabs>ul>li {
+    padding: 5px 20px;
+    margin: 0 10px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+#s2 #tabs>ul>li:hover {
+    background: #000;
+    color: #fff;
+}
+
+#s2 #tabs>ul>li>a {
+    color: #000;
+}
+
+#s2 #tabs>ul>li>a:hover {
+    color: #fff;
+}
+
+/* 탭의 콘텐츠 */
+#s2 #tabs>div ul {
+    margin-left: -100px;
+    height: 290px;
+}
+
+#s2 #tabs>div ul li {
+    height: 216px;
+}
+
+#s2 #tabs>div a {
+    color: #000;
+    width: 222px;
+    height: 368px;
+}
+
+#s2 #tabs>div h3 {
+    font-size: 15px;
+    color: #000;
+    margin-top: 16px;
+}
+
+#s2 #tabs>div img {
+    margin-right: 16px;
+}
+
+#s2 #tabs>div a.rank1 {
+    width: 570px;
+    height: 432px;
+}
+
+#s2 #tabs>div a.rank1+h3 {
+    position: absolute;
+    width: 474px;
+    height: 48px;
+    right: 0;
+    top: 48px;
+    text-wrap: nowrap;
+}
+
+/* 탭의 기능 핵심 */
+#s2 #tabs>div {
+    display: none;
+}
+
+#s2 #tabs>div.on {
+    display: block;
+}
+
+/* 섹션3 */
+
+/* 공통 */
+.inner {
+    width: 1120px;
+    margin: 0 auto;
+}
+
+#s3 {
+    margin-left: -200px;
+}
+
+#s3>.inner>h2 {
+    text-align: center;
+}
+
+/* 탭 공통 */
+#s3 #tabs {
+    position: relative;
+}
+
+#s3 #tabs ul {
+    display: flex;
+    align-items: flex-end;
+}
+
+
+/* 탭의 콘텐츠 */
+#s3 #tabs>div ul {
+    height: 632px;
+}
+
+#s3 #tabs>div ul li:nth-child(1) {
+    margin-right: 250px;
+}
+
+#s3 #tabs>div ul li:nth-child(2) {
+    margin-left: -230px;
+}
+
+#s3 #tabs>div ul li:nth-child(3) {
+    margin-left: 20px;
+}
+
+#s3 #tabs>div ul li {
+    height: 616px;
+}
+
+#s3 #tabs>div a {
+    font-size: 15px;
+    color: #000;
+    width: 222px;
+    height: 168px;
+}
+
+#s3 #tabs>div a.rank1 {
+    width: 570px;
+    height: 432px;
+}
+
+
+/* 섹션4 */
+.inner {
+    width: 1120px;
+    margin: 0 auto;
+}
+
+#s4 {
+    margin-left: -200px;
+}
+
+#s4>.inner>h2 {
+    text-align: center;
+}
+
+/* 탭 공통 */
+#s4 #tabs {
+    position: relative;
+}
+
+#s4 #tabs ul {
+    display: flex;
+    align-items: flex-end;
+}
+
+
+/* 탭의 콘텐츠 */
+#s4 #tabs>div ul {
+    height: 90px;
+}
+
+#s4 #tabs>div ul li:nth-child(1) {
+    margin-left: 900px;
+}
+
+#s4 #tabs>div ul li:nth-child(2) {
+    margin-right: 50px;
+}
+
+#s4 #tabs>div ul li:nth-child(3) {
+    margin-top: 200px;
+}
+
+#s4 #tabs>div ul li {
+    height: 616px;
+}
+
+#s4 #tabs>div a {
+    font-size: 15px;
+    color: #000;
+    width: 222px;
+    height: 168px;
+}
+
+#s4 #tabs>div a.rank1 {
+    width: 570px;
+    height: 432px;
+}
+
+/* 푸터 */
+i{
+    margin:10px;
+}
+footer img {
+    margin-top: 50px;
+    margin-left: 130px;
+}
+
+.section fp-auto-height {
+    display: flex;
+
+}
+
+.footer_text {
+    display: flex;
+    font-size: 13px;
+}
+
+.t1 {
+    margin-left: 550px;
+}
+
+.t2 {
+    margin-left: 100px;
+}
