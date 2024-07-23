@@ -55,6 +55,7 @@ a {
 }
 
 /* header */
+
 header {
     z-index: 9999;
     position: fixed;
@@ -172,6 +173,7 @@ header {
 /* 섹션1 */
 
 /* 슬라이드 */
+
 .bx-wrapper {
     box-shadow: none;
     border: none;
