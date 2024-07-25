@@ -8,6 +8,15 @@
     <title>Document</title>
     <style>
         /*width height 크기에 border와 padding이 포함되게 하는것*/
+        /*
+        미디어쿼리
+        중단점(breakpoint) : "576", 768, "992", 1200, 1440
+        중단점 숫자 밑에는 다 해당
+        @media (조건) {
+        css 조건
+        }
+        */
+        
         * {
             box-sizing: border-box;
         }
@@ -23,6 +32,23 @@
             float: left;
             padding: 15px;
         }
+        /*
+        css변수
+        1. 선언
+        :root {--변수명:값;}
+        2. 사용
+        선택자{속성:var(--변수명);}
+
+        background:url(이미지);
+        left : calc(10 - 2)
+        url()
+        scale()
+        rotate()
+        translste()
+        skew()
+        calc()
+        var()
+        */
 
         html {
             font-family: "Lucida Sans", sans-serif;
@@ -43,7 +69,7 @@
         .menu li {
             padding: 8px;
             margin-bottom: 7px;
-            background-color: #33b5e5;
+            background-color: #6be533;
             color: #ffffff;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
         }
@@ -53,7 +79,7 @@
         }
 
         .aside {
-            background-color: #33b5e5;
+            background-color: #6be533;
             padding: 15px;
             color: #ffffff;
             text-align: center;
@@ -76,6 +102,7 @@
         
         @media only screen and (min-width: 600px) {
             
+            /*그리드 시스템column*/
             /* For tablets: */
             .col-s-1 {
                 width: 8.33%;
@@ -128,6 +155,7 @@
 
         @media only screen and (min-width: 768px) {
 
+            /*그리드 시스템 column*/
             /* For desktop: */
             .col-1 {
                 width: 8.33%;
@@ -210,6 +238,7 @@
             <h1>The City</h1>
             <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts,
                 the old town and the modern city.</p>
+                <img src="./img_chania.jpg" alt="하니아">
             </div>
             <!-- 사이드 콘텐츠 -->
             <!-- 큰거 : 3등분 / 작은거(s) : 12등분 -->

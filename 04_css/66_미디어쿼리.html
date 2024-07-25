@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*pc 데스크탑 우선 디자인(max-width): 1 큰장치 >> 2 작은장치*/
+
+        /*데스크탑 우선 디자인*/
+        /*데스크탑*/
+
+
+        /*태블릿*/
+        /*992이하의 태블릿*/
+        @media (max-width:992px){
+            body{
+                background:darkmagenta;
+            }
+        }
+        /* 참고 : 자바스크립트의 and는 "논리연산자"(and,or...)이다 */
+
+        /*폰*/
+        /*576이하의 폰*/
+        @media (max-width:576px) {
+            body{
+                background: darkorange;
+            }
+        }
+        /*landscape : 가로방향으로 폰을 바꾸었을때*/
+        @media (max-width:768px) and (orientation: landscape){
+            /*768이하이고 가로방향일때 적용되는 css*/
+            body{
+                background:darkturquoise;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

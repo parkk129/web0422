@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        video{
+            /*max-width : 최댓값 비디오 위드 400 / 400이하 크기로 지정됨 줄어듬 400 초과로 커지지 않음*/
+            /*min-width : 최솟값 비디오 위드 400 / 400이상 크기로 지정됨 늘어남 400 미만으로 줄어들지 않음*/
+            max-width: 100%;
+            height:auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 아무거나 다 연결해주는 태그 -->
+    <iframe src="" frameborder="0"></iframe>
+
+    <!-- 비디오 태그 하나 만으로도 연결 가능 -->
+    <!-- <video src="https://www.w3schools.com/css/mov_bbb.mp4"></video> -->
+
+    <!-- 비디오 파일 : mp4 webm ogg -->
+    <!-- 비디오는 인라인 요소다 / 크기 지정 가능하다 -->
+    
+    <!-- 비디오 태그 안에 소스 태그로 연결가능 -->
+        <video width="400" >
+        <source src="https://www.w3schools.com/css/mov_bbb.mp4" type="video/mp4">
+        <source src="mov_bbb.webm" type="video/webm">
+        <source src="mov_bbb.ogg" type="video/ogg">
+        <!-- 비디오 또는 오디오 태그는 IE8 이전 버전은 지원하지 않는다 -->
+        Your browser does not support HTML5 video.
+    </video>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 모바일 우선 디자인(min-width): 1 작은장치 >> 2 큰장치 */
+        /*  */
+        /* 영역확인 하면서 작업하기 = 아웃라인 설정 */
+        body{
+            outline:5px solid blue;
+        }
+        /*  미디어 쿼리는 스타일 가장 아래쪽에 적는다 */
+        /* 공통 common */
+        .bx{
+
+            display: flex;
+            /*공통이 아닌 부분 flex-direction*/
+            flex-direction: column;
+            align-items: center;
+            justify-content:space-between;
+            border:5px dashed red;
+        } 
+        .bx div{
+            /*블록레벨 요소는 width를 쓰지 않으면
+            auto가 100%*/
+            margin:20px 0px;
+            width: 300px;
+            height: 300px;
+            background: #92baf5;
+            font-size:50px;
+        }
+        /* 더 작은 사이즈 : 폰 (작은 폰 사이즈 "기준") */
+        
+        /* 태블릿 */
+        /* 576px이상은 모두 해당 */
+        @media (min-width:576px){
+            body{background:lightblue;}
+            .bx{
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .bx div{
+                margin:10px;
+                /*늘어남*/
+                flex-grow:0;
+                /*줄어들지 않음*/
+                flex-shrink:0;
+                /*초기값*/
+                flex-basis:300;
+            }
+
+        }
+        /* 데스크탑 */
+        /* 992px이상은 모두 해당 */
+        @media (min-width:992px){
+            body{background:lightcoral;}
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h2>미디어쿼리 테스트</h2>
+        <div class="bx">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        img{
+            /*이미지 크기보다 큰 화면에서는 이미지 원래 크기대로 표시되고
+            이미지 크기보다 작은 화면에서는 이미지도 작아진다*/
+            /*f12 눌러서 크기 변화 확인*/
+            max-width:100%;
+            
+        }
+        /* 뷰포트 단위(비례반응형 단위): vw(너비에따라) vh(높이에따라) vmin vmax */
+        p{
+            font-size: 2vh;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="img_chania.jpg" alt="이미지 설명글">
+    <p>Resize the browser window to see how the image will scale.</p>
+</body>
+
+</html>
