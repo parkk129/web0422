@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- css는 링크 js는 스크립트 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
+    <style>
+        body * {
+            outline: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 576 이하 100% -->
+        <!-- 576 이상 540px-->
+        <!-- 768 이상 720px -->
+        <!-- 992 이상 960px -->
+        <!-- 1200 이상 1140x -->
+
+
+        <!-- row는 display:flex 방식이다 -->
+
+        <!-- col-sm : 576이하일때 100% 576이상일때 3칸-->
+        <!-- col-md : 768이하일때 100% 768이상일때 3칸-->
+        <!-- col-lg : 992이하일때 100% 992이상일때 3칸-->
+        <!-- col-xl : 1200이하일때 100% 1200이상일때 3칸-->
+        <!-- col-: 12등분-->
+        <!-- col-*-숫자-->
+        <!-- 숫자는 1 ~ 12 12등분 중에 n등분 / 숫자를 사용하지 않으면 자동으로 균등하게 분배됨 / 숫자의 합은 12이하여야 함 -->
+        <div class="row">
+            <div class="col-sm-2">
+                One of three columns
+            </div>
+            <div class="col-sm-8">
+                One of three columns
+            </div>
+            <div class="col-sm-2">
+                One of three columns
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                1 of 2
+            </div>
+            <div class="col">
+                2 of 2
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                1 of 3
+            </div>
+            <div class="col">
+                2 of 3
+            </div>
+            <div class="col">
+                3 of 3
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">col</div>
+            <div class="col">col</div>
+            <!-- <div class="w-100"></div> -->
+            <div class="col">col</div>
+            <div class="col">col</div>
+        </div>
+    </div>
+</body>
+
+<!-- 가변 가로크기 -->
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col col-lg-2">
+            1 of 3
+        </div>
+        <div class="col-md-auto">
+            Variable width content
+        </div>
+        <div class="col col-lg-2">
+            3 of 3
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            1 of 3
+        </div>
+        <div class="col-md-auto">
+            Variable width content
+        </div>
+        <div class="col col-lg-2">
+            3 of 3
+        </div>
+    </div>
+
+    
+</div>
+
+</html>

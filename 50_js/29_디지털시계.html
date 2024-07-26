@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        함수
+        1.선언적 함수
+        2.익명 함수 >> 화살표 함수
+        
+        const 변수 = function(){}
+        const 변수 = (매개변수)=>{return실행문;}
+        */
+        window.addEventListener("DOMContentLoaded",()=>{
+            const ho= document.querySelectorAll("span")[0];
+            const mi = document.querySelectorAll("span")[2];
+            const sec = document.querySelectorAll("span")[4];
+
+            /* 실시간 */
+            setInterval(clock,1000);
+            
+            function clock(){
+            /* 현재 날짜 시간 */
+            const d = new Date();
+            ho.innerText =d.getHours();
+            mi.innerText =d.getMinutes();
+            sec.innerText =d.getSeconds();
+        }
+        
+        if (se < 10){
+            se = "0" + se;
+        } else {
+            se = se;
+        }
+        
+        /* 
+        연산자
+        1.산술연산자 + - * / % **
+        2.비교연산자 > < >= <= == === != !==
+        3.대입연산자 = += -= *= /= %= **=
+        4.증감연산자 ++ --
+        5.논리연산자 && || !
+        6.조건연산자 ? :
+
+        항의 개수
+        1 단항 : 증감
+        2 이항 : 나머지
+        3 삼항 : 조건
+
+        조건연산자 형식
+        (조건) ? 참 : 거짓;
+
+         */
+        
+        let se = d.getSeconds();
+        (sec < 10) ? sec = "0" + sec : sec = sec;
+        se.innerText = sec;
+
+        let min = d.getSeconds();
+        (min< 10) ? min = "0" + min : min = min;
+        mi.innerText = min;
+
+        let hou = d.getSeconds();
+        (sec < 10) ? sec = "0" + sec : sec = sec;
+        se.innerText = sec;
+
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <span>시</span>
+        <span>:</span>
+        <span>분</span>
+        <span>:</span>
+        <span>초</span>
+
+    </div>
+</body>
+</html>
