@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            vertical-align:top;
+        }
+        span:not(:last-child)::after{
+            content:":"
+        }
+        
+    </style>
+    <script>
+        // 돔 DOM 요소를 모두 로딩한 후 - load 이벤트
+        window.addEventListener("DOMContentLoaded",()=>{
+            for(let i = 0; i<3; i++){
+                const ye = document.querySelectorAll("span")[0];
+                const mo = document.querySelectorAll("span")[1];
+                const da = document.querySelectorAll("span")[2];
+                const ho = document.querySelectorAll("span")[3];
+                const mi = document.querySelectorAll("span")[4];
+                const se = document.querySelectorAll("span")[5];
+            }
+            //1초마다 실행시킴 1초마다 clock 호출
+            setInterval(clock,1000);
+            
+            function clock(){
+            /* 현재 날짜 시간 */
+            const d = new Date();
+
+            let ye = d.getFullYear();
+            let mo = d.getMonth()+1;
+            let da = d.getDay();
+            //date값  중 시 값만 들어감
+            let ho = d.getHours();
+            //date값  중 분 값만 들어감
+            let mi = d.getMinutes();
+            //date값  중 초 값만 들어감
+            let se = d.getSeconds();
+            
+            //출력
+            ye.innerText = ye+"년";
+            mo.innerText = ze(mo)+"월";
+            da.innerText = ze(da)+"일";
+            ho.innerText = ze(ho);
+            mi.innerText = ze(mi);
+            se.innerText = ze(se);
+        }
+        
+        if (se < 10){
+            se = "0" + se;
+        } else {
+            se = se;
+        }
+        
+        let year = d.getFullYear();
+        ze(ye);
+        (sec < 10) ? sec = "0" + sec : sec = sec;
+        ye.innerText = year;
+
+        let mo = d.getMonth();
+        ze(mo);
+        (min< 10) ? min = "0" + min : min = min;
+        mi.innerText = min;
+
+        let da = d.getDay();
+        ze(da);
+        (sec < 10) ? sec = "0" + sec : sec = sec;
+        se.innerText = sec;
+
+        let ho = d.getHours();
+        ze(ho);
+        (sec < 10) ? sec = "0" + sec : sec = sec;
+        se.innerText = sec;
+
+        let mi = d.getMinutes();
+        ze(mi);
+        (min< 10) ? min = "0" + min : min = min;
+        mi.innerText = min;
+
+        let hou = d.getSeconds();
+        ze(se);
+        (sec < 10) ? sec = "0" + sec : sec = sec;
+        se.innerText = sec;
+
+        });
+    </script>
+</head>
+<body>
+    <div class="ddate">
+        <span>년</span>
+        <span>월</span>
+        <span>일</span>
+    </div>
+    <div class="dtime">
+        <span>시</span>
+        <span>분</span>
+        <span>초</span>
+    </div>
+</body>
+</html>

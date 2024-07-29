@@ -19,7 +19,13 @@
             const sec = document.querySelectorAll("span")[4];
 
             /* 실시간 */
+            //clock이라는 함수가 1초마다 시간이 바뀜
+            //para값이 있으면 괄호사용 없으면 괄호 생략 가능
+            //실행문이 하나이면 return과 {}생략
+            //매개값이 없으면 함수 이름만으로 호출한다 / 즉 ()는 안쓴다
             setInterval(clock,1000);
+
+
             
             function clock(){
             /* 현재 날짜 시간 */

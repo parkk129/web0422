@@ -14,13 +14,20 @@
         */
 
         //선언,정의
-        function fn(para){
-            document.write(para + "호출");
+        //더하기
+        function add(pa1, pa2){
+            //return은 리턴값을 호출한 함수에게 값을 "되돌려준다(다시 되돌아왔다가 되돌아가는)"
+            //return은 함수의 종료를 의미한다. 그래서 document.write는 출력되지 않는다
+            //디지털 시계 만들때 사용됨
+            document.write("나도 출력해줘");
+            return pa1 + pa2;
         }
         //호출
-        fn("홍길동");
-        fn("홍길동");
-        fn("홍길동");
+        const na = add(2, 5);
+        const you = add(20, 50);
+
+        //출력
+        document.write(na+"<br>"+you);
     </script>
 </head>
 <body>
