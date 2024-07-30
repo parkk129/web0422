@@ -3,31 +3,103 @@
 @import url(typo.css);
 
 /* 공통 */
-.inner {width:1120px; margin: 0 auto;}
+.inner {
+    width: 1120px;
+    margin: 0 auto;
+}
 
 /* 섹션2 */
-#s2 {padding:72px 0;}
-#s2>.inner>h2 {text-align: center;}
-#s2>.inner>h2+p {text-align: center; margin: 24px 0 48px;}
+#s2 {
+    padding: 72px 0;
+}
+
+#s2>.inner>h2 {
+    text-align: center;
+}
+
+#s2>.inner>h2+p {
+    text-align: center;
+    margin: 24px 0 48px;
+}
 
 /* 탭 공통 */
-#s2 #tabs {position: relative;}
-#s2 #tabs ul {display: flex; align-items: flex-end;}
+#s2 #tabs {
+    position: relative;
+    margin-bottom:100px;
+}
+
+#s2 #tabs ul {
+    display: flex;
+    align-items: flex-end;
+}
 
 /* 탭의 버튼 */
-#s2 #tabs>ul {position: absolute; right:0; width:474px;}
-#s2 #tabs>ul>li:not(:first-child) {margin:0 16px;}
+#s2 #tabs>ul {
+    position: absolute;
+    right: 0;
+    width: 474px;
+}
+
+#s2 #tabs>ul>li:not(:first-child) {
+    margin: 0 16px;
+}
 
 /* 탭의 콘텐츠 */
-#s2 #tabs>div ul {height:432px;}
-#s2 #tabs>div ul li:nth-child(1) {align-self: flex-start;}
-#s2 #tabs>div ul li:nth-child(2) {margin: 0 30px 0 75px;}
-#s2 #tabs>div ul li {height: 216px;}
-#s2 #tabs>div a {display:block; width: 222px; height: 168px;}
-#s2 #tabs>div a.rank1 {width: 570px; height: 432px;}
-#s2 #tabs>div a.rank1+h3 {position: absolute; width:474px; height:48px; right:0; top:48px; text-wrap: nowrap;}
+#s2 #tabs>div ul {
+    display: flex;
+    width: 1350px;
+    flex-wrap:wrap; 
+    text-decoration: none;
+    list-style:none;
+    margin:0 auto;
+}
+
+#s2 #tabs>div ul li {
+
+    margin:10px;
+    width: 416px;
+    height:549px;
+}
+
+ul li:nth-of-type(3){margin-right:0;}
+ul li:nth-of-type(6){margin-right:0;}
+ul li:nth-of-type(9){margin-right:0;}
+
+#s2 #tabs>div a {
+    display: block;
+    width: 222px;
+    height: 168px;
+}
+
+#s2 #tabs>div a.rank1 {
+    width: 570px;
+    height: 432px;
+}
+
+#s2 #tabs>div a.rank1+h3 {
+    position: absolute;
+    width: 474px;
+    height: 48px;
+    right: 0;
+    top: 48px;
+    text-wrap: nowrap;
+}
 
 /* 탭의 기능 핵심 */
-#s2 #tabs>div {display:none;}
-#s2 #tabs>div.on {display:block;}
+#s2 #tabs>div {
+    display: none;
+}
 
+#s2 #tabs>div.on {
+    display: block;
+}
+
+/* 박스 (이벤트 콘텐츠) */
+
+.on ul li img{
+    width: 416px;
+    height: 416px;
+}
+.on ul li{
+    border:1px solid black;
+}

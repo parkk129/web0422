@@ -1,4 +1,10 @@
 @charset "utf-8";
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
 
 /* reset */
 body {
@@ -8,7 +14,6 @@ body {
 }
 
 a {
-    /* 텍스트 밑줄 제거 */
     text-decoration: none;
 }
 body,
@@ -27,20 +32,117 @@ ul {
     margin-left:0;
 }
 
+/* typo */
+
+body{
+    font-family: 'Pretendard-Regular';
+}
+
 /* 제목 */
 .top{
     display: flex;
     justify-content: center;
     background: #faaeae;
     line-height:150px;
-    
-
 }
-/* 버튼 */
+h1{
+    font-size:40px;
+    font-weight: 900;
+}
+/* 버튼(새소식,이벤트) */
 .btn{
     display: flex;
     justify-content: center;
     width: 100%;
     height: 100px;
     background: #96e1f8;
+    line-height:100px;
+    font-size:20px;
 }
+
+.btn a{
+    color:black;
+}
+
+.new{
+    margin-left:5px;
+    margin-right:65px;
+}
+
+/* 버튼2(전체,진행중,종료) */
+
+.btn2{
+    display:flex;
+    margin:0 auto;
+    width: 1280px;
+    height: 45px;
+}
+
+.btn2 div{
+    line-height:35px;
+    margin-right:70px;
+}
+
+.btn2 div:hover{
+    transition:.3s;
+    padding:5px 20px;
+    border-radius:50px;
+    background:#58006C;
+}
+
+.btn2 div a:hover{
+    color:white;
+}
+
+.btn2 a{
+    color: black;
+}
+
+/* 박스 (이벤트 내용) */
+
+ul{
+    display: flex;
+    width: 1290px;
+    flex-wrap:wrap; 
+    text-decoration: none;
+    list-style:none;
+    margin:0 auto;
+}
+
+li{
+    border:1px solid #e2e2e2;
+    margin-top: 60px;
+    width: 416px;
+    height: 549px;
+    border-radius:19px;
+    margin-right:16px;
+    margin-bottom: 30px;
+}
+
+ul li:nth-of-type(3){margin-right:0;}
+ul li:nth-of-type(6){margin-right:0;}
+ul li:nth-of-type(9){margin-right:0;}
+
+h3{
+    margin-left: 20px;
+}
+h4{
+    margin-left:20px;
+    font-size:20px;
+    color:#888;
+}
+
+/* page 다음 페이지 넘기기 */
+.page{
+    margin:0 auto;
+    width:69px;
+    height: 30px;
+    text-align: center;
+    display: flex;
+    margin-top:20px;
+    margin-bottom:100px;
+}
+.page div{
+    margin:10px;
+}
+
