@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+/* 사용후 지울것 */
+body * {
+    outline: 1px solid red;
+    font-family: sans-serif;
+}
+
+/* 공통 */
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    color: #333;
+    background: #fff;
+}
+ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* A영역 */
+header {
+    /* 로고 왼쪽 네비게이션 오른쪽 */
+    justify-content: space-between;
+    height: 100px;
+    width: 1340px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding:0 30px;
+}
+/* 로고 */
+.logo{
+    width: 190px;
+    height: 44px;
+}
+/* 네비게이션 */
+nav{
+    align-self: flex-end;
+}
+/* 1depth */
+.main{
+    /* 폰트 위계 설정(메인/서브) : 폰트 크기 두께 등등 */
+    display: flex;
+    font-size:1.2rem;
+    font-weight: bold;
+}
+.main>li{
+    padding:0px 18px;
+
+}
+.main>li>a{
+    display: block;
+    padding:10px 24px;
+}
+.main>li>a:hover{
+    background: #e31a40 ;
+}
+/* 2depth */
+.sub{
+    display: none;
+    font-size:1.0rem;
+    font-weight:normal;
+}
+
+/* B영역 */
+#slide {
+    overflow: hidden;
+    height: 350px;
+}
+
+/* C와 D영역 공통 */
+.container {
+    position: relative;
+    top: -100px;
+    width: 1340px;
+    margin: 0 auto;
+}
+
+/* C영역 */
+#link {
+    height: 100px;
+    background: #e31a40;
+}
+
+#banner {
+    height: 150px;
+}
+
+#board {
+    height: 300px;
+}
+
+/* D영역 */
+footer {
+    padding:0px 30px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    height: 100px;
+}
+.flogo{
+    width: 20%;
+    background: #ffcccc;
+}
+.addr{
+    width: 80%;
+    background: #a0fc9d;
+}
+.fs{
+    width: 20%;
+    background: #fdff97;
+}

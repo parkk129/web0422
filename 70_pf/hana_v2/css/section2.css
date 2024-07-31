@@ -25,12 +25,13 @@
 /* 탭 공통 */
 #s2 #tabs {
     position: relative;
-    margin-bottom:100px;
+
 }
 
 #s2 #tabs ul {
     display: flex;
     align-items: flex-end;
+    
 }
 
 /* 탭의 버튼 */
@@ -47,6 +48,7 @@
 /* 탭1 */
 
 #tab1{
+    margin-top:700px;
     margin:0 auto;
 }
 
