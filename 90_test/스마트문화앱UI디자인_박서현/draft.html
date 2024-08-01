@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>subway</title>
     <style>
+        div{
+            height: 5157px;
+            background:url(phone.png) no-repeat 0 0/100%;
+        }
+        
         body{
             margin:0;
         }
@@ -15,19 +20,22 @@
         .tablet,.desktop{
             display:none;
         }
-        @media (min-width:576px){
-            .phone{display: none;}
-            .tablet{display: block;}
+        
+        @media (min-width:768px){
+            div{
+                height: 3796px;
+                background-image:url(tablet.png);
+            }
         }
-        @media (min-width:992px){
-            .tablet{display: none;}
-            .desktop{display: block;}
+        @media (min-width:768px){
+            div{
+                height: 3796px;
+                background-image:url(desktop.png);
+            }
         }
     </style>
 </head>
 <body>
-    <img class="phone" src="./phone.png" alt="폰">
-    <img class="tablet" src="./tablet.png" alt="태블릿">
-    <img class="desktop" src="./desktop.png" alt="데스크탑">
+    <div></div>
 </body>
 </html>
