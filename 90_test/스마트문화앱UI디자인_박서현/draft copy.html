@@ -1,49 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>subway</title>
+    <title>BR_Architects</title>
     <style>
-        div{
-            height: 5157px;
-            background:url(phone.png) no-repeat 0 0/100%;
+        body {
+            margin: 0;
         }
+        img {
+            width:100%;
+            vertical-align: top;
+        }
+
         
-        body{
-            margin:0;
-        }
-        img{
-            max-width:100%;
-            height:auto;
-        }
-        .tablet,.desktop{
-            display:none;
-        }
-        
-        @media (min-width:360px){
-            div{
-                height:7100px;
-                background-image:url(phone.png);
+
+        @media (min-width:768px) {
+            div {
+                height: 3796px;
+                background-image: url(tablet.png);
             }
         }
-        @media (min-width:768px){
-            div{
-                height:5700px;
-                background-image:url(tablet.png);
-            }
-        }
-        @media (min-width:992px){
-            div{
-                height:5600px;
-                background-image:url(desktop.png);
+
+        @media (min-width:992px) {
+            div {
+                height: 3670px;
+                background-image: url(desktop.png);
             }
         }
     </style>
 </head>
+
 <body>
-    <img src="./phone.png" alt="">
-    <img src="./tablet.png" alt="">
-    <img src="./desktop.png" alt="">
+    <img class="phone" src="phone.png" alt="폰 이미지">
+    <img class="tablet" src="tablet.png" alt="테블릿 이미지">
+    <img class="desktop" src="desktop.png" alt="데스크탑 이미지">
 </body>
+
 </html>
