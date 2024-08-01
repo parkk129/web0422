@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .rotate3d{
+            width: 700px;
+            height: 700px;
+            border:2px solid red;
+        }
+        .front{
+            width: 100px;
+            height: 100px;
+            background: #ffacac;
+        }
+        .rotate3d .front:hover{
+            transform:rotate(360deg);
+            transition:prop time;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>변형</h1>
+    <div class="rotate3d">
+        <div class="front"><div>3D</div></div>
+        <div class="back"><div>Y</div></div>
+    </div>
+</body>
+</html>
