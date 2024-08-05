@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.addEventListener("DOMContentLoaded",()=>{
+        //객체 생성
+        const car = {
+            type:"Fiat", 
+            model:"500", 
+            color:"white"
+        };
+
+        const person = {
+            firstName : "존",
+            lastName : "도",
+            age : 40,
+            man : true,
+            성과이름 : function(){
+                //this는 person을 가리킨다
+                //this는 객체 자신을 가리킨다
+                //주로 간접적 this를 사용한다
+
+                //return person.성 + " " + person.이름
+                return this.성 + " " + this.이름
+            }
+            , // 객체안의 또 객체
+            myCar:{
+                car: "2대",
+                home : "5채"
+            }
+        };
+
+        //요소 찾기
+        const div = document.querySelector("div");
+
+        //출력
+        //div.innertext = "값"
+        //div.innerHTML = "값"
+        //div.textConetent = "값"
+
+        // 객체 접근 방법 / 출력 (화면에 출력하는 방법)
+        // 객체.속성  ,  객체["속성"]
+
+        //div.innerText = person1.firstName;
+        //div.innerText = person1.lastName;
+        //div.innerText = person1.age;
+
+        // 1 객체.속성
+        console.log(car.type);
+        console.log(car.model);
+        console.log(car.color);
+        
+        //메소드 쓸때 ()기호 붙이기
+        // 속성은 괄호가 없고 메소드는 괄호가 있다
+        // 2 객체.메소드()
+        //console.log(person.남자니?); >> 특수문자 사용 불가
+        console.log(person.성과이름());
+        
+        // 3 객체["속성"]
+        console.log(person["이름"]);
+        console.log(person["나이"]);
+        console.log(person["남자니?"]);
+        
+        // const div = document.qureySelector("div");
+        // div.style.color = "red";
+        // 4 객체.객체.속성
+        console.log(person.myCar.car);
+        console.log(person.myCar.home);
+
+        //a를 1씩 증가
+        // a = a + 1
+        // a += 1
+
+        // a를 5씩 증가
+        // a = a + 5
+        // a += 5
+
+        div.innerHTML = "타입은" + car.type + "모델은" + car.model + "입니다";
+
+        //조건 삼항 연산자
+
+        +(person["남자니?"] ? "예" : "아니오")
+        + "<br>이름을 다시 한번 성과 함께 말해주세요<br>"
+        +person.성과이름()
+        +"입니다. 차를 가지고 있군요! 몇 대인가요?"
+        +person.myCar.car
+        + "이구요,집은"
+        +person.myCar.home
+        +"체 있습니다"
+
+
+
+        //조건 ? 참 :  거짓
+        //true ? "예" : "아니오"
+        //if (조건) {
+
+        //}else{
+
+       // }
+
+        //객체 생성시 빈 객체로 생성
+        const person2 = {};
+
+        console.log(person2);
+
+        person2.firstName = "elice";
+
+        //new 키워드로 객체 생성
+        const person3 = new Object({
+            firstName : "미나",
+            lastName : "상",
+            age : 17
+        })
+
+        console.log(person3.age);
+
+        //속성 값 변경 및 추가 / 갱신
+        person
+
+
+
+
+
+
+
+
+    });
+    </script>
+</head>
+<body>
+    <h1>객체</h1>
+    <div>여기에 출력됩니다</div>
+</body>
+</html>

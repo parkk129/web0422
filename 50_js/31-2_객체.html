@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        window.addEventListener("DOMContentLoaded",()=>{
+        const car = {
+            type:"Fiat", 
+            model:"500", 
+            color:"white"
+        };
+
+        const person = {
+            firstName : "존",
+            lastName : "도",
+            age : 40,
+            man : true,
+            성과이름 : function(){
+
+                return this.lastName + " " + this.firstName
+            }
+            ,
+            myCar:{
+                car: "2대",
+                home : "5채"
+            }
+        };
+
+        //요소 찾기
+        const div = document.querySelector("div");
+
+
+        console.log(car.type);
+        console.log(car.model);
+        console.log(car.color);
+
+        console.log(person.성과이름());
+        
+        console.log(person["이름"]);
+        console.log(person["나이"]);
+        console.log(person["남자니?"]);
+
+        console.log(person.myCar.car);
+        console.log(person.myCar.home);
+
+        //백틱 기호 : 전부 문자열로 표시됨
+        div.innerHTML = `<b>성별이 남자인것은 사실인가요?</b>
+        <br>${(person["남자니?"] ? "예" : "아니오")}
+        <br><b>이름을 다시 한번 성과 함께 말해주세요</b>
+        <br>${person.성과이름()}입니다. 
+        <br><b>차를 가지고 있군요! 몇 대인가요?</b>
+        <br>${person.myCar.car} 입니다
+        <br><b>집은 몇 채인가요?</b>
+        <br>${person.myCar.home}
+        있습니다`
+
+
+        const person2 = {};
+
+        console.log(person2);
+
+        person2.firstName = "elice";
+
+        const person3 = new Object({
+            firstName : "미나",
+            lastName : "상",
+            age : 17
+        })
+
+        console.log(person3.age);
+
+
+        //HTML 컬렉션 객체
+        //length : 개수
+
+        const b = document.querySelectorAll("b");
+
+        //개발자들의 스타일 css 넣기
+        //b 요소의 개수만큼 반복 = b.length
+        //for(let x = 0; i <= b.length; i++) 가장 오리지날 = for~of = forEach 모두 같은 기능을 함
+
+        //객체.forEach(function(현재값ele, 색인번호index){})
+
+        //for ~ of
+        //= for(let 변수명 of HTML컬렉션){
+        //변수명.코드; }
+        //b요소 개수만큼 for문을 반복한다
+
+        //화살표 함수의 매개변수 괄호는 매개변수 1개일때만 생략할수 있다
+        b.forEach((cv, idx) => {
+
+        cv.color = "#888";
+        cv.fontWeight = "100";
+
+    });
+
+});
+    </script>
+</head>
+<body>
+    <h1>객체</h1>
+    <div>여기에 출력됩니다</div>
+</body>
+</html>
