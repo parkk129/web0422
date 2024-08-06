@@ -24,7 +24,7 @@ section {
     padding:96px 32px 0;
 }
 section h2{
-    border-bottom:1px solid #ccc;
+    border:none;
     padding-bottom:24px;
     margin-bottom:48px;
 }
@@ -32,7 +32,7 @@ section h2{
 /* 섹션1 */
 #sec1 {
     position: relative;
-    padding-top: 54px;
+    padding-top: 54px 0 0;
 }
 
 #sec1 h2 {
@@ -76,6 +76,11 @@ nav {
         top: 50%;
     }
 
+    section li{
+        width:calc(25% - 15px);
+    }
+
+
         /* 섹션2 */
         #sec2 ul{
             width: 700px;
@@ -84,9 +89,12 @@ nav {
         }
         /* 섹션3 */
         #sec3 ul{
-            width: 900px;
+            width:30%;
             display: flex;
             flex-wrap: wrap;
+        }
+        nav {
+            display:flex;
         }
 }
 
@@ -94,13 +102,14 @@ nav {
 @media (min-width: 800px) {
     /* 섹션 공통 */
     section {
-        width: 1480px;
+        /* 퍼센테이지 계산 */
+        /* 환산 : 전체 사이즈1920 콘텐츠 사이즈1480 */
+        /* 1920 (스크롤바 포함1903)에서 1480은 몇%인가? */
+        /* 1480 / 1920 * 100 = 77.08 */
+        width: 77.77%;
         margin: 0 auto;
         padding-top: 96px;
-    }
-
-    section li{
-        width: 355px;
+        border:1px solid red;
     }
 
     /* 섹션1 */
@@ -114,33 +123,18 @@ nav {
         display: flex;
         flex-wrap: wrap;
     }
-    
+    nav {
+        display:flex;
+    }
+            /* 섹션3 */
+            #sec3 ul{
+                width:90%;
+                display: flex;
+                flex-wrap: wrap;
+            }
     
 }
-/* 992이상: 데스크탑 */
-@media (min-width: 992px) {
-    /* 섹션 공통 */
-    section {
-        width: 1480px;
-        margin: 0 auto;
-        padding-top: 96px;
-    }
 
-    section li{
-        width: 355px;
-    }
-
-    /* 섹션1 */
-    #sec1 div {
-        height: 745px;
-    }
-
-    /* 섹션2 */
-    #sec2 ul{
-        width: 1500px;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    
-    
+iframe{
+    height: 700px;
 }

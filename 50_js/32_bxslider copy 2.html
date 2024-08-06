@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script srd="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.css">
+    <script>
+        
+        //로드 이벤트
+        //bx slider는 제이쿼리 플러그인 프로그램이다
+        // 로드이벤트 : 헤드에 위에 썼을떄 html 먼저 읽도록 하는 기능
+        // 자바스크립트 : window.addEventListener("DOMContentLoaded", ()=>{});
+        // 제이쿼리 : $(document).ready(()=>{});
+        $(document).ready(()=>{
+            
+            // 제이쿼리 로드 이벤트 $(()=>{});
+            $('.bxslider').bxSlider({
+                auto: true,
+                autoControls: true,
+                stopAutoOnClick: true,
+                pager: true,
+                slideWidth: 600
+            });
+            
+        });
+    </script>
+</head>
+
+<body>
+    <div class="bxslider">
+        <div><img src="../1.jpg" /></div>
+        <div><img src="../2.jpg" /></div>
+        <div><img src="../3.jpg" /></div>
+    </div>
+
+</body>
+
+</html>
