@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bx슬라이더 라이브러리 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.css">
+    <!-- 제이쿼리 라이브러리 파일이 위쪽으로 지정 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- bx슬라이더 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js"></script>
+    <style>
+        .bx-wrapper .bx-controls-direction a {
+            /* 크기 */
+            /* 요즘방법 transform : translate 사용 */
+            /* 예전방법 margin-top:-38px;*/
+            width:50px;
+            height: 56px;
+            display: none;
+            transform: translateY(-50%);
+            background:url(../assets2/desert39/btn-slider-arrow-white.svg) 50%/35px;
+        }
+
+        /* 이전 */
+        .bx-wrapper .bx-prev {
+            /* background: url() 반복 x위치 y위치/가로 세로; */
+            background-image:url(../assets2/white_rollBtn_next.png);
+        }
+
+        /* 다음 */
+        .bx-wrapper .bx-next {
+            background-image:url(../assets2/white_rollBtn_next.png);
+        }
+    </style>
+    <script>
+        /* 
+            예제 코드
+                https://bxslider.com/examples/auto-show-start-stop-controls
+            
+            1. 위 사이트의 HTML 코드를 <body> 태그 사이에 붙어 넣기한다.
+            2. img 태그의 이미지 경로와 파일 변경한다. alt 속성 추가
+            3. <script> 태그 사이에 제이쿼리 로드 이벤트 작성 후
+            4. 위 사이트의 JS 코드를 로드 이벤트 사이에 붙어 넣기 한다.
+            5. 제이쿼리, bx슬라이더 라이브러리 파일을 연결한다.
+                라이브러리 파일은? cdnjs.com
+                가) 제이쿼리.min.js -> <script>
+                나) bx슬라이더.min.js -> <script>
+                다) bx슬라이더.min.css -> <link>
+
+        */
+        // 로드 이벤트
+        // window.addEventListener("DOMContentLoaded", ()=>{});
+        // bxSlider은 제이쿼리 플러그인 프로그램이다.
+        // $(document).ready(()=>{});
+        $(() => {
+            $('.bxslider').bxSlider({
+                auto: true,
+                autoControls: true,// 자동 넘기기
+                stopAutoOnClick: true,
+                pager: true,
+                slideWidth: 600, // 슬라이드 가로크기
+                minSlides:1, // 반응형 , 최소 슬라이드 수
+                maxSlides:5, // 반응형 , 최대 슬라이드 수
+                moveSlides:1, // 이동 슬라이드 수
+            });
+
+        }); // 로드 이벤트
+    </script>
+</head>
+
+<body>
+    <div class="bxslider">
+        <div><img src="../assets2/desert39/slide1.png" alt="슬라이드이미지1"></div>
+        <div><img src="../assets2/desert39/slide2.png" alt="슬라이드이미지2"></div>
+        <div><img src="../assets2/desert39/slide3.png" alt="슬라이드이미지3"></div>
+        <div><img src="../assets2/desert39/slide4.png" alt="슬라이드이미지3"></div>
+        <div><img src="../assets2/desert39/slide5.png" alt="슬라이드이미지3"></div>
+        <div><img src="../assets2/desert39/slide6.png" alt="슬라이드이미지3"></div>
+    </div>
+</body>
+
+</html>

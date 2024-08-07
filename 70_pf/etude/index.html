@@ -1,151 +1,364 @@
-<!doctype html>
-<html lang="ko">
+<!DOCTYPE html>
+<html lang="zxx">
 
 <head>
-    <meta charset="utf-8">
-    <title>롯데월드 어드벤처_박서현</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bx슬라이더 라이브러리 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'Pretendard-Regular';
+            src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        body {
+            padding:0;
+            margin: 0;
+            font-family: 'Pretendard-Regular';
+        }
+
+        /* top logo */
+        .top_logo img{
+            position:absolute;
+            left: 910px;
+            display: flex;
+            justify-content: center;
+            z-index: 999;
+            width: 100px;
+            height: 40px;
+        }
+
+        /* 1depth */
+        ul {
+            display: flex;
+            padding:0;
+            padding-left: 0;
+            list-style: none;
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+            color: rgb(22, 22, 22);
+        }
+
+        .main {
+            align-items: center;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .main>li {
+            width: 160px;
+            height: 30px;
+            text-align: center;
+            align-content: center;
+            line-height: 30px;
+        }
+
+        .main>li:hover {
+            background: rgba(88, 88, 88, 0.164);
+            height: 50px;
+        }
+
+        .gnb {
+            top:18px;
+            display: flex;
+            justify-content:space-between;
+            position: absolute;
+            z-index: 9999;
+            width: 100%;
+        }
+
+        .gnb .main:nth-of-type(1){
+            position: relative;
+            left:-150px;
+        }
+
+        .gnb .main:nth-of-type(2){
+            position: relative;
+            left:100px;
+        }
+        .gnb i{
+            position: relative;
+            left:-70px;
+            margin:23px 15px;
+        }
+
+        .main li .sub{
+            display: none;
+        }
+        .main:nth-of-type(1) li:nth-of-type(1):hover .sub{
+            display: flex;
+        }
+        .main:nth-of-type(1) li:nth-of-type(2):hover .sub{
+            display: flex;
+        }
+        .main:nth-of-type(1) li:nth-of-type(3):hover .sub{
+            display: flex;
+        }
+        /*슬라이드*/
+
+        img {
+            width: 100%;
+            height: 900px;
+            object-fit: cover;
+        }
+
+        #slideWrap {
+            position: relative;
+            height: 450px;
+            margin: 0 auto;
+        }
+
+        .bx-wrapper {
+            height: 100%;
+            box-shadow: none;
+            border: none;
+            margin-bottom: 0;
+        }
+
+        .bx-viewport {
+            height: 100%;
+        }
+
+        /* 인디케이터(페이저) */
+
+        .bx-wrapper .bx-pager {
+            /* 위치 */
+            bottom: -400px;
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a:focus,
+        .bx-wrapper .bx-pager.bx-default-pager a:hover,
+        .bx-wrapper .bx-pager.bx-default-pager a {
+            /* 전체 색상 */
+            background: #ffffff;
+            /* 페이저 아이템의 좌우 간격 */
+            margin: 0 8px;
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a.active {
+            /* transform: scale(2, 2); */
+            /* 현재 보이는 이미지의 해당하는 페이저 색상 */
+            background: #d38a95;
+        }
+
+        /* 이전/다음 버튼 */
+        .bx-wrapper .bx-controls-direction a {
+            /* 크기 */
+            /* 요즘방법 transform : translate 사용 */
+            transform: translateY(-50%);
+            /* 예전방법 margin-top:-38px;*/
+            width: 50px;
+            height: 76px;
+            display: none;
+            background: url(../assets2/ico_comm_sp.png) no-repeat;
+        }
+
+        /* 이전 */
+        .bx-wrapper .bx-prev {
+            left: 0px;
+            /* background: url() 반복 x위치 y위치/가로 세로; */
+            background-position: 0 -129px !important;
+        }
+
+        /* 다음 */
+        .bx-wrapper .bx-next {
+            right: 0px;
+            background-position: -55px -129px !important;
+        }
+
+        /* 다음 버튼 호버시 사라지는 현상 초기화 */
+        .bx-wrapper .bx-next:focus,
+        .bx-wrapper .bx-next:hover {
+            background-position: 0 0;
+        }
+
+        /* 폰 */
+        #slideWrap img:last-of-type {
+            display: none;
+        }
+        
+        /* section1 */
+
+        .section1{
+            margin-top:500px;
+        }
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /* 반응형 */
+
+        @media (min-width: 768px) {
+
+            #slideWrap img:first-of-type {
+                display: none;
+            }
+
+            #slideWrap img:last-of-type {
+                display: block;
+            }
+        }
+
+        @media (min-width: 992px) {
+
+            /* 이전/다음 버튼 */
+            .bx-wrapper .bx-controls-direction a {
+                /* 크기 */
+                display: block;
+            }
+        }
+    </style>
+    <!-- 제이쿼리 라이브러리 파일이 위쪽으로 지정 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- bx슬라이더 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js"></script>
+    <script>
+        $(() => {
+            // $(".slider")와 <div class="slider"> 이름이 같아야 한다.
+            $('.slider').bxSlider({
+                // auto는 자동슬라이드 기능으로 true이면 자동슬라이드 처리하고, false(기본값)이면 자동슬라이드되지 않는다.
+                auto: true,
+                stopAutoOnClick: true,
+
+                // autoControls은 play(실행)/pasue(일지정지) 버튼을 true이면 보이고, false(기본값) 이면 숨긴다.
+                // autoControls: true,
+
+                // pager는 하단 중앙의 인디케이터로 true(기본값)이면 보이고, false이면 숨겨진다.
+                // pager: false,
+
+                // slideWidth는 슬라이드 크기 지정, 단위는 px로 숫자만 기록한다.
+                // slideWidth: 1200,
+
+                // controls는 다음(next)/이전(prev) 버튼으로 true(기본값)이면 보이고, false이면 숨겨진다.
+                // constrols: false
+            });
+        }); // 로드 이벤트
+    </script>
 </head>
 
 <body>
-
-    <div id="wrap">
-
-        <header>
-        
-                <h1><a href="#"><img src="./assets/tlogo.png" alt="롯데월드 어드벤처 로고"></a></h1>
-        
-            <nav class="gnb">
-                <!-- 1depth -->
-                <ul class="main">
-                    <li>
-                        <a href="#">즐길거리</a>
-                        <!-- 2dpeth -->
-                        <ul class="sub">
-                            <li><a href="#">어트랙션</a></li>
-                            <li><a href="#">페스티벌</a></li>
-                            <li><a href="#">공연</a></li>
-                            <li><a href="#">다이닝/쇼핑</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">요금/할인</a>
-                        <ul class="sub">
-                            <li><a href="#">이용요금</a></li>
-                            <li><a href="#">이달의 혜택</a></li>
-                            <li><a href="#">연간이용</a></li>
-                            <li><a href="#">롯데월드카드</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">시설정보</a>
-                        <ul class="sub">
-                            <li><a href="#">운영/운휴</a></li>
-                            <li><a href="#">파크 이용안내</a></li>
-                            <li><a href="#">편의시설/제도</a></li>
-                            <li><a href="#">오시는 길</a></li>
-                            <li><a href="#">가이드맵</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">이용안내</a>
-                        <ul class="sub">
-                            <li><a href="#">공지사항</a></li>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">고객소리함</a></li>
-                        </ul>
-                    </li>
-                    
-                </ul>
-
-                <ul class="plus">
-                    <li><a href="#">온라인예매</a></li>
-                    <p>&nbsp;|&nbsp;</p>
-                    <li><a href="#">단체</a></li>
-                    <p>&nbsp;|&nbsp;</p>
-                    <li><a href="#">기업체</a></li>
-                    <span></span>
-                    <a href=""><i class="fa-solid fa-magnifying-glass fa-xl"></i></a>
-                </ul>
-            </nav>
-            
-        </header>
-
-        <div class="slide">
-            <ul>
-                <li><img src="assets/slide1.jpg" alt="메인이미지1"></li>
-                <li><img src="assets/slide2.jpg" alt="메인이미지3"></li>
-                <li><img src="assets/slide3.jpg" alt="메인이미지1"></li>
-                <li><img src="assets/slide1.jpg" alt="메인이미지1"></li>
+    <header>
+        <nav class="gnb">
+            <!-- 1depth -->
+            <div class="top_logo"><img src="./assets/tlogo.png" alt=""></div>
+            <ul class="main">
+                <li>
+                    <a href="#">PRODUCT</a>
+                    <!-- 2dpeth -->
+                    <ul class="sub">
+                        <li><a href="#">Festival 소개</a></li>
+                        <li><a href="#">행사장 안내</a></li>
+                        <li><a href="#">조직위원회</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">BRAND</a>
+                    <ul class="sub">
+                        <li><a href="#">예약하기</a></li>
+                        <li><a href="#">예약확인/취소</a></li>
+                        <li><a href="#">단체예약문의</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">MAKEUP LOOK</a>
+                    <ul class="sub">
+                        <li><a href="#">고릴라즈</a></li>
+                        <li><a href="#">메이저 레이저</a></li>
+                        <li><a href="#">아우스게인</a></li>
+                        <li><a href="#">타임로드</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">STORE</a>
+                    <ul class="sub">
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">사진갤러리</a></li>
+                        <li><a href="#">영상갤러리</a></li>
+                    </ul>
+                </li>
             </ul>
-        </div>
 
-        <!-- 탭 -->
-        <div class="bline">
-            <div class="tabs">
-                <!-- 탭1 공지사항-->
-                <input type="radio" name="btn" id="btn1" checked >
-                <label for="btn1">공지사항</label>
-                <div class="tab1">
-                    <ul>
-                        <li><span>35주년 WORLD OF LIGHT 퍼레이드 연...</WORLD></span>2024.06.20</li>
-                        <li><span>어트랙션 싱글라이더 제도 안내 이용방법..</span>2024.05.17</li>
-                        <li><span>ai로 미리 만나는 35주년 NEW 퍼레이드...</span>2024.04.24</li>
-                        <li><span>어트랙션 탑승예약제도 안내 이용방법...</span>&nbsp;&nbsp;&nbsp;2024.04.18</li>
+            <ul class="main">
+                <li>
+                    <a href="#">COMMUNITY</a>
+                    <!-- 2dpeth -->
+                    <ul class="sub">
+                        <li><a href="#">Festival 소개</a></li>
+                        <li><a href="#">행사장 안내</a></li>
+                        <li><a href="#">조직위원회</a></li>
                     </ul>
-                </div>
-                
-                <!-- 탭2 갤러리 -->
-                <input type="radio" name="btn" id="btn2">
-                <label for="btn2">갤러리</label>
-                <div class="tab2">
-                    <ul>
-                        <li>
-                                <img src="images/gallery1.png" alt="">
-                                <!-- 이미지삽입 -->
-                            <p>유레카</p>
-                        </li>
-                        <li>
-                                <img src="images/gallery2.png" alt="">
-                                <!-- 이미지삽입 -->
-                        
-                            <p>매직붕붕카</p>
-                        </li>
-                        <li>
-                                <img src="images/gallery3.png" alt="">
-                                <!-- 이미지삽입 -->
-                            <p>키즈토리아</p>
-                        </li>
+                </li>
+                <li>
+                    <a href="#">EDITORIAL</a>
+                    <ul class="sub">
+                        <li><a href="#">예약하기</a></li>
+                        <li><a href="#">예약확인/취소</a></li>
+                        <li><a href="#">단체예약문의</a></li>
                     </ul>
-                </div>
+                </li>
+                <li>
+                    <a href="#">CUSTOMIZE</a>
+                    <ul class="sub">
+                        <li><a href="#">예약하기</a></li>
+                        <li><a href="#">예약확인/취소</a></li>
+                        <li><a href="#">단체예약문의</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #161616;"></i>
+            <i class="fa-solid fa-user fa-lg" style="color: #161616;"></i>
+            <i class="fa-solid fa-bag-shopping fa-lg" style="color: #161616;"></i>
+            <i class="fa-solid fa-globe fa-lg" style="color: #161616;"></i>
+        </nav>
+    </header>
+
+    <div id="slideWrap">
+        <div class="slider">
+            <div>
+                <!-- 위에 이미지가 폰 -->
+                <!-- 아래 이미지가 테블릿/데스크탑 -->
+                <img src="./assets/slide1.jpg" alt="슬라이드이미지1">
             </div>
-            
-            
-                <div class="banner">
-                    <a href="#"><img src="images/banner2.png" alt="거울미로 open"></a>
-                </div>
-                <div class="quick">
-                    <a href="#"><img src="images/banner1.png" alt="모바일 앱 다운로드 바로가기"></a>
-                </div>
+            <div>
+                <img src="./assets/slide2.jpg" alt="슬라이드이미지2">
+            </div>
+            <div>
+                <img src="./assets/slide3.jpg" alt="슬라이드이미지3">
+            </div>
+            <div>
+                <!-- 위에 이미지가 폰 -->
+                <!-- 아래 이미지가 테블릿/데스크탑 -->
+                <img src="./assets/slide4.jpg" alt="슬라이드이미지1">
             </div>
         </div>
-
-        <footer>
-            <div class="logo2">
-                <a href="#"><img src="images/footer_logo.png" alt="푸터 로고"></a>
-            </div>
-            <div class="copy">
-                <p>서울특별시 송파구 올림픽로 240 호텔롯데 롯데월드<br>COPYRIGHT 2018 LOTTEWORLD. ALL RIGHTS RESERVED.</p>
-            </div>
-            <div class="sns">
-                <ul>
-                    <li><a href="#"><i class="fa-brands fa-facebook fa-xl"></i></a><span></span></li>
-                    <li><a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a><span></span></li>
-                    <li><a href="#"><i class="fa-brands fa-youtube fa-xl"></i></a></li>
-                </ul>
-            </div>
-        </footer>
     </div>
+
+    <div class="section1">
+        <h2>베스트상품</h2>
+        <P>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, pariatur aliquam perspiciatis praesentium, neque, commodi fugit ab sint ullam quaerat veniam. Totam, pariatur dignissimos aspernatur voluptas similique explicabo ipsam culpa hic blanditiis ea. Ipsa eius tempore nam consequuntur cumque odio, vel quidem eligendi reiciendis. Explicabo sed hic in sit impedit quae voluptates sint animi omnis. Natus consequuntur est quia doloribus optio. Minima maxime aperiam, sapiente fugiat deserunt numquam odio dignissimos temporibus placeat maiores nesciunt eum ducimus non tempore ratione praesentium labore amet ipsum, expedita nihil exercitationem, enim omnis! Corporis saepe delectus porro vero modi dolore id. Distinctio ipsum magnam atque. Quae blanditiis assumenda ea atque placeat deleniti voluptatibus, eos quasi necessitatibus repellendus numquam excepturi eaque! Voluptate minima doloribus exercitationem, sunt sapiente iusto commodi suscipit eligendi, modi eius rerum? Animi ratione debitis a beatae vel tempore dolore exercitationem dolor delectus adipisci. Ipsa reprehenderit facere ipsum blanditiis nesciunt neque ab dignissimos minus nostrum quasi, voluptatem commodi reiciendis fugiat, ducimus ut, ratione eius possimus minima beatae! Necessitatibus quo possimus libero consequuntur laudantium magnam voluptatibus ipsum sed. Dolore quae nemo officia? Repellat fugit rerum nam dolorum atque enim harum voluptates, aut voluptatibus pariatur, quia maxime doloribus illum consequatur assumenda eveniet quasi quaerat excepturi ad. Nisi quas fugiat sint voluptate amet debitis excepturi nihil quibusdam cum dignissimos, nesciunt recusandae sit officia ipsam neque, nostrum asperiores ex et! Quisquam, sint necessitatibus, corrupti sit modi explicabo mollitia reiciendis culpa tenetur, inventore nostrum eius unde minima ipsum odit voluptates officiis distinctio. Mollitia ipsam, eos earum voluptas, expedita porro cumque tenetur dolorum vitae hic enim! Vero, quisquam recusandae nam alias, blanditiis totam odio ratione aperiam placeat illo dignissimos id corporis delectus laudantium! Dignissimos veritatis saepe provident libero facilis veniam sunt natus sit quibusdam, voluptatum soluta earum iste aliquid ullam quisquam, architecto nesciunt autem temporibus. Enim nihil cupiditate temporibus hic praesentium rem eius eos recusandae vel, laborum voluptas fugit quia, blanditiis obcaecati voluptatibus quaerat repellendus, minima distinctio maiores nobis ex quis neque asperiores repellat. Eius, qui magnam quam quis possimus perferendis, ullam soluta nihil voluptas iusto, quidem doloremque placeat! Vero dolorem tempore cupiditate sint distinctio maxime dolor ea, sequi officiis in nesciunt magnam architecto molestiae velit illum deleniti recusandae ipsam natus. Tempore reprehenderit rem aliquid vitae. Recusandae, sunt? Autem ipsum laudantium suscipit tempora repellendus labore repellat debitis magni eum amet nulla laboriosam corporis cupiditate quod molestias tenetur adipisci quidem, totam nisi? Reiciendis hic aliquid alias ea in sapiente inventore delectus quia, recusandae culpa. Omnis repellat blanditiis mollitia consequatur vero accusamus fugiat eum quibusdam doloribus eaque, asperiores sint. Eius accusamus autem in nisi praesentium, inventore, mollitia facere quisquam error expedita commodi, aspernatur maxime nostrum nemo vel voluptatum suscipit dolore! Exercitationem praesentium commodi esse ratione iusto aliquam dolorem, modi voluptatem molestias quidem. Velit iste laborum tempore laudantium esse possimus, molestiae id autem, nobis quis sapiente magnam ipsa distinctio maxime odio nulla doloremque est repellat expedita veritatis odit quia perspiciatis voluptas ratione! Odit magnam consequuntur ipsam! Inventore sapiente tenetur illo corporis maxime tempora eos, ex eius eveniet veritatis non dolores, reprehenderit commodi ipsum aliquid in mollitia, praesentium laudantium incidunt! Ad suscipit, deserunt consequatur, illum rerum impedit debitis voluptatem possimus labore amet harum quaerat fugit alias explicabo rem fuga reprehenderit porro ipsum. Ipsa velit soluta explicabo fugit quibusdam inventore repudiandae officiis quaerat iure. Incidunt, aliquid repudiandae repellat iusto rerum omnis, vel, sit vero impedit ab ut dolorem a doloribus ad eius eligendi quod non natus dolore molestiae. Optio cupiditate dolorem accusantium est cumque asperiores maiores quasi, earum sequi repellendus tempore eius minus eveniet ipsam. Similique vel accusantium doloribus laudantium natus repellendus illo doloremque tempora est voluptates alias omnis, consectetur tenetur quos! Ducimus et ea harum aliquam aut minus, dolor quia commodi ab deleniti id sint voluptas ipsam fuga, quidem delectus! Nisi nostrum, sit ullam accusantium cupiditate earum eos libero numquam fugit! Praesentium temporibus, reiciendis iure in recusandae eveniet iusto maiores atque sapiente. Ullam velit repudiandae exercitationem. Omnis facilis, voluptatum vitae minus voluptates voluptas eligendi earum quod aliquam quam in obcaecati quibusdam deserunt, accusantium placeat autem nisi? Hic tenetur nulla id maxime blanditiis architecto, porro totam cupiditate pariatur odit necessitatibus temporibus repellendus unde placeat fugit harum sapiente repudiandae, officia consequatur doloribus dolor corporis reiciendis. Nam voluptas quidem tempora laudantium. Impedit facere et sequi saepe consequuntur?
+        </P>
+    </div>
+    <P>베스트상품
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, pariatur aliquam perspiciatis praesentium, neque, commodi fugit ab sint ullam quaerat veniam. Totam, pariatur dignissimos aspernatur voluptas similique explicabo ipsam culpa hic blanditiis ea. Ipsa eius tempore nam consequuntur cumque odio, vel quidem eligendi reiciendis. Explicabo sed hic in sit impedit quae voluptates sint animi omnis. Natus consequuntur est quia doloribus optio. Minima maxime aperiam, sapiente fugiat deserunt numquam odio dignissimos temporibus placeat maiores nesciunt eum ducimus non tempore ratione praesentium labore amet ipsum, expedita nihil exercitationem, enim omnis! Corporis saepe delectus porro vero modi dolore id. Distinctio ipsum magnam atque. Quae blanditiis assumenda ea atque placeat deleniti voluptatibus, eos quasi necessitatibus repellendus numquam excepturi eaque! Voluptate minima doloribus exercitationem, sunt sapiente iusto commodi suscipit eligendi, modi eius rerum? Animi ratione debitis a beatae vel tempore dolore exercitationem dolor delectus adipisci. Ipsa reprehenderit facere ipsum blanditiis nesciunt neque ab dignissimos minus nostrum quasi, voluptatem commodi reiciendis fugiat, ducimus ut, ratione eius possimus minima beatae! Necessitatibus quo possimus libero consequuntur laudantium magnam voluptatibus ipsum sed. Dolore quae nemo officia? Repellat fugit rerum nam dolorum atque enim harum voluptates, aut voluptatibus pariatur, quia maxime doloribus illum consequatur assumenda eveniet quasi quaerat excepturi ad. Nisi quas fugiat sint voluptate amet debitis excepturi nihil quibusdam cum dignissimos, nesciunt recusandae sit officia ipsam neque, nostrum asperiores ex et! Quisquam, sint necessitatibus, corrupti sit modi explicabo mollitia reiciendis culpa tenetur, inventore nostrum eius unde minima ipsum odit voluptates officiis distinctio. Mollitia ipsam, eos earum voluptas, expedita porro cumque tenetur dolorum vitae hic enim! Vero, quisquam recusandae nam alias, blanditiis totam odio ratione aperiam placeat illo dignissimos id corporis delectus laudantium! Dignissimos veritatis saepe provident libero facilis veniam sunt natus sit quibusdam, voluptatum soluta earum iste aliquid ullam quisquam, architecto nesciunt autem temporibus. Enim nihil cupiditate temporibus hic praesentium rem eius eos recusandae vel, laborum voluptas fugit quia, blanditiis obcaecati voluptatibus quaerat repellendus, minima distinctio maiores nobis ex quis neque asperiores repellat. Eius, qui magnam quam quis possimus perferendis, ullam soluta nihil voluptas iusto, quidem doloremque placeat! Vero dolorem tempore cupiditate sint distinctio maxime dolor ea, sequi officiis in nesciunt magnam architecto molestiae velit illum deleniti recusandae ipsam natus. Tempore reprehenderit rem aliquid vitae. Recusandae, sunt? Autem ipsum laudantium suscipit tempora repellendus labore repellat debitis magni eum amet nulla laboriosam corporis cupiditate quod molestias tenetur adipisci quidem, totam nisi? Reiciendis hic aliquid alias ea in sapiente inventore delectus quia, recusandae culpa. Omnis repellat blanditiis mollitia consequatur vero accusamus fugiat eum quibusdam doloribus eaque, asperiores sint. Eius accusamus autem in nisi praesentium, inventore, mollitia facere quisquam error expedita commodi, aspernatur maxime nostrum nemo vel voluptatum suscipit dolore! Exercitationem praesentium commodi esse ratione iusto aliquam dolorem, modi voluptatem molestias quidem. Velit iste laborum tempore laudantium esse possimus, molestiae id autem, nobis quis sapiente magnam ipsa distinctio maxime odio nulla doloremque est repellat expedita veritatis odit quia perspiciatis voluptas ratione! Odit magnam consequuntur ipsam! Inventore sapiente tenetur illo corporis maxime tempora eos, ex eius eveniet veritatis non dolores, reprehenderit commodi ipsum aliquid in mollitia, praesentium laudantium incidunt! Ad suscipit, deserunt consequatur, illum rerum impedit debitis voluptatem possimus labore amet harum quaerat fugit alias explicabo rem fuga reprehenderit porro ipsum. Ipsa velit soluta explicabo fugit quibusdam inventore repudiandae officiis quaerat iure. Incidunt, aliquid repudiandae repellat iusto rerum omnis, vel, sit vero impedit ab ut dolorem a doloribus ad eius eligendi quod non natus dolore molestiae. Optio cupiditate dolorem accusantium est cumque asperiores maiores quasi, earum sequi repellendus tempore eius minus eveniet ipsam. Similique vel accusantium doloribus laudantium natus repellendus illo doloremque tempora est voluptates alias omnis, consectetur tenetur quos! Ducimus et ea harum aliquam aut minus, dolor quia commodi ab deleniti id sint voluptas ipsam fuga, quidem delectus! Nisi nostrum, sit ullam accusantium cupiditate earum eos libero numquam fugit! Praesentium temporibus, reiciendis iure in recusandae eveniet iusto maiores atque sapiente. Ullam velit repudiandae exercitationem. Omnis facilis, voluptatum vitae minus voluptates voluptas eligendi earum quod aliquam quam in obcaecati quibusdam deserunt, accusantium placeat autem nisi? Hic tenetur nulla id maxime blanditiis architecto, porro totam cupiditate pariatur odit necessitatibus temporibus repellendus unde placeat fugit harum sapiente repudiandae, officia consequatur doloribus dolor corporis reiciendis. Nam voluptas quidem tempora laudantium. Impedit facere et sequi saepe consequuntur?
+    </P>
 </body>
 
 </html>
