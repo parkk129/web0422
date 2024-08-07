@@ -7,6 +7,9 @@
     font-weight: 400;
     font-style: normal;
 }
+h1{
+    margin:0 auto;
+}
 
 /* reset */
 * {
@@ -84,7 +87,6 @@ header {
 .gnb {
     display: flex;
     position: relative;
-    left: -745px;
 }
 
 .plus {
@@ -187,7 +189,7 @@ html {
 
 :root {
     --w: 1920px;
-    --h: 3000px;
+    --h: 1000px;
 }
 
 .slide {
