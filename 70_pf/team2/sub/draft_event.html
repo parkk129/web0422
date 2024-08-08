@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>subway</title>
+    <style>
+        /* reset */
+        body{
+            margin:0;
+        }
+        img{
+            width: 100%;
+            height:auto;
+            vertical-align: top;
+        }
+        /*미디어쿼리*/
+
+        /*phone*/
+        .desktop, .tablet{
+            display: none;
+        }
+
+        /*tablet*/
+        @media (min-width: 768px) {
+            .phone {display: none;}
+            .tablet{display: block;}
+        }
+
+        /*desktop*/
+        @media (min-width: 992px) {
+            .tablet {display: none;}
+            .desktop{display: block;}
+        }
+    </style>
+</head>
+<body>
+    <img class="desktop" src="../assets/images/draft/desktop_새소식.png" alt="desktop" usemap="#image-map-desktop">
+    <img class="tablet" src="../assets/images/draft/tablet_새소식.png" alt="tablet" usemap="#image-map-tablet">
+    <img class="phone" src="../assets/images/draft/phone_새소식.png" alt="phone" usemap="#image-map-phone">
+
+    <map name="image-map-desktop">
+        <area target="" alt="메인 페이지" title="메인 페이지로 이동합니다" href="../draft.html" coords="45,9,318,98" shape="rect">
+        <area target="" alt="메뉴소개" title="메뉴소개 페이지로 이동합니다" href="../sub/draft_menu.html" coords="564,22,688,83" shape="rect">
+        <area target="" alt="이용방법" title="이용방법 페이지로 이동합니다" href="../sub/draft_use.html" coords="814,88,707,22" shape="rect">
+        <area target="" alt="새소식" title="새소식 페이지로 이동합니다" href="../sub/draft_event.html" coords="841,25,944,85" shape="rect">
+        <area target="" alt="온라인주문" title="온라인주문 페이지로 이동합니다" href="../sub/draft_order.html" coords="1219,22,1352,88" shape="rect">
+        <area target="" alt="로그인" title="로그인 페이지로 이동합니다" href="../sub/draft_login.html" coords="1560,31,1652,68" shape="rect">
+    </map>
+
+    <map name="image-map-tablet">
+        <area target="" alt="메인 페이지로 이동합니다" title="메인 페이지로 이동합니다" href="../draft.html" coords="3,7,226,76" shape="rect">
+    </map>
+
+    <map name="image-map-phone">
+        <area target="" alt="메인 페이지로 이동합니다" title="메인 페이지로 이동합니다" href="../draft.html" coords="12,11,115,54" shape="rect">
+    </map>
+</body>
+</html>

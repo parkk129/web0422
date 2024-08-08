@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>subway</title>
+    <style>
+        /* reset */
+        body {
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            vertical-align: top;
+        }
+
+        /*미디어쿼리*/
+
+        /*phone*/
+
+
+        .desktop,
+        .tablet {
+            display: none;
+        }
+
+        /*tablet*/
+        @media (min-width: 768px) {
+            .phone {
+                display: none;
+            }
+
+            .tablet {
+                display: block;
+            }
+        }
+
+        /*desktop*/
+        @media (min-width: 992px) {
+            .tablet {
+                display: none;
+            }
+
+            .desktop {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 파일 폴더 명명 규칙 -->
+    <!-- 시안_페이지명_장치명.png -->
+
+
+    <img class="desktop" src="./assets/images/draft/desktop_메인.png" alt="desktop PC" usemap="#image-map-desktop">
+    <img class="tablet" src="./assets/images/draft/tablet_메인.png" alt="tablet PC" usemap="#image-map-tablet">
+    <img class="phone" src="./assets/images/draft/phone_메인.png" alt="phone" usemap="#image-map-phone">
+
+    <!-- usemap 네임과 map name 이름이 동일해야함 -->
+
+    <!-- 이미지맵: "하나의 '이미지'"안에 2개 이상의 링크를 걸때 사용한다 
+    하나의 이미지 안에 특정 영역에만 링크를 적용시킬때 사용한다 -->
+    <!-- shape (모양) coords="x1 y1 x2 y2" -->
+
+        
+
+    <map name="image-map-desktop">
+        <area target="" alt="메인 페이지" title="메인 페이지로 이동합니다" href="./draft.html" coords="45,9,318,98" shape="rect">
+        <area target="" alt="메뉴소개" title="메뉴소개 페이지로 이동합니다" href="./sub/draft_menu.html" coords="564,22,688,83" shape="rect">
+        <area target="" alt="이용방법" title="이용방법 페이지로 이동합니다" href="./sub/draft_use.html" coords="814,88,707,22" shape="rect">
+        <area target="" alt="새소식" title="새소식 페이지로 이동합니다" href="./sub/draft_event.html" coords="841,25,944,85" shape="rect">
+        <area target="" alt="온라인주문" title="온라인주문 페이지로 이동합니다" href="./sub/draft_order.html" coords="1219,22,1352,88" shape="rect">
+        <area target="" alt="로그인" title="로그인 페이지로 이동합니다" href="./sub/draft_login.html" coords="1560,31,1652,68" shape="rect">
+    </map>
+
+    <map name="image-map-tablet">
+        <area target="" alt="메인 페이지로 이동합니다" title="메인 페이지로 이동합니다" href="./draft.html" coords="12,11,115,54" shape="rect">
+        <area target="" alt="새소식 페이지로 이동합니다" title="새소식 페이지로 이동합니다" href="./sub/draft_event.html" coords="0,57,538,443" shape="rect">
+        <area target="" alt="메뉴소개 페이지로 이동합니다" title="메뉴소개 페이지로 이동합니다" href="./sub/draft_menu.html" coords="15,1917,524,2376" shape="rect">
+        <area target="" alt="온라인주문 페이지로 이동합니다" title="온라인주문 페이지로 이동합니다" href="./sub/draft_order.html" coords="24,2385,519,2763" shape="rect">
+        <area target="" alt="이용방법 페이지로 이동합니다" title="이용방법 페이지로 이동합니다" href="./sub/draft_use.html" coords="41,3832,507,4103" shape="rect">
+    </map>
+    
+</map>
+<map name="image-map-phone">
+    <area target="" alt="메인 페이지로 이동합니다" title="메인 페이지로 이동합니다" href="./draft.html" coords="12,11,115,54" shape="rect">
+    <area target="" alt="새소식 페이지로 이동합니다" title="새소식 페이지로 이동합니다" href="./sub/draft_event.html" coords="1,53,359,326" shape="rect">
+        <area target="" alt="메뉴소개 페이지로 이동합니다" title="메뉴소개 페이지로 이동합니다" href="./sub/draft_menu.html" coords="26,1802,342,1888" shape="rect">
+        <area target="" alt="온라인주문 페이지로 이동합니다" title="온라인주문 페이지로 이동합니다" href="./sub/draft_order.html" coords="41,2246,185,2295" shape="rect">
+        <area target="" alt="이용방법 페이지로 이동합니다" title="이용방법 페이지로 이동합니다" href="./sub/draft_use.html" coords="26,3309,337,3543" shape="rect">
+</map>
+
+</body>
+
+</html>
