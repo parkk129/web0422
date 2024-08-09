@@ -19,7 +19,9 @@ header {
     height: 54px;
     padding: 0 30px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    transition: .3s ease-out;
 }
+
 /* 섹션 공통 */
 section {
     padding:96px 32px 0;
@@ -50,37 +52,77 @@ section h2{
 
 /* 섹션2 */
 
-
+/* 모바일 버튼 */
 
 /* 폰 */
 nav {
-    display: none;
+    z-index:-999;
+    position: absolute;
+    top:0;
+    right:-65%;
+    width: 50%;
+    background: #cacaca;
+    height: 100vh;
 }
+
+.collapsedMenuIcon {
+    display: inline-block;
+    /* 마우스 포인터 모양 */
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    border-radius: 3px;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+
 /* 섹션1 */
 #sec1 span {
     display: none;
 }
 
 /* 내비게이션 */
-
-/* 768이상: 테블릿, 데스크탑 */
+/* 768이상: 테블릿 */
 @media (min-width: 768px) {
+
+    /* 내비게이션 */
+    nav {
+        display: block;
+    }
+
     nav ul {
         display: flex;
     }
-    
+
     nav ul li {
         margin-left: 40px;
-    }
-    
-    #sec1 h2 {
-        top: 50%;
+
     }
 
-    section li{
-        width:calc(25% - 15px);
+    .collapsedMenuIcon{
+        display: none;
     }
 
+}
 
         /* 섹션2 */
         #sec2 ul{
@@ -97,7 +139,7 @@ nav {
         nav {
             display:flex;
         }
-}
+
 
 /* 992이상: 데스크탑 */
 @media (min-width: 800px) {
