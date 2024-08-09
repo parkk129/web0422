@@ -1,11 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- 슬릭 슬라이더 css 라이브러리 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <!-- 슬릭 슬라이더 css테마 라이브러리 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <!-- 사용자 css 링크 -->
+    <style>
+        body{
+            background: #aaffde;
+        }
+        img{
+            width: 100%;
+        }
+    </style>
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- 슬릭 슬라이더 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script>
+        // 자바스크립트 road이벤트 = 제이쿼리 ready 이벤트
+        $(() => {
+            $('.slider').slick({
+                // 자동 슬라이드
+                slidesToScroll: 1,
+                autoplaySpeed: 1000,
+                autoplay: true,
+                centerMode: true,
+                centerPadding: '145px',
+                // 현재 보이는 슬라이드 수
+                slidesToShow: 4,
+                responsive: [
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
 </head>
+
 <body>
-    
+    <div class="slider">
+        <div><img src="../assets2/desert39/slide1.png" alt=""></div>
+        <h3></h3>
+        <p></p>
+        <div><img src="../assets2/desert39/slide2.png" alt=""></div>
+        <h3></h3>
+        <p></p>
+        <div><img src="../assets2/desert39/slide3.png" alt=""></div>
+        <h3></h3>
+        <p></p>
+        <div><img src="../assets2/desert39/slide3.png" alt=""></div>
+        <h3></h3>
+        <p></p>
+        <div><img src="../assets2/desert39/slide3.png" alt=""></div>
+        <h3></h3>
+        <p></p>
+        <div><img src="../assets2/desert39/slide3.png" alt=""></div>
+        <h3></h3>
+        <p></p>
+        <div><img src="../assets2/desert39/slide3.png" alt=""></div>
+        <h3></h3>
+        <p></p>
+        <div><img src="../assets2/desert39/slide3.png" alt=""></div>
+        <h3></h3>
+        <p></p>
+        <div><img src="../assets2/desert39/slide3.png" alt=""></div>
+        <h3></h3>
+        <p></p>
+    </div>
 </body>
+
 </html>
