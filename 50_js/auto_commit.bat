@@ -1,6 +1,6 @@
 :loop
 
-   cd C:\Users\USER\Documents\GitHub\ju-ing
+   cd D:\박서현\web0422\.git
 
    git init
    
