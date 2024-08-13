@@ -7,6 +7,27 @@
     <title>하이글로벌컴퍼니</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/layout.css">
+    <script src="./script/jquery-3.7.1.min.js"></script>
+    <script>
+    $(function(){
+        
+        // 요소 찾기
+        const firstList = $(".notice a").eq(0);
+        const modal = $("#modal");
+        const closeBtn = $("button");
+        console.log(modal);
+        
+        // 이벤트 처리
+        firstList.click(function(){
+            modal.css({display : "block"});
+        });
+        
+        closeBtn.click(function(){
+            modal.css({display : "none"});
+        });
+            
+    });
+    </script>
 </head>
 
 <body>
@@ -57,11 +78,10 @@
     <!-- B -->
     <div id="slide">
         <ul>
-            <li><img src="https://images.unsplash.com/photo-1719937051058-63705ed35502?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="슬라이드 이미지1"></li>
-            <li><img src="" alt="슬라이드 이미지2"></li>
-            <li><img src="" alt="슬라이드 이미지3"></li>
-            <li><img src="" alt="슬라이드 이미지1"></li>
+            <li><a href="#"><img src="./images/slide1.jpg"alt="슬라이드 이미지1"></a></li>
+            <li><a href="#"><img src="./images/slide2.png" alt="슬라이드 이미지2"></a></li>
+            <li><a href="#"><img src="./images/slide3.png" alt="슬라이드 이미지3"></a></li>
+            <li><a href="#"><img src="./images/slide4.png" alt="슬라이드 이미지4"></a></li>
         </ul>
     </div>
 
@@ -99,15 +119,24 @@
                 <div class="notice">
                     <h2>공지사항</h2>
                     <ul>
-                        <li><a href="#"><span>Lorem, ipsum dolor sit amet consectetur adipisicing.</span>0000.00.00</a>
+                        <li><a href="#"><span>맞춤 플랜을 제안하는 크리에이티브..</span>0000.00.00</a>
                         </li>
-                        <li><a href="#"><span>Lorem, ipsum dolor sit amet consectetur adipisicing.</span>0000.00.00</a>
+                        <li><a href="#"><span>JUST 쇼핑몰과 함께 하실 가슴 따뜻한..</span>0000.00.00</a>
                         </li>
-                        <li><a href="#"><span>Lorem, ipsum dolor sit amet consectetur adipisicing.</span>0000.00.00</a>
+                        <li><a href="#"><span>코리아웨딩페어 결혼박람회가 열립니다.</span>0000.00.00</a>
                         </li>
-                        <li><a href="#"><span>Lorem, ipsum dolor sit amet consectetur adipisicing.</span>0000.00.00</a>
+                        <li><a href="#"><span>마진없이 아낌없이 드리는 마지막 찬스!</span>0000.00.00</a>
                         </li>
                     </ul>
+                </div>
+                <div id="modal">
+                    <div class="popup">
+                        <h2>모달 팝업</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet magnam voluptates corrupti aliquam
+                            accusamus eaque magni mollitia nesciunt? Praesentium quidem odio aperiam officiis debitis beatae,
+                            architecto tempora magni! Repellat, exercitationem.</p>
+                        <button>닫기</button>
+                    </div>
                 </div>
                 <div class="gallery">
                     <h2>갤러리</h2>
