@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+body{
+    margin:0;
+}
+body *{
+    border:1px solid red;
+}
+#wrap{
+    display:flex;
+    height:700px;
+}
+#wrap header{
+    text-align: center;
+    width: 200px;
+    
+}
+#wrap .contents{
+    width: 400px;
+
+}
+#wrap #slide{
+    width:calc(100% - 600px);
+}
+
+/* 네비게이션 */
+ul{
+    list-style:none;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+nav{
+    
+
+}
+nav > ul{
+
+}
+nav > ul > li{
+
+}
+nav > ul > li > a{
+    display: block;
+    padding: 10px;
+    background: #fff344;
+}
+nav > ul > li > a:hover{
+    background: #54ff7e;
+}
+nav > ul > li > ul{
+    display: none;
+}
+nav > ul > li > ul > li{
+    background: #ff7a7a;
+}
+nav > ul > li > ul > li:hover{
+    background: #ff3b3b;
+}
+nav > ul > li > ul > li > a{
+    
+}
+/* 공지사항 */
+
+#link{}
+/* 푸터 */
+footer{
+    height: 120px;
+}
