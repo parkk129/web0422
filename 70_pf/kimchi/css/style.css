@@ -61,6 +61,37 @@ nav > ul > li > ul > li:hover{
 nav > ul > li > ul > li > a{
     
 }
+/* 슬라이드 */
+body,
+ul {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    object-fit: cover;
+    vertical-align: top;
+}
+
+/* 슬라이드 */
+#slide {
+    height: 350px;
+    overflow: hidden;
+}
+#slide li{
+    position: absolute;
+    opacity:0;
+}
+#slide ul {
+    position: relative;
+    /* top: 0 -> -100% -> -200% -> 0 */
+    top: 0%;
+    height: 1050px;
+}
 /* 공지사항 */
 
 #link{}

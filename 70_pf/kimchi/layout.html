@@ -93,14 +93,31 @@
 
         </div>
         <div id="slide">
-            슬라이드 이미지 3장
+                <ul>
+                    <li><a href="#"><img src="../kimchi/images/slide1.jpg"alt="슬라이드 이미지1"></a></li>
+                    <li><a href="#"><img src="../kimchi/images/slide2.jpg" alt="슬라이드 이미지2"></a></li>
+                    <li><a href="#"><img src="../kimchi/images/slide3.jpg" alt="슬라이드 이미지3"></a></li>
+                    <li><a href="#"><img src="../kimchi/images/slide1.jpg" alt="슬라이드 이미지4"></a></li>
+                </ul>
         </div>
     </div>
     <footer>푸터</footer>
+    <script src="./jquery-3.7.1.min.js"></script>
     <script>
-        $(function(){
-            
-        })
+        $(function () {
+            let idx = 0;
+            setInterval(autoSlide, 2000);
+            function autoSlide() {
+                console.log("idx", idx);
+
+                //삼항연산자=조건연산자
+                // 조건 ? 참이면 이것 수행 : 거짓이면 이것 수행
+                (idx === 2) ? idx = 0 : idx++;
+                $("#slide li").eq(idx).animate({opacity:1},function(){
+                    $("#slide li").eq(idx).animate({opacity:0});
+                });
+            }
+        });
     </script>
 
 
