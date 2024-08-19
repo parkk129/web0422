@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 300px;
+            height: 300px;
+            border:1px solid red;
+
+            /* table과 td사이의 경계 */
+            /* border-collapse : seperate (기본값) */
+            /* border-collapse : collapse 제거  */
+
+            border-collapse: collapse;
+        }
+
+        td{
+            border:1px solid blue;
+        }
+        tr:first-child td:first-child{
+            text-align: center;
+            background: #ffc1c1;
+        }
+        tr:nth-of-type(2) td:first-child{
+            background: #9ee2e7;
+            text-align: center;
+            border:5px solid red;
+        }
+    </style>
+</head>
+
+<body>
+<!-- 테이블(표)의 기본 구조 -->
+<!-- table : 블록레벨요소 이지만 display: table; (table식으로 나열됨)-->
+<!-- tr : 블록레벨요소 이며 display-row; 태두리 적용 안됨 -->
+<!-- td : 블록레벨요소 이며 display : table-cell; -->
+
+<!-- thead : 테이블 헤더 
+tbody : 테이블 바디 
+tfoot : 테이블 푸터-->
+<table>
+    <tr>
+        <!-- 1행 2열 지우고 1행 1열과 1행 2열 합치기 -->
+        <td colspan="2">1</td>
+        <!-- 2행 3열 지우고 1행 3열 2행 3열 합치기 -->
+        <td rowspan="2">3</td>
+    </tr>
+    <tr>
+        <!-- 3행 1열 지우고 2행 1열 3행 1열 합치기 -->
+        <td rowspan="2">4</td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <!-- 3행 3열 지우고 3행 2열 3행 3열 합치기 -->
+        <td colspan="2">8</td>
+    </tr>
+</table>
+
+</body>
+
+</html>
