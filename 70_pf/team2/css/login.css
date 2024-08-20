@@ -1,17 +1,5 @@
 @charset "utf-8";
 
-.bar1,
-.bar2,
-.bar3 {
-    display: flex;
-    width: 35px;
-    height: 5px;
-    background-color: #5a5a5a;
-    border-radius: 3px;
-    margin: 6px 0;
-    transition: 0.4s;
-}
-
 /* reset */
 * {
     box-sizing: border-box;
@@ -25,17 +13,13 @@ ul,
 p {
     margin: 0;
 }
-
 ul {
     padding: 0;
     list-style: none;
 }
-
-
 a {
     text-decoration: none;
 }
-
 body {
     background: #fff;
 }
@@ -100,10 +84,14 @@ html {
 
 
 /* 폰 */
+
 #wrap{
     text-align: center;
 }
 input{
+    border:1px solid #D2D2D2;
+    margin:5px;
+    border-radius:3px;
     width: 300px;
     height: 40px;
 }
@@ -115,17 +103,32 @@ input{
     width: 18px;
 }
 .find{
+    
     padding:10px;
+}
+.find a{
+    color:#333;
 }
 #signup{
     margin-top:80px;
 }
 #signup input{
+    color:#fff;
+    background-color:#222;
     width: 150px;
     margin: 20px;
 }
 
+.login_submit{
+    border:none;
+    color:#fff;
+    background-color:#009223;
+}
+
 .signup_submit{
+    border:2px solid #009223;
+    color:#009223;
+    background-color:#fff;
     display: none;
 }
 
@@ -161,11 +164,14 @@ input{
     }
 
     #signup input{
+        color:#333;
+        background-color:#fff;
         width: 600px;
         margin: 20px;
     }
 
     .signup_submit{
+        
         display: none;
     }
 
@@ -194,7 +200,6 @@ input{
         margin-top:20px;
         display: block;
     }
-
 
 
 }
