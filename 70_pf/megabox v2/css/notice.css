@@ -1,0 +1,33 @@
+@charset "utf-8";
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    height: 300px;
+    text-align: center;
+    background-color: rgb(192, 192, 192);
+}
+a{
+    color: #ffffff;
+    text-decoration: none;
+}
+a+a::before{
+    
+    content:">";
+    margin:0 12px;
+}
+#board th:nth-of-type(4){
+    width: 100px;
+}
+#board th:nth-of-type(odd){
+    display: none;
+}
+
+footer{
+    line-height:60px;
+    text-align: center;
+    color:white;
+    height: 70px;
+    background: #000;
+}
