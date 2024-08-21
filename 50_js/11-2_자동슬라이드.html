@@ -114,8 +114,8 @@
             // 자동 슬라이드 함수 선언
             function autoSlide() {
                 idx++;
+                console.log("idx?",idx);
                 slideList.style.left = -100 * idx + "%";
-                slideList.style.transition = "1s";
 
                 if (idx === slideCount) {
                     idx = 0;
