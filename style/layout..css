@@ -67,7 +67,9 @@ h2 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
     font-weight:700;
-    margin: 56px 0;
+}
+section>h2{
+    padding: 50px 0px;
 }
 
 .figma {
