@@ -85,38 +85,135 @@ html {
 
 
 /* 폰 */
+.phone-tit{
+    font-size:16px;
+    text-align: center;
+    font-weight: 700;
+}
 
-.tab-menu{
+/* 탭 메뉴클릭 */
+.tab-menu ul{
+    position: relative;
+    left:30px;
     display: flex;
 }
-.tab-menu a{
+.tab-menu ul li{
+    font-weight: 600;
+    font-size:16px;
     margin:10px;
-    background: #ffc8c8;
+    padding:15px;
+    border-bottom:3px solid rgb(214, 214, 214);
 }
-.tab-menu a.active{
-    background: #ff6565;
+.tab-menu ul li.active{
+    color:#018B37;
+    border-bottom:3px solid #018B37;
 }
-
+.tab-menu ul li a{
+    color:#018B37;
+}
+.tab-menu ul li a.active{
+    color:#018B37;
+}
+/* 탭 콘텐츠 */
 .tab-cont{
-    background: #deffa1;
-    width: 400px;
-    height: 700px;
+    margin-top:20px;
+    width: 360px;
+    height: 100px;
+}
+.tab-cont .cont1{
+    text-align: center;
+}
+.tab-cont .cont1 img{
+    width: 320px;
+    height: 130px;
 }
 .tab-cont .cont2{
+    text-align: center;
+}
+.tab-cont .cont2 img{
+    width: 320px;
+    height: 130px;
+}
+.tab-cont .cont2{
+    text-align: center;
     display: none;
 }
 
 
 
-
 /* 768이상: 테블릿, 데스크탑 */
 @media (min-width: 768px) {
+    .tab-cont{
+        position: relative;
+        left:25px;
+    }
+    .tab-cont > .cont1 > ul{
+        display: flex;
+        width: 900px;
+        flex-wrap: wrap;
+    }
+    .tab-cont > .cont1 > ul >li {
+        margin: 10px;
+    }
+    .tab-cont .cont1 img{
+        width: 336px;
+        height:190px;
+    }
+
+    .tab-cont > .cont2 > ul{
+        display: flex;
+        width: 900px;
+        flex-wrap: wrap;
+    }
+    .tab-cont > .cont2 > ul >li {
+        margin: 10px;
+    }
+    .tab-cont .cont2 img{
+        width: 336px;
+        height:190px;
+    }
+
+
 
 
 }
 
 /* 992이상: 데스크탑 */
 @media (min-width: 992px) {
+    
+    .tab-cont{
+        position: relative;
+        left:200px;
+    }
+    /* cont1 */
+    .tab-cont > .cont1 > ul{
+        display: flex;
+        width: 1500px;
+        flex-wrap: wrap;
+    }
+    .tab-cont > .cont1 > ul >li {
+        margin: 10px;
+    }
+    .tab-cont .cont1 img{
+        width: 416px;
+        height:416px;
+    }
+    /* cont2 */
+    .tab-cont > .cont2 > ul{
+        display: flex;
+        width: 1500px;
+        flex-wrap: wrap;
+    }
+    .tab-cont > .cont2 > ul >li {
+        margin: 10px;
+    }
+    .tab-cont .cont2 img{
+        width: 416px;
+        height:416px;
+    }
+
+
+    
 
 
 }
