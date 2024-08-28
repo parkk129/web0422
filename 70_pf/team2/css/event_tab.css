@@ -76,6 +76,8 @@ body {
 
 /* 탭 메뉴클릭 */
 .tab-menu ul{
+    margin:0 auto;
+    width: 300px;
     display: flex;
 }
 .tab-menu ul li{
@@ -177,6 +179,31 @@ body {
         font-weight: 700;
     }
     
+    /* 탭 메뉴클릭 */
+.tab-menu ul{
+    margin:0 auto;
+    width: 1250px;
+    display: flex;
+}
+.tab-menu ul li{
+    font-weight: 600;
+    font-size:16px;
+    margin:10px;
+    padding:15px;
+    border-bottom:3px solid rgb(214, 214, 214);
+}
+.tab-menu ul li.active{
+    color:#018B37;
+    border-bottom:3px solid #018B37;
+}
+.tab-menu ul li a{
+    color:#018B37;
+}
+.tab-menu ul li a.active{
+    color:#018B37;
+}
+
+
     .tab-cont{
         position: relative;
         left:25px;
@@ -184,7 +211,7 @@ body {
     /* 콘텐츠1 */
     .tab-cont > .cont1 > ul{
         display: flex;
-        width: 900px;
+        width: 720px;
         flex-wrap: wrap;
     }
     .tab-cont > .cont1 > ul >li {
@@ -211,6 +238,7 @@ body {
         display: flex;
         position: relative;
         left:180px;
+        top:100px;
         justify-content: center;
     }
 }
@@ -223,11 +251,12 @@ body {
         text-align: center;
         font-weight: 700;
     }
-    
+
+
     
     .tab-cont{
         position: relative;
-        left:200px;
+        left:300px;
     }
     /* cont1 */
     .tab-cont > .cont1 > ul{
@@ -279,6 +308,7 @@ body {
         display: flex;
         position: relative;
         left:470px;
+        top:100px;
         justify-content: center;
     }
     
