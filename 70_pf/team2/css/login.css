@@ -79,15 +79,11 @@ body {
     background: white;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-
 /* 폰 */
 
-#wrap{
+#wrap_login{
     text-align: center;
+    margin-top:150px;
 }
 input{
     border:1px solid #D2D2D2;
@@ -114,7 +110,7 @@ input{
     color:#333;
 }
 #signup{
-    margin-top:80px;
+    margin-top:100px;
 }
 #signup input{
     cursor: pointer;
@@ -147,6 +143,10 @@ input{
 
 .sns_text{
     display:none;
+}
+
+#footer{
+    margin-top:95px;
 }
 
 
