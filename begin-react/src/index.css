@@ -1,0 +1,119 @@
+@charset "utf-8";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css");
+@font-face {
+    font-family: "NanumBarunGothic";
+    src: url("https//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+ul {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: "NanumBarunGothic", sans-serif;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: top;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+    line-height: 35px;
+    vertical-align: top;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+#root {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+}
+
+.card_list {
+    width: 235px;
+    margin: 60px;
+}
+
+.card_img {
+    cursor: pointer;
+    width: 340px;
+    height: 450px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card_tit {
+    cursor: pointer;
+    width: 300px;
+    display: inline-block;
+    margin: 0px;
+    margin: 10px 0;
+}
+
+.card_rate {
+    color: #666;
+    display: block;
+}
+
+.card_date {
+    font-size: 15px;
+    color: #999;
+}
+
+.card_btn {
+    margin-top: 12px;
+}
+
+.card_btn button {
+    width: 70px;
+    height: 35px;
+    margin-right: 3px;
+    border-radius: 3px;
+    border: 1px solid #F3F3F3;
+}
+
+.card_btn button::before {
+    content: "\f004";
+    font-family: "Font Awesome 5 Free";
+    margin-right: 8px;
+}
+
+.card_btn button.on::before {
+    color: red;
+}
+
+.card_btn a {
+    line-height: 25px;
+    font-size: 14px;
+    display: inline-block;
+    width: 65px;
+    height: 27px;
+    color: #EF3E43;
+    border: 1px solid #EF3E43;
+    border-radius: 3px;
+}
