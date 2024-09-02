@@ -1,29 +1,179 @@
-@charset "utf-8";
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css);
-
 @font-face {
     font-family: 'Pretendard-Regular';
     src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
+
 body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Pretendard-Regular';
+}
+
+/* top logo */
+.top_logo img {
+    position: absolute;
+    left: 910px;
+    display: flex;
+    justify-content: center;
+    z-index: 999;
+    width: 100px;
+    height: 40px;
+}
+
+/* 1depth */
+ul {
+    display: flex;
+    padding: 0;
+    padding-left: 0;
+    list-style: none;
     margin: 0;
 }
 
-img{
-    height: 900px;
+a {
+    text-decoration: none;
+    color: rgb(22, 22, 22);
 }
 
+.main {
+    align-items: center;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.main>li {
+    width: 160px;
+    height: 30px;
+    text-align: center;
+    align-content: center;
+    line-height: 30px;
+}
+
+.main>li:hover {
+    background: rgba(88, 88, 88, 0.164);
+    height: 50px;
+}
+
+.gnb {
+    top: 18px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+}
+
+.gnb .main:nth-of-type(1) {
+    position: relative;
+    left: -50px;
+}
+
+.gnb .main:nth-of-type(2) {
+    position: relative;
+    left: 100px;
+}
+
+.gnb i {
+    position: relative;
+    left: -70px;
+    margin: 23px 15px;
+}
+
+.main li .sub {
+    display: none;
+}
+
+.main li:hover {
+    border-radius: 10px;
+    width: 160px;
+    height: 30px;
+    background: #ffffff7c;
+}
+
+
+/* left nav*/
+.main:nth-of-type(1) li:nth-of-type(1):hover .sub {
+    margin-top: 10px;
+    border-radius: 10px;
+    display: block;
+    background: #ffffff;
+}
+
+.main:nth-of-type(1) li:nth-of-type(2):hover .sub {
+    display: block;
+    margin-top: 10px;
+    border-radius: 10px;
+    display: block;
+    background: #ffffff;
+}
+
+.main:nth-of-type(1) li:nth-of-type(3):hover .sub {
+    display: block;
+    margin-top: 10px;
+    border-radius: 10px;
+    display: block;
+    background: #ffffff;
+}
+
+.main:nth-of-type(1) li:nth-of-type(4):hover .sub {
+    display: block;
+    margin-top: 10px;
+    border-radius: 10px;
+    display: block;
+    background: #ffffff;
+}
+
+
+/* right nav*/
+.main:nth-of-type(2) li:nth-of-type(1):hover .sub {
+    display: block;
+    margin-top: 10px;
+    border-radius: 10px;
+    display: block;
+    background: #ffffff;
+}
+
+.main:nth-of-type(2) li:nth-of-type(2):hover .sub {
+    display: block;
+    margin-top: 10px;
+    border-radius: 10px;
+    display: block;
+    background: #ffffff;
+}
+
+.main:nth-of-type(2) li:nth-of-type(3):hover .sub {
+    display: block;
+    margin-top: 10px;
+    border-radius: 10px;
+    display: block;
+    background: #ffffff;
+}
+
+
+.sub li:hover {
+    font-weight: 900;
+}
+
+/*슬라이드*/
+
+img {
+    width: 100%;
+    height: 900px;
+    object-fit: cover;
+}
 
 #slideWrap {
     position: relative;
-    height: 900px;
+    height: 450px;
     margin: 0 auto;
-    border: 1px solid red;
 }
 
 .bx-wrapper {
+    height: 100%;
     box-shadow: none;
     border: none;
     margin-bottom: 0;
@@ -34,16 +184,17 @@ img{
 }
 
 /* 인디케이터(페이저) */
+
 .bx-wrapper .bx-pager {
     /* 위치 */
-    bottom: 20px;
+    bottom: -400px;
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a:focus,
 .bx-wrapper .bx-pager.bx-default-pager a:hover,
 .bx-wrapper .bx-pager.bx-default-pager a {
     /* 전체 색상 */
-    background: #ffcece;
+    background: #ffffff;
     /* 페이저 아이템의 좌우 간격 */
     margin: 0 8px;
 }
@@ -51,32 +202,32 @@ img{
 .bx-wrapper .bx-pager.bx-default-pager a.active {
     /* transform: scale(2, 2); */
     /* 현재 보이는 이미지의 해당하는 페이저 색상 */
-    background: #fff;
+    background: #d38a95;
 }
 
 /* 이전/다음 버튼 */
 .bx-wrapper .bx-controls-direction a {
     /* 크기 */
     /* 요즘방법 transform : translate 사용 */
-    transform:translateY(90%);
+    transform: translateY(-50%);
     /* 예전방법 margin-top:-38px;*/
     width: 50px;
     height: 76px;
     display: none;
-    background:  url(../assets2/ico_comm_sp.png) no-repeat;
+    background: url(../assets2/ico_comm_sp.png) no-repeat;
 }
 
 /* 이전 */
 .bx-wrapper .bx-prev {
-    left:0px;
+    left: 0px;
     /* background: url() 반복 x위치 y위치/가로 세로; */
-    background-position:0 -129px !important;
+    background-position: 0 -129px !important;
 }
 
 /* 다음 */
 .bx-wrapper .bx-next {
-    right:0px;
-    background-position:-55px -129px !important;
+    right: 0px;
+    background-position: -55px -129px !important;
 }
 
 /* 다음 버튼 호버시 사라지는 현상 초기화 */
@@ -91,11 +242,19 @@ img{
 }
 
 
+/* section1 */
+
+.section1 > ul > li{
+    width: 200px;
+    height: 200px;
+}
+
 @media (min-width: 768px) {
 
     #slideWrap img:first-of-type {
         display: none;
     }
+
     #slideWrap img:last-of-type {
         display: block;
     }
