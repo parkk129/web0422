@@ -240,13 +240,10 @@ img {
 #slideWrap img:last-of-type {
     display: none;
 }
-
-
-/* section1 */
-
 .section1 > ul > li{
-    width: 200px;
-    height: 200px;
+    width: 375px;
+    height: 375px;
+    background: #000;
 }
 
 @media (min-width: 768px) {
