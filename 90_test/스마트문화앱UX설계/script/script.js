@@ -26,6 +26,13 @@
 
         //nav 태그에 change 클래스가 추가
         nav.classList.toggle("change");
+
+
+        // ///////////////////무신사 원페이지 롱스크롤
+
+        
+
+
     }
 
 
