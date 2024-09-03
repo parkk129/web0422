@@ -5,7 +5,6 @@
     src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2");
 }
 
-/* typo*/
 html {
     font-size: 10px;
     scroll-behavior: smooth;
@@ -56,7 +55,7 @@ p {
 
 a {
     color: #444;
-    text-decoration: underline;
+    text-decoration:none;
 }
 
 nav a {
@@ -79,6 +78,9 @@ nav ul {
 
 /* common */
 
+.container-fluid{
+    background:no-repeat 50% 50%/cover fixed;
+}
 .progress{
     font-size:1.5rem;
     height: 30px;
@@ -93,7 +95,7 @@ nav ul {
     width: 80%;
 }
 .progress:nth-of-type(4) .progress-bar{
-    width: 50%;
+    width: 60%;
 }
 .progress-bar{
     height: 30px;
@@ -130,6 +132,14 @@ nav ul {
     text-align: center;
 }
 
+.btn{
+    padding: 8px;
+    font-size:1.3rem;
+}
+
+#s4{
+    text-align: center;
+}
 
 /* //////////////// */
 
@@ -194,7 +204,15 @@ h3 span {
 
 
 /* footer */
+footer{
+    height: 200px;
+    background: #000;
+}
+footer p,a{
+    color:#fff;
+}
 footer, footer p {
+    line-height:3;
     text-align: center;
 }
 
