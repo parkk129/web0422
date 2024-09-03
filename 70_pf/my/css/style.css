@@ -1,32 +1,11 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
-
-/* typo */
-html {
-    font-size:10px;
-}
-body {
-    font: 굵기 / 줄간격 글꼴1, 글꼴2, 글꼴3;
-    font:1.5rem/1.5 "Noto Sans KR", Arial, sans-serif;
-}
-h2, h3 {
-    font-weight:300;
-}
-img{
-    width: 100%;
-    max-width:100%;
-    height:auto;
-}
-
-/* ///////////////////////// */
-
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
 @font-face {
     font-family: "NanumSquareNeo";
     src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2");
 }
 
-/* common */
+/* typo*/
 html {
     font-size: 10px;
     scroll-behavior: smooth;
@@ -46,7 +25,8 @@ ul {
     list-style: none;
 }
 
-img {
+img,video{
+    object-fit: cover;
     width: 100%;
 }
 
@@ -154,6 +134,38 @@ section {
 
 h3 span {
     font-weight: 400;
+}
+
+/* common */
+
+.progress{
+    font-size:1.5rem;
+    height: 30px;
+}
+.progress:nth-of-type(1) .progress-bar{
+    width: 70%;
+}
+.progress:nth-of-type(2) .progress-bar{
+    width: 90%;
+}
+.progress:nth-of-type(3) .progress-bar{
+    width: 80%;
+}
+.progress:nth-of-type(4) .progress-bar{
+    width: 50%;
+}
+.progress-bar{
+    height: 30px;
+}
+.skill{
+    display: block;
+}
+.counter{
+    text-align: center;
+}
+.counter span{
+    display: block;
+    font-size:2.4rem;
 }
 
 /* footer */

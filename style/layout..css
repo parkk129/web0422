@@ -107,8 +107,6 @@ footer{
 
 /* ////////////////////////////////////반응형css */
 
-@import url(reset.css);
-@import url(typo.css);
 
 /* :root는 HTML 태그를 가리킨다. */
 :root {
@@ -171,7 +169,7 @@ h2 {
 
 .home-card {
     display: grid;
-    grid-template-columns:auto;
+    grid-template-columns: 100px auto;
     column-gap: 24px;
 }
 
@@ -179,17 +177,9 @@ h2 {
     grid-row: 1/span 3;
 }
 
-@media (min-width:768px) {
-    .grid-container {
-        width: 50%;
-        grid-template-columns: auto auto;
-    }
-}
-
 @media (min-width:992px) {
     .home-card {
-        grid-template-columns: auto auto auto auto;
-        width: 100%;
+        width: 50%;
         margin: 0 auto;
     }
 }
