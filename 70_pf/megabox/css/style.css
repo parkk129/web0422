@@ -7,6 +7,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body{
+    background-color: rgb(255, 255, 255);
+}
+
 /* 헤더 */
 
 header {
@@ -18,7 +22,7 @@ header {
     align-items: center;
     height: 54px;
     padding: 0 30px;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(20, 20, 20, 0.16), 0 2px 10px 0 rgba(49, 49, 49, 0.12);
 }
 /* 섹션 공통 */
 section {
@@ -110,7 +114,6 @@ nav {
         width: 77.77%;
         margin: 0 auto;
         padding-top: 96px;
-        border:1px solid red;
     }
 
     /* 섹션1 */
@@ -120,9 +123,12 @@ nav {
 
     /* 섹션2 */
     #sec2 ul{
-        width: 1000px;
+        width:100%;
         display: flex;
         flex-wrap: wrap;
+    }
+    #sec2 > ul > li{ 
+        margin: 5px;
     }
     nav {
         display:flex;
