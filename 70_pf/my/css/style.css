@@ -77,6 +77,43 @@ nav ul {
     display: flex;
 }
 
+/* common */
+
+.progress{
+    font-size:1.5rem;
+    height: 30px;
+}
+.progress:nth-of-type(1) .progress-bar{
+    width: 70%;
+}
+.progress:nth-of-type(2) .progress-bar{
+    width: 90%;
+}
+.progress:nth-of-type(3) .progress-bar{
+    width: 80%;
+}
+.progress:nth-of-type(4) .progress-bar{
+    width: 50%;
+}
+.progress-bar{
+    height: 30px;
+}
+.skill{
+    display: block;
+}
+
+.counter {
+    background: #616161;
+    color: #fff;
+    text-align: center;
+    padding: 32px;
+}
+
+.counter span{
+    display: block;
+    font-size:2.4rem;
+}
+
 /* 메뉴 사이 작은 동그라미 */
 nav li:first-child::after {
     content: "";
@@ -136,37 +173,6 @@ h3 span {
     font-weight: 400;
 }
 
-/* common */
-
-.progress{
-    font-size:1.5rem;
-    height: 30px;
-}
-.progress:nth-of-type(1) .progress-bar{
-    width: 70%;
-}
-.progress:nth-of-type(2) .progress-bar{
-    width: 90%;
-}
-.progress:nth-of-type(3) .progress-bar{
-    width: 80%;
-}
-.progress:nth-of-type(4) .progress-bar{
-    width: 50%;
-}
-.progress-bar{
-    height: 30px;
-}
-.skill{
-    display: block;
-}
-.counter{
-    text-align: center;
-}
-.counter span{
-    display: block;
-    font-size:2.4rem;
-}
 
 /* footer */
 footer, footer p {
