@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>칼럼/로우/반응형</title>
+    <style>
+        /* 폰 */
+
+        .grid-container {
+            background: #27f1ff;
+            /*디스플레이 사용*/
+            display: grid;
+            grid-template-columns: auto;
+            /* 첫번째 로우 두번째 컬럼 */
+            gap:24px 5px;
+        }
+
+        .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        /* ------------반응형--------------- */
+
+        /* 태블릿 */
+        @media (min-width:768px){
+            .grid-container {
+                grid-template-columns: auto auto;
+            }
+        }
+        
+        /* 데스크탑 */
+        @media (min-width:992px){
+            .grid-container {
+                grid-template-columns: auto auto auto auto;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+    </div>
+
+    <!-- layout
+    1.float
+    2.table
+    3.display:flex
+    4.position
+    5.display:grid
+    
+    용어
+    grid:격자
+    column(세로):그리드 열
+    row(가로):그리드 행
+    gap:열과 열사이의 간격/행과 행사이의 간격
+    line:그리드 라인/격자 선
+
+    부모 : 그리드 컨테이너
+    display:grid
+    grid-templete-rows
+    grid-templete-columns
+    grid-template-areas
+    
+    grid-column-start
+    grid-column-end
+    grid-column
+    grid-row-start
+    grid-row-end
+    grid-row
+
+    column-gap
+    row-gap
+    gap
+    
+    자식 : 그리드 아이템
+    grid-area  -->
+    
+</body>
+
+</html>
