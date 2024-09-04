@@ -54,7 +54,7 @@ window.addEventListener("DOMContentLoaded", () => {
         we.innerText = wee + "요일";
         ho.innerText = ze(hou)+ "시";
         mi.innerText = ze(min)+ "분";
-        se.innerText = ze(sec)+ "초";
+        se.innerText = ze(sec);
 
         // 0~9는 00~09로 표기
         function ze(num) {
