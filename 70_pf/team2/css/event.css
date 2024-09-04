@@ -76,7 +76,6 @@ body {
     font-weight: 700;
 }
 
-
 /* 탭 메뉴클릭 */
 .tab-menu ul{
     margin:0 auto;
@@ -201,11 +200,8 @@ body {
 }
 
 #footer{
-    margin-top: 1200px;
+    margin-top: 1400px;
 }
-
-
-
 
 
 /* 768이상: 테블릿, 데스크탑 */
