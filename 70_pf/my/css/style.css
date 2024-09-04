@@ -4,6 +4,7 @@
     font-family: "NanumSquareNeo";
     src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2");
 }
+@import url("clock.css");
 
 html {
     font-size: 10px;
@@ -81,6 +82,10 @@ nav ul {
 .container-fluid{
     background:no-repeat 50% 50%/cover fixed;
 }
+
+#s1 div{
+    font-size: 50px;
+}
 #s1 .container-fluid{
     height: 100vh;
     background-image:url(../assets/KakaoTalk_20240903_162506603.jpg);
@@ -139,8 +144,12 @@ nav ul {
     margin:20px 0px;
     text-align: center;
 }
-
+#s3{
+    text-align: center;
+    margin-bottom:50px;
+}
 .btn{
+    justify-content: center;
     padding: 8px;
     font-size:1.3rem;
 }
@@ -149,24 +158,28 @@ nav ul {
     text-align: center;
 }
 
+#s4 .container-fluid{
+    align-content: center;
+    font-size:50px;
+    color:#fff;
+}
+#s4 .info{
+    text-align: left;
+}
+#s4 form{
+    text-align: left;
+}
+[name="user_name"]{
+    margin-right:calc(2% - 4px)
+}
+[name*="user"]{
+    width: 50%;
+}
+[name="message"]{
+    width:90%;
+}
+
 /* //////////////// */
-
-/* 메뉴 사이 작은 동그라미 */
-nav li:first-child::after {
-    content: "";
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    margin: 0 12px 4px;
-    background: #999;
-}
-
-/* header */
-header {
-    background: url(../assets/bg-light.png) no-repeat 50% 50% / cover fixed;
-    line-height: 150px;
-}
 
 /* main */
 main {
@@ -209,7 +222,6 @@ section {
 h3 span {
     font-weight: 400;
 }
-
 
 /* footer */
 footer{

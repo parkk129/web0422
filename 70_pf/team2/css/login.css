@@ -144,6 +144,16 @@ input{
 .sns_text{
     display:none;
 }
+#id_save{
+    position: relative;
+    left:-95px;
+    margin-bottom:18px;
+}
+
+#agree-chk{
+    height:20px;
+    width:30px;
+}
 
 #footer{
     margin-top:95px;
@@ -187,6 +197,11 @@ input{
     .sns_text{
         display:none;
     }
+    #id_save{
+        position: relative;
+        left:-245px;
+        margin-bottom:18px;
+    }
 
 }
 
@@ -211,6 +226,10 @@ input{
         margin-top:20px;
         display: block;
     }
-
+    #id_save{
+        position: relative;
+        left:-145px;
+        margin-bottom:18px;
+    }
 
 }
