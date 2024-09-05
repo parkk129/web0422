@@ -61,4 +61,13 @@ window.addEventListener("DOMContentLoaded", () => {
             return num < 10 ? (num = "0" + num) : (num = num);
         }
     } // clock_fn
+
+        // lightbox2 link
+        const lb_caption = $(".lb-caption");
+        lb_caption.css({cursor:"pointer"});
+        lb_caption.click(() => {
+            const lb_link = event.currentTarget.text();
+            const openNewWindow = window.open("about:blank");
+            openNewWindow.location.href = lb_link;
+        });
 }); // DOMContentLoaded
