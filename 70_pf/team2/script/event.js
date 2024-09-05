@@ -17,6 +17,7 @@ window.addEventListener("DOMContentLoaded", () => {
             $(this).addClass("active");
             $(".tab-cont > div").eq(index).show();
             
+            return;
     });
 
 });

@@ -169,11 +169,15 @@ nav > ul > li > a{
     background: #4d0686;
 }
 
-/* 섹션3 */
-#sec3 h3 {
-    font-size: 2.4rem;
+/* 섹션3--------------- */
+.s3 .slider{
+    display: flex;
 }
 
+#sec2 .s2_left{
+    width: 50%;
+}
+/* 섹션4 */
 /* font color */
 
 #sec1 b,
