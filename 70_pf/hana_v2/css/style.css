@@ -3,6 +3,21 @@
 @import url(typo.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.css);
 
+/* 헤더 */
+
+header {
+    background: #b8b8b8a9;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 54px;
+    padding: 0 30px;
+    transition: .3s ease-out;
+}
+
 /* fullpage */
 #myMenu {
     z-index:9999;
@@ -20,11 +35,6 @@
 #fp-nav.right li:last-child {
     display: none;
 }
-
-/* common */
-/* section {
-    height: 100vh;
-} */
 
 .ibx {
     width: 1120px;
@@ -124,7 +134,7 @@ header {
 
 /* 섹션4 */
 #s4 {
-    background: url(../assets/s4_bg.png) no-repeat -285px 0/cover;
+    background: url(../assets/건물1.jpg) no-repeat -285px 0/cover;
 }
 #s4 .ibx {
     display: flex;

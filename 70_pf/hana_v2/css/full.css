@@ -1,6 +1,11 @@
 @charset "utf-8";
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css);
 
-
+/* s1 */
+.title{
+    text-align: center;
+    z-index: 999;
+}
 /* 햄버거 버튼 */
 .collapsedMenuIcon {
     right: 0;
@@ -8,7 +13,10 @@
     /* 마우스 포인터 모양 */
     cursor: pointer;
 }
-
+#fullpage > .section:nth-of-type(0) > p{
+    position: absolute;
+    top:100px;
+}
 .bar1,
 .bar2,
 .bar3 {
@@ -40,14 +48,6 @@ ul {
     list-style: none;
 }
 
-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 0% 0%;
-    vertical-align: top;
-}
-
 a {
     text-decoration: none;
 }
@@ -66,8 +66,6 @@ iframe {
     height: 100%;
 }
 
-/* --- common ---*/
-
 :root {
     font-size: 10px;
     --black: #000;
@@ -81,10 +79,6 @@ iframe {
 body {
     font-family: "Noto Sans KR", sans-serif;
     font-size: 1.5rem;
-}
-
-h1 {
-    font-weight: normal;
 }
 
 h1,
@@ -112,7 +106,7 @@ button {
 /* 헤더 */
 
 header {
-    background: #b8b8b8a9;
+    background: #b8b8b800;
     position: fixed;
     z-index: 9999;
     width: 100%;
@@ -124,24 +118,57 @@ header {
     transition: .3s ease-out;
 }
 
+nav > ul > li > a{
+    font-size:20px;
+    color:#fff;
+}
+
 /* 섹션1 */
 
-#sec1 h2 {
-    text-align: center;
-    width:60px;
-    display: flex;
-    position: absolute;
-    left:919px;
-    font-weight: 400;
+.s1 {
+    background:url(../assets/건물3.jpg) no-repeat;
 }
-/* 섹션2 */
-#sec2{
-    display: flex;
+.title{
+    color:#fff;
+    font-size: 75px;
+}
+.title2{
+    color:#fff;
+    font-size:26px;
+    font-weight:400;
+    text-align: center;
 }
 
-#sec2 .s2_left{
-    width: 50%;
+/* 섹션2 */
+.s2{
+    background:url(../assets/sec2.png) no-repeat;
 }
+.ibx{
+    margin-left:1100px;
+    align-items:center;
+    height: 100%;
+    display: flex;
+    width: 900px;
+}
+.ibx h2{
+    font-size:49px;
+    margin-bottom:40px;
+}
+.ibx p{
+    font-size:18px;
+    margin-bottom:30px;
+}
+#s4 .cont{
+    width: 560px;
+    background: #a3acff;
+}
+
+#s4 .link a {
+    display: flex;
+    padding: 16px 24px;
+    background: #4d0686;
+}
+
 /* 섹션3 */
 #sec3 h3 {
     font-size: 2.4rem;
@@ -170,20 +197,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* 섹션 공통 */
-section {
-    padding: 96px 32px 0;
-}
-
-section h2 {
-    border: none;
-    padding-bottom: 24px;
-    margin-bottom: 48px;
-}
-/* --- common 끝---*/
-
-
-
 /* 폰 */
 nav {
     display: none;
@@ -204,58 +217,6 @@ nav {
 nav.change {
     right: 0;
 }
-
-h3 {
-    line-height: 10px;
-}
-
-
-#sec3 ul li {
-    margin: 60px 0px;
-}
-
-#sec3 ul li div {
-    margin-bottom: 20px;
-}
-
-#sec3 ul li p {
-    margin-top: 20px;
-}
-
-#sec5 h3{
-    line-height: 50px;
-}
-
-#sec1 span {
-    display: none;
-}
-
-#sec4{
-    margin-bottom:50px;
-}
-footer{
-    background:#333;
-}
-footer img{
-    width: 200px;
-}
-.footer_text{
-    line-height: 20px;
-}
-footer {
-    background: #333;
-}
-
-#sec5 .slider {
-    display: block;
-
-}
-
-#sec5 img {
-    width: 400px;
-    margin-right: 20px;
-}
-
 nav a {
     font-weight: 800;
     position: relative;
@@ -294,28 +255,10 @@ iframe{
         margin-left: 40px;
     }
     
-    #sec1 h2 {
-        top: 50%;
-    }
-
     section li {
         width: calc(25% - 15px);
     }
 
-
-    /* 섹션2 */
-    #sec2 ul {
-        width: 700px;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    /* 섹션3 */
-    #sec3 ul {
-        width: 30%;
-        display: flex;
-        flex-wrap: wrap;
-    }
 
     nav {
         display: flex;
@@ -325,76 +268,17 @@ iframe{
         width: 70%;
     }
 
-    #sec5 .slider {
-        display: flex;
-    }
-
 }
 
 /* 992이상: 데스크탑 */
 @media (min-width: 992px) {
 
-    /* 섹션 공통 */
-    section {
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    /* 섹션1 */
-
-    #sec1 div {
-        height: 745px;
-    }
-
-    /* 섹션2 */
-    #sec2 .title{
-        font-size: 50px;
-    }
-    #sec2 ul {
-        width: 1000px;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    #sec2 img{
-        width: 400px;
-    }
-    #sec2 ul li{
-        width: 400px;
-    }
-    
     nav ul {
         display: flex;
     }
-
-    /* 섹션3 */
-    #sec3 ul {
-        width: 1700px;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    #sec3 ul li{
-        margin: 5px;
-    }
-
     .collapsedMenuIcon {
         display: none;
     }
 
-    #sec4 input,button{
-        width: 500px;
-        height: 50px;
-    }
-    #sec5 .slider {
-        display: flex;
-    }
-    footer img{
-        width: 300px;
-    }
-    
-    .footer_text{
-        line-height: 30px;
-        text-align: center;
-        margin-left:200px;
-    }
+
 }

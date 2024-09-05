@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js"></script>
+    <style>
+
+        .skill{
+            margin:20px 0px 50px 0px;
+        }
+        .good{
+            text-align: center;
+        }
+        .col{
+            margin:20px 0px;
+        }
+        
+        .counter {
+            background: #616161;
+            color: #fff;
+            text-align: center;
+            padding: 32px;
+        }
+        
+        .counter span{
+            display: block;
+            font-size:2.4rem;
+        }
+        
+        #container{
+            margin:0 auto;
+            width: 1000px;
+        }
+        #container h3,p{
+            margin:20px 0px;
+            text-align: center;
+        }
+        #s3{
+            text-align: center;
+            margin-bottom:50px;
+        }
+
+        .btn{
+            justify-content: center;
+            padding: 8px;
+            font-size:1.3rem;
+        }
+        
+        #s4{
+            text-align: center;
+        }
+        
+        #s4 .container-fluid{
+            align-content: center;
+            font-size:50px;
+            color:#fff;
+        }
+        #s4 .info{
+            text-align: left;
+        }
+        #s4 form{
+            text-align: left;
+        }
+        [name="user_name"]{
+            margin-right:calc(2% - 4px)
+        }
+        [name*="user"]{
+            width: 50%;
+        }
+        [name="message"]{
+            width:90%;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        // 제이쿼리 ready 이벤트
+        // dom content loaded
+        $(()=>{
+            //요소 찾기
+            //제이쿼리는 id든 class든 구분없이 $로 표현
+            const btn = $("button");
+            const b = $("b")
+
+            //let count = 0;
+            //innertext와 같은 역할
+            //console.log(b.eq(0).text(10));
+
+            btn.click(()=>{
+                //for 반복문 (0부터 99까지)
+                //fot 반복문은 정지를 못함
+                //컴퓨터가 숫자가 증가하는건 매우 빠름
+                //숫자가 올라갈때마다 정지해줘야함 >> settimout
+                
+                counter()
+
+            });
+
+            //setTimeout(,1000);
+
+            //재귀 호출 함수
+            //재귀 호출 : 함수가 자기 자신을 호출하는 것ㅊㅊ
+
+            let count = 1;
+            function counter(){
+            //for(let i=0; i<100; i++){
+            count++;
+            b.eq(0).text(count);
+            //count가 100이상이면 함수 탈출시킴
+            if (count >= 100) return;
+            setTimeout(counter, 100);
+        }
+
+
+        });
+    </script>
+</head>
+<body>
+            <button>클릭하면 숫자가 올라가요</button>
+            <!-- counter -->
+            <div class="container-fluid counter">
+                <div class="row pb-5 ">
+                    <div class="col">
+                        <span><b>0</b>+</span>
+                        <span>Team projects</span>
+                    </div>
+                    <div class="col">
+                        <span><b>0</b>+</span>
+                        <span>Personal projects</span>
+                    </div>
+                    <div class="col">
+                        <span><b>0</b>+</span>
+                        <span>Total projects</span>
+                    </div>
+                    <div class="col">
+                        <span><b>0</b>+</span>
+                        <span>National technical certification</span>
+                    </div>
+                </div>
+            </div>
+</body>
+</html>
