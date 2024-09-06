@@ -15,21 +15,11 @@
     border-radius: 50%;
 }
 
-/* 큰 원 */
-.mp1 {
+/* 작은 원 */
+.mp2 {
     background-image: url(../assets/pointer2.png); 
     width: 30px;
     height: 30px;
-    /* background: url(mouse-cursor.png) no-repeat; */
-    /* ease-out을 사용! */
-    transition: .7s ease-out;
-}
-
-/* 작은 원 */
-.mp2 {
-    width: 10px;
-    height: 10px;
-    background: #000;
     /* ease-out을 사용! */
     transition: .1s ease-out;
 }
