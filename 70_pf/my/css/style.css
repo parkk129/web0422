@@ -1,15 +1,44 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
 @font-face {
     font-family: "NanumSquareNeo";
     src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2");
 }
+
 @import url("clock.css");
+
+
+/* 마우스 포인터 */
+.mp {
+    position: absolute;
+    border-radius: 50%;
+}
+
+/* 큰 원 */
+.mp1 {
+    background-image: url(../assets/fire.png);
+    width: 30px;
+    height: 30px;
+    /* background: url(mouse-cursor.png) no-repeat; */
+    /* ease-out을 사용! */
+    transition: .7s ease-out;
+}
+
+/* 작은 원 */
+.mp2 {
+    width: 10px;
+    height: 10px;
+    background: #000;
+    /* ease-out을 사용! */
+    transition: .1s ease-out;
+}
 
 html {
     font-size: 10px;
     scroll-behavior: smooth;
 }
+
 body,
 ul,
 h1,
@@ -17,15 +46,18 @@ h2,
 h3 {
     margin: 0;
 }
+
 body {
     font: 1.5rem/1.5 "Noto Sans KR", Arial, sans-serif;
 }
+
 ul {
     padding: 0;
     list-style: none;
 }
 
-img,video{
+img,
+video {
     object-fit: cover;
     width: 100%;
 }
@@ -46,9 +78,11 @@ h1 {
 h2 {
     font-size: 2.25rem;
 }
+
 h3 {
     font-size: 1.8rem;
 }
+
 p {
     text-align: justify;
     word-break: break-all;
@@ -56,7 +90,7 @@ p {
 
 a {
     color: #444;
-    text-decoration:none;
+    text-decoration: none;
 }
 
 nav a {
@@ -79,49 +113,60 @@ nav ul {
 
 /* common */
 
-.container-fluid{
-    background:no-repeat 50% 50%/cover fixed;
+.container-fluid {
+    background: no-repeat 50% 50%/cover fixed;
 }
 
-#s1 div{
+#s1 div {
     font-size: 50px;
 }
-#s1 .container-fluid{
+
+#s1 .container-fluid {
     height: 100vh;
-    background-image:url(../assets/KakaoTalk_20240903_162506603.jpg);
+    background-image: url(../assets/KakaoTalk_20240903_162506603.jpg);
 }
-#s4 .container-fluid{
+
+#s4 .container-fluid {
     height: 400px;
-    background-image:url(../assets/KakaoTalk_20240903_162506603_12.jpg);
+    background-image: url(../assets/KakaoTalk_20240903_162506603_12.jpg);
 }
-.progress{
-    font-size:1.5rem;
+
+.progress {
+    font-size: 1.5rem;
     height: 30px;
 }
-.progress:nth-of-type(1) .progress-bar{
+
+.progress:nth-of-type(1) .progress-bar {
     width: 70%;
 }
-.progress:nth-of-type(2) .progress-bar{
+
+.progress:nth-of-type(2) .progress-bar {
     width: 90%;
 }
-.progress:nth-of-type(3) .progress-bar{
+
+.progress:nth-of-type(3) .progress-bar {
     width: 80%;
 }
-.progress:nth-of-type(4) .progress-bar{
+
+.progress:nth-of-type(4) .progress-bar {
     width: 60%;
 }
-.progress-bar{
+
+.progress-bar {
     height: 30px;
 }
-.skill{
-    margin:20px 0px 50px 0px;
+
+.skill {
+    margin: 20px 0px 50px 0px;
     display: block;
 }
-.good{
+
+.good {
     text-align: center;
 }
-.col{
-    margin:20px 0px;
+
+.col {
+    margin: 20px 0px;
 }
 
 .counter {
@@ -131,52 +176,96 @@ nav ul {
     padding: 32px;
 }
 
-.counter span{
-    display: block;
-    font-size:2.4rem;
+/* video */
+#s2 .vid {
+    position: relative;
 }
 
-#container{
-    margin:0 auto;
-    width: 1000px;
+/* i태그가 비디오 버튼 */
+#s2 .vid i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6rem;
+    opacity: 0;
+    transition: .3s;
 }
-#container h3,p{
-    margin:20px 0px;
+
+#s2 .vid:hover i {
+    opacity: 1;
+}
+
+
+
+.counter span {
+    display: block;
+    font-size: 2.4rem;
+}
+
+#container {
+    margin: 0 auto;
+    width:100%;
+}
+
+
+#container h3,
+p {
+    margin: 20px 0px;
     text-align: center;
 }
-#s3{
+
+#s3 {
     text-align: center;
-    margin-bottom:50px;
+    margin-bottom: 50px;
 }
-.btn{
+
+#s3 .row {
+    display: block;
+}
+
+#s3 .row .col {
+    display: block;
+}
+
+#s3 .row .col img {
+    width: 480px;
+}
+
+.btn {
     justify-content: center;
     padding: 8px;
-    font-size:1.3rem;
+    font-size: 1.3rem;
 }
 
-#s4{
+#s4 {
     text-align: center;
 }
 
-#s4 .container-fluid{
+#s4 .container-fluid {
     align-content: center;
-    font-size:50px;
-    color:#fff;
+    font-size: 50px;
+    color: #fff;
 }
-#s4 .info{
+
+#s4 .info {
     text-align: left;
 }
-#s4 form{
+
+#s4 form {
     text-align: left;
 }
-[name="user_name"]{
-    margin-right:calc(2% - 4px)
+
+[name="user_name"] {
+    margin-right: calc(2% - 4px)
 }
-[name*="user"]{
+
+[name*="user"] {
     width: 50%;
 }
-[name="message"]{
-    width:90%;
+
+[name="message"] {
+    width: 90%;
 }
 
 /* //////////////// */
@@ -215,6 +304,7 @@ section {
     border: 1px solid #f1f1f1;
     transition: 0.3s;
 }
+
 .home-icon:hover {
     box-shadow: 0px 0px 5px 2px #ccc;
 }
@@ -224,36 +314,65 @@ h3 span {
 }
 
 /* footer */
-footer{
+footer {
     height: 200px;
-    background: #000;
+    background-image:url(../assets/pattern.png);
 }
-footer p,a{
-    color:#fff;
+
+footer p,
+a {
+    color: #fff;
 }
-footer, footer p {
-    line-height:3;
+
+footer,
+footer p {
+    line-height: 3;
     text-align: center;
 }
+
+@media (min-width:768px) {
+    #s3 .row .col img {
+        width: 400px;
+    }
+}
+
 
 @media (min-width: 992px) {
     nav {
         line-height: 100px;
         font-size: 2rem;
     }
+
     h1 {
         font-size: 5rem;
     }
+
     h2 {
         font-size: 3rem;
         margin: 56px 0;
     }
+
     header {
         line-height: 200px;
     }
+
     section {
         width: 50%;
         margin: auto;
         padding: 0;
+    }
+
+    #s3 {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    #s3 .row {
+        display: flex;
+        width: 100%;
+    }
+
+    #s3 .row .col img {
+        width: 300px;
     }
 }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그라디언트</title>
+    <style>
+        
+        body{
+            display: flex;
+        }
+        div{
+            border:1px solid black;
+            margin: 100px;
+            width: 300px;
+            height: 300px;
+        }
+        .grad1{
+            background-image: linear-gradient(to left bottom, red,blue);
+        }
+        .grad2{
+            background-image: linear-gradient(rgb(255, 251, 0),rgb(0, 183, 255));
+        }
+        .grad3{
+            background-image: linear-gradient(rgb(255, 166, 0),rgb(255, 0, 234));
+        }
+    </style>
+</head>
+<!-- 
+<방향>
+to left
+to right
+to top
+to bottom
+to left bottom : 대각선
+<각도>
+90deg
+내가 쓰고싶은 각도숫자+deg 
+<정도>
+-->
+<body>
+    <div class="grad1">선형</div>
+    <div class="grad2">원형</div>
+    <div class="grad3">원뿔형</div>
+</body>
+</html>

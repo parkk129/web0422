@@ -170,35 +170,57 @@ nav > ul > li > a{
 }
 
 /* 섹션3--------------- */
+.s3 h2{
+    font-size: 49px;
+}
+.s3 p{
+    margin-top:20px;
+    font-size: 18px;
+}
 .s3 .slider{
     display: flex;
 }
-
-#sec2 .s2_left{
-    width: 50%;
+.s3 .container{
+    display: flex;
+    flex-wrap: wrap;
+    border:1px solid red;
+    width: 1500px;
+    margin:0 auto;
 }
-/* 섹션4 */
-/* font color */
+.s3 .container div{
+    margin-bottom:-25px;
+}
 
+.s3 .container img{
+    border:1px solid yellow;
+    width: 499px;
+    height: 320px;
+}
+.s3 .container img:hover{
+    background: #3a3a3a54;
+}
+.s3 .title3{
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1500px;
+    border:1px solid;
+    display: flex;
+}
+.s3 .container h3{
+    color:#fff;
+    position:relative;
+    top:-50px;
+    left:30px;
+}
+
+/* 섹션4 */
+
+/* font color */
 #sec1 b,
 #sec2 h3,
 #sec4 button,
 footer {
     color: var(--white);
-}
-
-/* bg color */
-body {
-    background: white;
-}
-
-#sec1 b,
-#sec4 button {
-    width: 210px;
-    background: #00A4DF;
-}
-html {
-    scroll-behavior: smooth;
 }
 
 /* 폰 */

@@ -13,6 +13,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js"></script>
     <script src="./js/clock.js"></script>
+    <script src="./js/video.js"></script>
 </head>
 <!-- https://www.w3schools.com/w3css/tryw3css_templates_parallax.htm -->
 
@@ -41,6 +42,7 @@
             </ul>
         </div>
     </nav>
+
     <div id="s1">
 
         <div class="container-fluid">
@@ -49,9 +51,9 @@
                     <span>년</span>
                     <span>월</span>
                     <span>일</span>
-                    <span>요일</span>
                 </div>
                 <div class="dtime">
+                    <span>요일</span>
                     <span>시</span>
                     <span>분</span>
                     <span>초</span>
@@ -61,6 +63,10 @@
 
     </div>
 
+        <!-- 마우스 포인터 -->
+        <div class="mp1 mp"></div>
+        <div class="mp2 mp"></div>
+    
     <div id="s2">
         <div class="container">
             <h2 class="text-center">ABOUT ME</h2>
@@ -85,7 +91,20 @@
             <div class="row">
                 <div class="col">
                     <div class="text-center my-5">Park Seo Hyun</div>
-                    <div><img src="https://www.w3schools.com/w3images/avatar_hat.jpg" alt="내 사진"></div>
+                    <div>
+                        <!-- 비디오 속성 : 자동재생 소리끄기(무음) 무한반복 -->
+                        <!-- 비디오 형식(webm,mp4,ogg/ogv) : type 속성에 적기 -->
+                        <video>
+                            <source src="../../assets2/mov_bbb.mp4" type="video/mp4">
+                            <p>지금 사용하고있는 브라우저는 비디오 태그를 지원하지 않습니다.</p>
+                        </video>
+                        <!-- 비디오 플레이/일시정지 버튼 -->
+                        <div class="vid">
+                            <i class="fa-regular fa-circle-play"></i>
+                            <i class="fa-solid fa-pause"></i>
+                        </div>
+                        <!-- <img src="https://www.w3schools.com/w3images/avatar_hat.jpg" alt="내 사진"> -->
+                    </div>
                 </div>
                 <div class="col-md mt-5"><!-- 마진top-5 max -->
                     <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor
@@ -132,6 +151,7 @@
             </div>
 
         </div>
+        
         <!-- counter -->
         <div class="container-fluid counter">
             <div class="row pb-5 ">
@@ -154,11 +174,9 @@
             </div>
         </div>
 
-
-
         <!-- portfolio -->
         <div id="s3">
-            <div id="container">
+            <div id="container" class="container-fluid">
                 <h3>my work</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, eligendi ab animi magni maiores
                     natus
@@ -233,8 +251,18 @@
                         <div class="col">
                             <ul class="info">
                                 <li>성남시, 경기도</li>
-                                <li>Phone : 010 5004 8516</li>
-                                <li>Email : seohyun3517@naver.com</li>
+                                <!-- href="tel:전화번호" -->
+                                <!-- href="mailto:이메일" -->
+                                <!-- href="https:웹주소" -->
+
+                                <!-- 1.a태그 걸기 -->
+                                <!-- 2.gmail로그인 -->
+                                <!-- 3.구글 설정 프로토콜 핸들러 체크 되어있는지 확인 -->
+                                <!-- 4. -->
+                                <li>Phone : <a href="tel:010-5004-8516">010 5004 8516</a></li>
+                                <!-- 구글메일 네이버메일 차이 -->
+                                <li>Email : <a href="mailto:seohyun3517@gmail.com">seohyun3517@gmail.com</a></li>
+                                <li>Email : <a href="https://mail.naver.com/write/popup?srvid=note&to=seohyun3517@naver.com">seohyun3517@naver.com</a></li>
                             </ul>
                         </div>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, cumque.</p>
@@ -269,6 +297,32 @@
         <p>Copyright 2024 P.S.H</p>
     </footer>
 
+
+    <audio>
+        <source src="./assets/9908544D5CDEABA903.mp3" type="audio/mp3" class="snd">
+    </audio>
+    <script>
+                /* 
+            event.pageX ~ 마우스 이벤트가 발생할 때 마우스 포인터의 문서 상대 X 좌표(읽기 전용)
+            event.pageY ~ 마우스 이벤트가 발생할 때 마우스 포인터의 문서 상대 Y 좌표(읽기 전용)
+        */
+        let mp = document.querySelectorAll('.mp');
+
+        document.body.onmousemove = ()=> {
+            //큰 원
+            mm(0);
+            //작은 원
+            mm(1);
+        };
+
+        function mm(i) {
+            let x = event.pageX - mp[i].offsetWidth / 2;
+            let y = event.pageY - mp[i].offsetWidth / 2;
+
+            mp[i].style.left = x + 'px';
+            mp[i].style.top = y + 'px';
+        }
+    </script>
 </body>
 
 </html>
