@@ -52,7 +52,7 @@ window.addEventListener("DOMContentLoaded", () => {
         }
 
         // 출력
-        ye.innerText = yea + "년";
+        ye.innerText = ze(yea) + "년";
         mo.innerText = ze(mon) + "월";
         da.innerText = ze(dat) + "일";
         we.innerText = wee + "요일";

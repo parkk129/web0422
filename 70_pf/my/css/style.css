@@ -91,6 +91,7 @@ nav a {
 /* navigation */
 
 nav {
+    background-color:#fff;
     height:70px;
     line-height:30px;
 }
@@ -109,15 +110,22 @@ nav ul {
     background: no-repeat 50% 50%/cover fixed;
 }
 
-#s1 div {
+#s1 div{
     position:relative;
-    text-align:right;
+    text-align:center;
     color:#fff;
     font-weight: 700;
     font-size: 50px;
 }
 #s1 #title {
+    width: 100%;
+    height: 100%;
     text-align: center;
+}
+#s1 #title div{
+    position: absolute;
+    top:200px;
+    left:150px;
 }
 #s1 #clock {
     position:absolute;
@@ -174,34 +182,27 @@ nav ul {
 }
 
 .counter {
-    background: #616161;
+    background-image:url(../assets/배경\ \(5\).jpg);
     color: #fff;
     text-align: center;
     padding: 32px;
 }
 
-/* video */
-#s2 .vid {
-    position: relative;
+/* profile */
+#s2 div .profile_box{
+    text-align: center;
 }
 
-/* i태그가 비디오 버튼 */
-#s2 .vid i {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 6rem;
-    opacity: 0;
-    transition: .3s;
+#s2 img{
+    width:400px;    
 }
 
-#s2 .vid:hover i {
-    opacity: 1;
+#s2 .good{
+    margin-top:50px;
+    margin-bottom:50px;
 }
 
-
-
+/* 섹션3 */
 .counter span {
     display: block;
     font-size: 2.4rem;
