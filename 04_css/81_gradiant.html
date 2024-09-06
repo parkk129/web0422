@@ -16,27 +16,51 @@
             height: 300px;
         }
         .grad1{
-            background-image: linear-gradient(to left bottom, red,blue);
+            background-image: linear-gradient(to left bottom, red 10%,blue 90%);
         }
         .grad2{
-            background-image: linear-gradient(rgb(255, 251, 0),rgb(0, 183, 255));
+            background-image: Radial-gradient(rgb(255, 251, 0),rgb(0, 183, 255));
         }
         .grad3{
-            background-image: linear-gradient(rgb(255, 166, 0),rgb(255, 0, 234));
+            background-image: Conic-gradient(rgb(255, 166, 0),rgb(255, 0, 234));
         }
     </style>
 </head>
 <!-- 
+<그라디언트 종류>
+Linear : 선형
+Radial : 원형
+Conic : 원뿔형 ex 코뿔소
+
+----Linear----
+
 <방향>
 to left
 to right
 to top
 to bottom
 to left bottom : 대각선
+
 <각도>
 90deg
 내가 쓰고싶은 각도숫자+deg 
+
 <정도>
+색상이름 + n %
+
+----Radial----
+
+circle 완벽한 원형
+closest-side : 사이드로부터 가장 가까운 
+farthest-side
+closest-corner
+farthest-corner
+
+----Conic----
+
+from 각도
+at 위치
+
 -->
 <body>
     <div class="grad1">선형</div>

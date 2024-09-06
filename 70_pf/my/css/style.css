@@ -34,6 +34,7 @@
     transition: .1s ease-out;
 }
 
+/* reset */
 html {
     font-size: 10px;
     scroll-behavior: smooth;
@@ -98,8 +99,10 @@ nav a {
 }
 
 /* navigation */
+
 nav {
-    line-height: 60px;
+    height:70px;
+    line-height:30px;
 }
 
 nav section {
@@ -111,19 +114,30 @@ nav ul {
     display: flex;
 }
 
-/* common */
-
+/* 섹션1 */
 .container-fluid {
     background: no-repeat 50% 50%/cover fixed;
 }
 
 #s1 div {
+    position:relative;
+    text-align:right;
+    color:#fff;
+    font-weight: 700;
     font-size: 50px;
+}
+#s1 #title {
+    text-align: center;
+}
+#s1 #clock {
+    position:absolute;
+    right:0;
+    bottom:0;
 }
 
 #s1 .container-fluid {
     height: 100vh;
-    background-image: url(../assets/KakaoTalk_20240903_162506603.jpg);
+    background-image: url(../assets/배경\ \(5\).jpg);
 }
 
 #s4 .container-fluid {
