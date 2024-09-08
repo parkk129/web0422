@@ -12,7 +12,7 @@
 /* 마우스 포인터 */
 .mp {
     position: absolute;
-    border-radius: 50%;
+    border-radius: 100%;
 }
 
 /* 작은 원 */
@@ -138,10 +138,6 @@ nav ul {
     background-image: url(../assets/배경\ \(5\).jpg);
 }
 
-#s4 .container-fluid {
-    height: 400px;
-    background-image: url(../assets/KakaoTalk_20240903_162506603_12.jpg);
-}
 
 .progress {
     font-size: 1.5rem;
@@ -243,6 +239,8 @@ p {
     font-size: 1.3rem;
 }
 
+/* 섹션4 */
+
 #s4 {
     text-align: center;
 }
@@ -259,6 +257,11 @@ p {
 
 #s4 form {
     text-align: left;
+}
+
+#s4 .container-fluid {
+    height: 400px;
+    background-image: url(../assets/배경\ \(5\).jpg);
 }
 
 [name="user_name"] {
@@ -321,7 +324,7 @@ h3 span {
 /* footer */
 footer {
     height: 200px;
-    background-image:url(../assets/pattern.png);
+    background: #000;
 }
 
 footer p,
@@ -331,7 +334,6 @@ a {
 
 footer,
 footer p {
-    line-height: 3;
     text-align: center;
 }
 
