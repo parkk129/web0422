@@ -126,7 +126,7 @@ nav > ul > li > a{
 /* 섹션1 */
 
 .s1 {
-    background:url(../assets/건물3.jpg) no-repeat;
+    background:url(../images/건물3.jpg) no-repeat;
 }
 .title{
     color:#fff;
@@ -141,7 +141,7 @@ nav > ul > li > a{
 
 /* 섹션2 */
 .s2{
-    background:url(../assets/sec2.png) no-repeat;
+    background:url(../images/sec2.png) no-repeat;
 }
 .ibx{
     margin-left:1100px;
