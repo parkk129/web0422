@@ -110,15 +110,15 @@ iframe {
 
 #s1 .container-fluid {
     height: 100vh;
-    background-image: url(../assets/배경\ \(5\).jpg);
+    background-image: url(../70_pf/my/assets/배경\ \(5\).jpg);
 }
 #s3 .container-fluid {
     height: 400px;
-    background-image: url(../assets/배경\ \(5\).jpg);
+    background-image: url(../assets/parallax2.jpg);
 }
 #s4 .container-fluid {
     height: 400px;
-    background-image: url(../assets/배경\ \(5\).jpg);
+    background-image: url(../assets/parallax3.jpg);
 }
 
 /* background-image Title */
@@ -199,9 +199,6 @@ iframe {
 }
 #s4 button.btn {
     margin-top: 16px;
-}
-#s4 iframe{
-    height:260px;
 }
 
 /* footer */

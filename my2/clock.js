@@ -1,9 +1,6 @@
 // DOM 요소를 모두 로딩한 후 - load 이벤트
 window.addEventListener("DOMContentLoaded", () => {
-
-
-
-
+    
     const ye = document.querySelectorAll("span")[0];
     const mo = document.querySelectorAll("span")[1];
     const da = document.querySelectorAll("span")[2];
@@ -75,6 +72,4 @@ window.addEventListener("DOMContentLoaded", () => {
             openNewWindow.location.href = lb_link;
         });
 
-
-        
 }); // DOMContentLoaded
