@@ -96,6 +96,7 @@ button {
 
 header {
     position: fixed;
+    /* 수정부분 사항 : 헤더 색상 추가 */
     background: #57575723;
     position: fixed;
     z-index: 9999;
@@ -107,7 +108,6 @@ header {
     padding: 0 30px;
     transition: .3s ease-out;
     box-shadow: 0px 0px 5px #44444475;
-
 }
 
 nav>ul>li>a {
@@ -275,6 +275,7 @@ nav>ul>li>a {
 }
 
 .s3 .title3 {
+    /* 수정부분 사항 : 제목부분과 이미지 부분 여백 추가 */
     padding-bottom: 30px;
     justify-content: space-between;
     margin: 0 auto;
@@ -301,6 +302,7 @@ nav>ul>li>a {
     text-align: center;
 }
 .s4 .inquiry h2{
+    /* 수정부분 사항 : 색상 추가 */
     color:#176798;
 
 }
@@ -316,6 +318,7 @@ nav>ul>li>a {
 }
 
 .s4 form input {
+    /* 수정부분 사항 : 테두리 색상 연하게 */
     border:1px solid rgba(190, 190, 190, 0.685);
     margin: 20px;
     width: 390px;
@@ -326,6 +329,7 @@ nav>ul>li>a {
     color: #fff;
     width: 200px;
     height: 64px;
+    /* 수정부분 사항 : 색상 추가 */
     background:#176798;
     margin-left: 20px;
 }
@@ -345,6 +349,7 @@ footer {
 }
 
 .footer_text {
+    /* 수정부분 사항 : 왼쪽 여백 추가 */
     margin-left:50px;
     display: block;
 }
