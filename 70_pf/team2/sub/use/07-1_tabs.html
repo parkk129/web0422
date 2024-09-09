@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../team2/css/store.css">
+    <link rel="stylesheet" href="../css/use.css">
+</head>
+<style>
+    body {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+    }
+
+    .tabs {
+      /*   max-width: 640px; */
+     /*    margin: 0 auto; */
+        padding: 0 20px;
+    }
+
+    #tab-button {
+        display: table;
+        table-layout: fixed;
+        /* width: 100%; */
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    #tab-button li {
+        display: table-cell;
+        width: 20%;
+    }
+
+    #tab-button li a {
+        display: block;
+        padding: .5em;
+        background: #eee;
+        border: 1px solid #ddd;
+        text-align: center;
+        color: #000;
+        text-decoration: none;
+    }
+
+    #tab-button li:not(:first-child) a {
+        border-left: none;
+    }
+
+    #tab-button li a:hover,
+    #tab-button .is-active a {
+        border-bottom-color: transparent;
+        background: #fff;
+    }
+
+    .tab-contents {
+        padding: .5em 2em 1em;
+      /*   border: 1px solid #ddd; */
+    }
+
+
+
+    .tab-button-outer {
+        display: none;
+    }
+
+    .tab-contents {
+        margin-top: 20px;
+    }
+
+    @media screen and (min-width: 640px) {
+        .tab-button-outer {
+            position: relative;
+            z-index: 2;
+            display: block;
+        }
+
+        .tab-select-outer {
+            display: none;
+        }
+
+        .tab-contents {
+            position: relative;
+            top: -1px;
+            margin-top: 0;
+        }
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(function () {
+        var $tabButtonItem = $('#tab-button li'),
+            $tabSelect = $('#tab-select'),
+            $tabContents = $('.tab-contents'),
+            activeClass = 'is-active';
+
+        $tabButtonItem.first().addClass(activeClass);
+        $tabContents.not(':first').hide();
+
+        $tabButtonItem.find('a').on('click', function (e) {
+            var target = $(this).attr('href');
+
+            $tabButtonItem.removeClass(activeClass);
+            $(this).parent().addClass(activeClass);
+            $tabSelect.val(target);
+            $tabContents.hide();
+            $(target).show();
+            e.preventDefault();
+        });
+
+        $tabSelect.on('change', function () {
+            var target = $(this).val(),
+                targetSelectNum = $(this).prop('selectedIndex');
+
+            $tabButtonItem.removeClass(activeClass);
+            $tabButtonItem.eq(targetSelectNum).addClass(activeClass);
+            $tabContents.hide();
+            $(target).show();
+        });
+    });
+</script>
+
+<body>
+    <div class="tabs">
+        <div class="tab-button-outer">
+            <ul id="tab-button">
+                <li><a href="#tab01">매장에서주문하기</a></li>
+                <li><a href="#tab02">주문 TIP</a></li>
+            </ul>
+        </div>
+        <div class="tab-select-outer">
+            <select id="tab-select">
+                <option value="#tab01">매장에서주문하기</option>
+                <option value="#tab02">주문 TIP</option>
+            </select>
+        </div>
+        <!-- 매장에서 주문하기 -->
+        <div id="tab01" class="tab-contents">
+           
+            
+
+            </div>
+
+
+
+            <!--주문 TIP -->
+            <div id="tab02" class="tab-contents">
+                <div class="box">
+                    <h2>SUBWAY <span>STEP</span></h2>
+                    <h3>신선한 재료로 만들면 맛있다!</h3>
+            
+                    <!-- 01 스테이크&치즈 -->
+                    <div class="stake">
+                        <div class="group">
+                            <div class="a">
+                                <div class="c"><span>01</span></div>
+                                <h1><b>스테이크&치즈</b></h1>
+                            </div>
+                        </div>
+            
+                        <p><b>고급스러운 스테이크와 고소하고 진한 치즈의 콜라보<br>신선한 야채와 함께 푸짐하고 완벽한 한끼가 완성됩니다!
+                        <br>다양한 토핑을 추가해 나만의 한끼 메뉴를 즐겨보세요.</b>
+                        </p>
+                        <!-- 노랑색 박스 -->
+                        <div class="y">
+                            <div class="b">
+                                <img src="../team2/assets/images/pik1.svg" alt="샌드위치1">
+            
+                                <div class="want"><span><b>완벽한 한끼를 원하신다면?</b></span></div>
+                            </div>
+            
+                            <!-- 소스 사진들 -->
+            
+                            <div class="source">
+                                <!--치즈 -->
+                                <div class="cheese"><img src="../team2/assets/images/cheese.svg" alt="치즈">
+                                    <b>
+                                        <p>+ CHEESE <br>더블치즈로 치즈와 쇠고기의<br> 완벽한 조합</p>
+                                    </b>
+                                </div>
+            
+                                <!-- 소스 -->
+                                <div class="sources"><img src="../team2/assets/images/sauce1.svg" alt="소스">
+                                    <b>
+                                        <p>+ SAUCE<br>달콤하게 즐기고 싶다면 스윗어니언+마요네즈!<br> 스테이크의 맛을 즐기고 싶다면 후추만 톡톡!</p>
+                                    </b>
+                                </div>
+            
+                                <!-- 오이 -->
+                                <div class="ve"><img src="../team2/assets/images/ve.svg" alt="오이">
+                                    <b>
+                                        <p>- VEGETABLE <br>토마토,오이를 빼면<br>고기의 풍미를 즐길 수 있습니다.</p>
+                                    </b>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- 01.스테이크&치즈 -->
+            
+                    <!-- 2. 로스트치킨 -->
+            
+                    <div class="chicken">
+                        <div class="group">
+                            <div class="aaa">
+                                <div class="c"><span>02</span></div>
+                                <h1><b>써브웨이 클럽</b></h1>
+                            </div>
+                        </div>
+            
+                        <p><b>퍽퍽한 닭가슴살은 그만!
+                                <br>로스트 치킨 샐러드는 가볍고 든든하게 즐길 수 있습니다.<br>샌드위치와 샐러드로 맛있고 든든하게 즐기세요</b>
+                        </p>
+            
+                        <div class="g">
+                            <div class="fun"><img src="../team2/assets/images/pik2.svg" alt="다이어트중이라면?">
+                                <span><b>다이어트중이라면?</b></span>
+                            </div>
+            
+                            <!-- 소스들 -->
+                            <div class="diet">
+                                <!-- 샐로드 -->
+                                <div class="salad">
+                                    <img src="../team2/assets/images/salad.svg" alt="샐러드">
+                                    <b>
+                                        <p>+ SALAD <br>로스트치킨은 샐러드로 드려도 좋습니다.<br>관리의 시작은 서브웨이로부터!</p>
+                                    </b>
+                                </div>
+                                <!-- 렌치 -->
+                                <div class="lan">
+                                    <img src="../team2/assets/images/sauce02.svg" alt="렌치소스">
+                                    <b>
+                                        <p>+ SAUCE <br>렌치로 고소하게 즐겨보세요<br></p>
+                                    </b>
+                                </div>
+                                <!--토핑 -->
+                                <div class="olive">
+                                    <img src="../team2/assets/images/topping.svg" alt="올리브">
+                                    <b>
+                                        <p>- TOPPING <br>올리브,피클,할라피뇨를 빼고 드시면<br>담백하고 부드러운 로스트치킨을 제대로 즐길 수 있습니다.</p>
+                                    </b>
+                                </div>
+                            </div><!-- 소스친구들 -->
+                        </div>
+                        <!-- 3. 써브웨이 클럽 -->
+                        <div class="subway">
+                            <div class="group">
+                                <div class="aaa">
+                                    <div class="c"><span>03</span></div>
+                                    <h1><b>써브웨이 클럽</b></h1>
+                                </div>
+                            </div>
+            
+                            <p><b>고기의 단백질과 야채의 비타민으로 영양UP!
+                                    <br>절임류 야채를 제외하고 더 담백하게, 올리브오일을 넣어 부담은 DOWN!
+                                    <br>서브웨이 클럽으로 건강한 하루를 보내세요.</b></p>
+            
+                            <!-- 건강을 생각한다면? -->
+                            <div class="health">
+                                <div class="up"><img src="../team2/assets/images/pik3.svg" alt="건강">
+                                    <span><b>건강을 생각한다면?</b></span>
+                                </div>
+            
+            
+                                <div class="oli">
+                                    <!-- 올리브 -->
+                                    <div class="taste"><img src="../team2/assets/images/sauce03.svg" alt="올리브오일과 후추">
+                                        <b>
+                                            <p>+ SALAD <br>올리브오일과 후추를 살짝뿌리면,<br>짜지 않고 담백한 행복한 맛을 느낄 수 있습니다.</p>
+                                        </b>
+                                    </div>
+                                    <!-- 치즈들 -->
+                                    <div class="cheeses"><img src="../team2/assets/images/cheese.svg" alt="치즈">
+                                        <b>
+                                            <p>+ SAUCE <br>치즈를 빼고 터키, 베이컨,<br>햄의 완벽한 조화를 느껴보세요!</p>
+                                        </b>
+                                    </div>
+                                    <!-- 토핑들 -->
+                                    <div class="picle"><img src="../team2/assets/images/topping.svg" alt="토핑들">
+                                        <b>
+                                            <p>- TOPPING <br>올리브,피클, 할라피뇨를 빼고 드시면<br>야채들의 싱싱한 맛을 하나하나 느낄 수 있습니다.</p>
+                                        </b>
+                                    </div>
+                                
+                            </div>
+                            </div>
+                            <!-- 소스3 -->
+                        </div>
+                    </div>
+                </div>
+            </div><!-- 주문 TIP -->
+</body>
+</html>

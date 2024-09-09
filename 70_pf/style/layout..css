@@ -1,0 +1,174 @@
+@charset "utf-8";
+@import url(reset.css);
+@import url(typo.css);
+@import url(section.css);
+
+/* typo */
+
+/* layout 배치 */
+/* 박스모델 속성, display, position */
+img{
+    width: 100px;
+    height: 100px;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* navigation */
+nav {
+    height: 100px;
+}
+
+nav section {
+    align-items: center;
+}
+
+nav li:first-child::after {
+    content: "";
+    display: inline-block;
+    border-radius: 50px;
+    width: 6px;
+    height: 6px;
+    margin: 0 8px 4px;
+    background: #bbb;
+}
+
+nav li {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    display: inline-block;
+    line-height: 100px;
+}
+
+header {
+    height: 200px;
+    /* 높이와 같은 값을 준다 */
+    line-height: 200px;
+    background:url(../assets/keila-hotzel-2VyyvZns3qQ-unsplash.jpg) no-repeat 50% 50%/cover fixed;
+}
+
+header h1{
+    font-size:50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight:700;
+}
+/* main */
+
+main{
+    padding-bottom: 200px;
+}
+section {
+    width: 940px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight:700;
+}
+section>h2{
+    padding: 50px 0px;
+}
+
+.figma {
+    margin: 0
+}
+
+.home-card {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.home-icon {
+    width: 100px;
+    height: 100px;
+
+}
+
+
+.home-description {
+    width: 790px;
+
+}
+
+
+ul {
+    text-align: right;
+}
+
+/* footer */
+footer{
+    text-align: center;
+}
+
+
+/* ////////////////////////////////////반응형css */
+
+
+/* :root는 HTML 태그를 가리킨다. */
+:root {
+    /*  to the top 버튼을 부드럽게 스크롤 */
+    scroll-behavior: smooth;
+}
+
+/* navigation */
+nav {
+    /* height: 100px;  */
+    line-height: 100px;
+}
+
+nav section {
+    display: flex;
+    justify-content: flex-end;
+    /* align-items: center;
+    height: 100px; */
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li:first-child::after {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin: 0 12px 4px;
+    background: #999;
+}
+
+
+
+/* main */
+main {
+    padding-bottom: 200px;
+}
+
+section {
+    /* width: 940px; */
+    margin: auto;
+}
+
+h2 {
+    margin: 56px 0;
+}
+
+.inner {
+    padding: 24px;
+}
+
+.home-card {
+    display: grid;
+    grid-template-columns: 100px auto;
+    column-gap: 24px;
+}
+
+.home-icon {
+    grid-row: 1/span 3;
+}
+
+
