@@ -140,7 +140,7 @@ nav ul {
 
 #s4 .container-fluid {
     height: 400px;
-    background-image: url(../assets/KakaoTalk_20240903_162506603_12.jpg);
+    background-image: url(../assets/배경\ \(5\).jpg);
 }
 
 .progress {
@@ -321,7 +321,7 @@ h3 span {
 /* footer */
 footer {
     height: 200px;
-    background-image:url(../assets/pattern.png);
+    background-color: #444;
 }
 
 footer p,
