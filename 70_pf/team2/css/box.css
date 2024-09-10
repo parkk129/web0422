@@ -1,0 +1,11 @@
+@charset "utf-8";
+.a{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+}
+.b{
+    font-size: 22px;
+}
+
