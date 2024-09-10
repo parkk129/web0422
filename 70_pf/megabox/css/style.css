@@ -127,19 +127,19 @@ nav {
         display: flex;
         flex-wrap: wrap;
     }
-    #sec2 > ul > li{ 
-        margin: 5px;
+    #sec2 > ul > li{
+        width: 340px;
+        margin:6px;
     }
     nav {
         display:flex;
     }
-            /* 섹션3 */
-            #sec3 ul{
-                width:90%;
-                display: flex;
-                flex-wrap: wrap;
-            }
-    
+    /* 섹션3 */
+    #sec3 ul{
+        width:100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 iframe{
