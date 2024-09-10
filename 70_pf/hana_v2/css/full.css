@@ -1,6 +1,11 @@
 @charset "utf-8";
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css);
-
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
 /* s1 */
 .title{
     text-align: center;
@@ -76,15 +81,15 @@ iframe {
     --white: #fff;
 }
 
-body {
-    font-family: "Noto Sans KR", sans-serif;
+body{
+    font-family: 'Pretendard-Regular';
     font-size: 1.5rem;
 }
 
 h1,
 h2,
 h3 {
-    font-family: "NanumSquareNeo", sans-serif;
+    font-family: 'Pretendard-Regular';
 }
 
 h1,
@@ -98,8 +103,9 @@ h2 {
 
 input,
 ::placeholder,
-button {
-    font-family: "Noto Sans KR", sans-serif;
+button,
+.inquiry{
+    font-family: 'Pretendard-Regular';
     font-size: 1.5rem;
 }
 
@@ -123,9 +129,10 @@ nav > ul > li > a{
     color:#fff;
 }
 
-/* 섹션1 */
+/* --------------- 섹션1 --------------- */
 
 .s1 {
+    text-align: center;
     background:url(../assets/건물3.jpg) no-repeat;
 }
 .title{
@@ -138,8 +145,20 @@ nav > ul > li > a{
     font-weight:400;
     text-align: center;
 }
+.scrolldown{
+    margin-top:70px;
+    text-align: center;
+    width: 90px;
+    height: 90px;
+    animation:rotate2d 5s infinite linear;
+}
 
-/* 섹션2 */
+
+@keyframes rotate2d{
+    from {transform:rotate(0deg)}
+    to{transform:rotate(360deg)}
+}
+/* --------------- 섹션2 --------------- */
 .s2{
     background:url(../assets/sec2.png) no-repeat;
 }
@@ -169,7 +188,7 @@ nav > ul > li > a{
     background: #4d0686;
 }
 
-/* 섹션3--------------- */
+/* --------------- 섹션3 --------------- */
 .s3 h2{
     font-size: 49px;
 }
@@ -198,6 +217,7 @@ nav > ul > li > a{
     background: #3a3a3a54;
 }
 .s3 .title3{
+    padding-bottom: 20px;
     justify-content: space-between;
     margin: 0 auto;
     width: 1500px;
@@ -210,11 +230,16 @@ nav > ul > li > a{
     left:30px;
 }
 
+<<<<<<< HEAD
 /* 섹션4 */
+=======
+/* --------------- 섹션4 --------------- */
+>>>>>>> 070f1cb39127ab87089817613e945af573052ff9
 .s4{
     position: relative;
 }
 .s4 .inquiry{
+<<<<<<< HEAD
     margin-top:-230px;
     font-size:25px;
     width: 50%;
@@ -265,6 +290,52 @@ footer div{
     display: flex;
 }
 
+=======
+    font-weight:700;
+    font-size:25px;
+    text-align: center;
+    width:40%;
+    height: 500px;
+}
+.s4 .inquiry div{
+    display: flex;
+    text-align: left;
+    justify-content: right;
+}
+.s4 .inquiry h2{
+    color:#008AC2;
+    margin-bottom: 40px;
+}
+form{
+    margin-top: -190px;
+    position: absolute;
+    right:0;
+    text-align:left;
+    width:60%;
+}
+form input{
+    box-shadow: 0px 0px 20px #4444442f;
+    border: none;
+    margin:20px 0px 0px 50px;
+    width: 390px;
+    height: 80px;
+}
+form input:nth-of-type(5){
+    width: 835px;
+}
+form input:nth-of-type(6){
+    width: 835px;
+    height: 150px;
+}
+form button{
+    left:30px;
+    position: absolute;
+    background:#008AC2;
+    margin: 20px;
+    width: 200px;
+    height: 70px;
+}
+>>>>>>> 070f1cb39127ab87089817613e945af573052ff9
 /* font color */
 #sec1 b,
 #sec2 h3,
@@ -301,15 +372,6 @@ nav a {
     line-height: 50px;
     ;
     color: #333333e3;
-}
-
-iframe{
-    margin:20px 0px;
-    height: 400px;
-}
-
-.iframe{
-    margin-top: 50px;
 }
 
 /* 576이상 */

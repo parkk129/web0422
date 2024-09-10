@@ -7,7 +7,7 @@ window.addEventListener("DOMContentLoaded", () => {
         $('#fullpage').fullpage({
             menu: '#hana_nav',
             anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
-            sectionsColor: ['#f2f2f2', '#f2f2f2', '#f2f2f2', '#f2f2f2'],
+            sectionsColor: ['#ffffff', '#ffffff', '#ffffff', '#ffffff'],
             navigation: true,
             navigationTooltips: ['', '', '', ''],
             showActiveTooltip: true,
