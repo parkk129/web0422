@@ -3,9 +3,6 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css");
 @import url("clock.css");
 
-<<<<<<< HEAD
-/* common */
-=======
 
 /* 마우스 포인터 */
 .mp {
@@ -23,7 +20,6 @@
 }
 
 /* reset */
->>>>>>> 070f1cb39127ab87089817613e945af573052ff9
 html {
     scroll-behavior: smooth;
     font-size: 10px;
@@ -132,18 +128,6 @@ iframe {
     height: 100vh;
     background-image: url(../assets/배경\ \(5\).jpg);
 }
-<<<<<<< HEAD
-#s3 .container-fluid {
-    height: 400px;
-    background-image: url(../assets/배경\ \(5\).jpg);
-}
-#s4 .container-fluid {
-    height: 400px;
-    background-image: url(../assets/배경\ \(5\).jpg);
-}
-=======
-
->>>>>>> 070f1cb39127ab87089817613e945af573052ff9
 
 /* background-image Title */
 .container-fluid > span {
@@ -156,7 +140,9 @@ iframe {
 #s2 .row {
     overflow: hidden;
 }
-
+#s2 .container img{
+    width: 300px;
+}
 .profile1 {
     transform: translateY(300px);
     transition:transform .5s .2s;
@@ -195,8 +181,8 @@ iframe {
 
 /* section3: portfolio */
 
-#s3 {
-    text-align: center;
+#s3 .col a img{
+    width: 400px;
 }
 /* #s3 .col {
     padding: 8px;
@@ -205,19 +191,10 @@ iframe {
     margin-bottom: 12px;
 }
 
-<<<<<<< HEAD
-/* section4: contact */
-#s4 input {
-    width: 100%;
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 4px 0;
-=======
 /* 섹션4 */
 
 #s4 {
     text-align: center;
->>>>>>> 070f1cb39127ab87089817613e945af573052ff9
 }
 #s4 ul {
     margin-top: 16px;
@@ -228,10 +205,6 @@ iframe {
 #s4 .row p {
     margin: 24px 0 8px;
 }
-<<<<<<< HEAD
-#s4 button.btn {
-    margin-top: 16px;
-=======
 
 #s4 .container-fluid {
     height: 400px;
@@ -240,7 +213,6 @@ iframe {
 
 [name="user_name"] {
     margin-right: calc(2% - 4px)
->>>>>>> 070f1cb39127ab87089817613e945af573052ff9
 }
 #s4 iframe{
     height:260px;
@@ -248,15 +220,6 @@ iframe {
 
 /* footer */
 footer {
-<<<<<<< HEAD
-    padding: 30px 0;
-    background: #000;
-    text-align: center;
-    color: #fff;
-}
-footer a {
-    color: #fff;
-=======
     height: 200px;
     background: #000;
 }
@@ -269,7 +232,6 @@ a {
 footer,
 footer p {
     text-align: center;
->>>>>>> 070f1cb39127ab87089817613e945af573052ff9
 }
 footer .sns {
     margin: 16px 0;
