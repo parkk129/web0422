@@ -124,27 +124,44 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3165.242020060127!2d127.02272372632109!3d37.50220962781344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z67Cw7Iqk7YKo652867mI7IqkIOqwleuCqOuMgOuhnA!5e0!3m2!1sko!2skr!4v1725892646313!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
             <form action="#">
-                <label for="lang">Language</label>
+                <label for="lang">도/시 선택</label>
                 <select name="languages" id="lang">
-                  <option value="select">Select a language</option>
-                  <option value="javascript">JavaScript</option>
-                  <option value="php">PHP</option>
-                  <option value="java">Java</option>
-                  <option value="golang">Golang</option>
-                  <option value="python">Python</option>
-                  <option value="c#">C#</option>
-                  <option value="C++">C++</option>
-                  <option value="erlang">Erlang</option>
+                  <option value="select">경기</option>
+                  <option value="javascript">경남</option>
+                  <option value="php">경북</option>
+                  <option value="java">광주</option>
+                  <option value="golang">대구</option>
+                  <option value="python">대전</option>
+                  <option value="c#">부산</option>
+                  <option value="C++">서울</option>
+                  <option value="erlang">울산</option>
+                  <option value="erlang">인천</option>
+                  <option value="erlang">울산</option>
+                  <option value="erlang">전남</option>
+                  <option value="erlang">전북</option>
+                  <option value="erlang">충남</option>
+                  <option value="erlang">충북</option>
+                  <option value="erlang">제주</option>
                 </select>
-                <input type="submit" value="Submit" />
+              </form>
+
+            <form action="#">
+                <label for="lang">구/군 선택</label>
+                <select name="languages" id="lang">
+                  <option value="erlang">송파구</option>
+                  <option value="erlang">강서구</option>
+                  <option value="erlang">남동구</option>
+                  <option value="erlang">부평구</option>
+                  <option value="erlang">관악구</option>
+                  <option value="erlang">양천구</option>
+                  <option value="erlang">성북구</option>
+                </select>
               </form>
 
                 <form action="custom.jsp">
-                    <input type="text" type="" placeholder="이름을 입력하세요">
-                    <input type="text" type="" placeholder="이메일을 입력하세요">
-                    <input type="text" type="" placeholder="제목을 입력하세요">
-                    <input type="text" type="" placeholder="내용을 입력하세요">
-                    <button>메시지 전송하기</button>
+                    <input type="text" type="" placeholder="매장명을 입력하세요">
+
+                    <button>검색</button>
                 </form>
 
                 <div class="map">
