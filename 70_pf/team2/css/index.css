@@ -111,11 +111,12 @@ body {
 
 /* section3 */
 #s3 {
-    margin-top: 10%;
+    margin-top:-40px;
     position: relative;
     height: 80vh;
 }
 #s3 .mlogo {
+    margin-top: 20px;
     position: absolute;
     width: 200px;
     left: 4%;
@@ -123,7 +124,7 @@ body {
 #s3 h2 {
     position: absolute;
     top: 10vh;
-    left: 2%;
+    left: 5%;
 }
 
 #s3 img {
