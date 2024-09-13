@@ -398,6 +398,7 @@ header {
 
 
 /* 탭의 콘텐츠 */
+
 #s4 #tabs>div ul {
     height: 90px;
 }
@@ -441,12 +442,16 @@ footer img {
 
 .section fp-auto-height {
     display: flex;
-
 }
 
-.footer_text {
+.footer_text{
+    margin-top:-50px;
     display: flex;
+    justify-content: space-around;
     font-size: 13px;
+}
+.footer_text p{
+    line-height:2;
 }
 
 .t1 {

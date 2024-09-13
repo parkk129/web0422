@@ -3,9 +3,9 @@
         $('#wrap').fullpage({
             menu: '#hana_nav',
             anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
-            sectionsColor: ['#f2f2f2', '#f2f2f2', '##AEC7E4', 'whitesmoke'],
+            sectionsColor: ['#f2f2f2', '#f2f2f2', '##AEC7E4', '#fff'],
             navigation: true,
-            navigationTooltips: ['section1', 'section2', 'section3', 'section4'],
+            navigationTooltips: ['', '', '', ''],
             showActiveTooltip: true,
         });
     });
