@@ -18,7 +18,7 @@ header {
     z-index: 9999;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
     height: 54px;
     padding: 0 30px;
@@ -51,21 +51,63 @@ section h2{
     padding: 8px 16px;
     margin-right: 16px;
 }
+#sec2 h2{
+    border-bottom: 1px solid #dfdfdf;
+}
 
 /* 섹션2 */
 
+/* 섹션3 */
 
 
 /* 폰 */
 nav {
-    display: none;
+    display:flex;
 }
 /* 섹션1 */
 #sec1 span {
     display: none;
 }
 
-/* 내비게이션 */
+/* 지도 */
+iframe{
+    width:400px;
+    height: 300px;
+    margin-bottom: 20px;
+}
+/* 푸터 */
+footer{
+    background-color:#232323;
+    height: 200px;
+    text-align: center;
+}
+footer p{
+    padding-top: 20px;
+}
+footer i{
+    margin: 0px 10px;
+}
+#sec3 h2{
+    border-bottom: 1px solid #dfdfdf;
+}
+#sec3 > p{
+    margin-bottom: 20px;
+}
+#sec3 > ul > li > a{
+    margin: 0 auto;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width:340px;
+    height: 38px;
+    color:#fff;
+    background: #232323;
+}
+#sec4 h2{
+    border-bottom: 1px solid #dfdfdf;
+}
+
 
 /* 768이상: 테블릿, 데스크탑 */
 @media (min-width: 768px) {
@@ -143,8 +185,22 @@ nav {
     #sec3 ul li{
         margin: 5px;
     }
-}
-
-iframe{
-    height: 700px;
+    #sec4 input{
+        display: block;
+        width: 1400px;
+        height: 40px;
+        margin: 20px 0px;
+    }
+    #sec4 button{
+        background:#232323;
+        height: 40px;
+        width: 153px;
+        margin-top: 10px;
+        margin-bottom: 40px;
+    }
+    iframe{
+        width: 1400px;
+        height: 700px;
+        margin-bottom: 20px;
+    }
 }
