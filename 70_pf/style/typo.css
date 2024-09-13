@@ -31,6 +31,14 @@ body : 15px, line-height 1.5 23px (150~200%)
 
 /* 글자의 속성은 상속받는다 */
 html{font-size: 10px;}
+
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @font-face {
     font-family: 'NanumSquareRound';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
@@ -38,7 +46,6 @@ html{font-size: 10px;}
     font-style: normal;
 }
 body {
-    font-family: 'NanumSquareRound';
     font-size: 1.5rem;
 }
 
@@ -74,4 +81,13 @@ h3 {
 nav a {
     font-size: 2rem;
     color: #444444;
+}
+
+main h2{
+    color:#222;
+    font-family: 'Cafe24Ssurround';
+}
+
+main p{
+    font-family: 'NanumSquareRound';
 }

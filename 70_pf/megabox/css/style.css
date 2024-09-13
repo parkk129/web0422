@@ -140,6 +140,9 @@ nav {
         display: flex;
         flex-wrap: wrap;
     }
+    #sec3 ul li{
+        margin: 5px;
+    }
 }
 
 iframe{

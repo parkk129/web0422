@@ -230,67 +230,11 @@ nav > ul > li > a{
     left:30px;
 }
 
-<<<<<<< HEAD
-/* 섹션4 */
-=======
 /* --------------- 섹션4 --------------- */
->>>>>>> 070f1cb39127ab87089817613e945af573052ff9
 .s4{
     position: relative;
 }
 .s4 .inquiry{
-<<<<<<< HEAD
-    margin-top:-230px;
-    font-size:25px;
-    width: 50%;
-    text-align: center;
-}
-.s4 form{
-    margin-top:-200px;
-    line-height:50px;
-    position: absolute;
-    right:0;
-    width:50%;
-}
-.s4 form input{
-    margin: 20px;
-    width: 390px;
-    height: 80px;
-}
-.s4 form .submit{
-    color:#fff;
-    width: 200px;
-    height: 64px;
-    background: #000;
-    margin-left: 20px;
-}
-
-/* 푸터 */
-footer{
-    padding-top:18px;
-    display: flex;
-    font-size:16px;
-    line-height:35px;
-    width: 100%;
-    height: 180px;
-    position: absolute;
-    bottom:0;
-    border-top:1px solid #e2e2e2;
-    background: #ffffff;
-}
-.footer_text{
-    display: block;
-}
-footer img{
-    width: 300px;
-    height: 150px;
-}
-footer div{
-    color:#888;
-    display: flex;
-}
-
-=======
     font-weight:700;
     font-size:25px;
     text-align: center;
@@ -335,7 +279,6 @@ form button{
     width: 200px;
     height: 70px;
 }
->>>>>>> 070f1cb39127ab87089817613e945af573052ff9
 /* font color */
 #sec1 b,
 #sec2 h3,
