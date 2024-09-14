@@ -143,6 +143,12 @@ iframe {
 #s2 .container img{
     width: 300px;
 }
+#s2 #skills{
+    display: flex;
+}
+#s2 .my_photo{
+    width: 300px;
+}
 .profile1 {
     transform: translateY(300px);
     transition:transform .5s .2s;
@@ -158,6 +164,8 @@ iframe {
 
 /* progress */
 .progress {
+    text-align: center;
+    width: 1200px;
     height: 30px;
     font-size: 1.5rem;
     padding: 0;
