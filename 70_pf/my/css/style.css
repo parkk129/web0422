@@ -154,7 +154,7 @@ iframe {
 #s2 .my_photo{
     width: 300px;
 }
-#s2 .container-fluid {
+#s2 > .container-fluid {
     background-image: url(../assets/배경\ \(5\).jpg);
 }
 
@@ -182,8 +182,8 @@ iframe {
 
 /* counter */
 .counter {
+    background-image: url(../assets/배경\ \(5\).jpg);
     display: block;
-    background: #616161;
     color: #fff;
     text-align: center;
     padding: 32px;
@@ -197,7 +197,15 @@ iframe {
 }
 
 /* section3: portfolio */
-
+#s3{
+    margin:0 auto;
+    width: 1092px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+#s3 > #container{
+    display: block;
+}
 #s3 .col a img{
     width: 400px;
 }
