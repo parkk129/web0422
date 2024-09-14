@@ -137,6 +137,11 @@ iframe {
 }
 
 /* seciton2: profile */
+#s2{
+    width: 1092px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
 #s2 .row {
     overflow: hidden;
 }
@@ -149,6 +154,10 @@ iframe {
 #s2 .my_photo{
     width: 300px;
 }
+#s2 .container-fluid {
+    background-image: url(../assets/배경\ \(5\).jpg);
+}
+
 .profile1 {
     transform: translateY(300px);
     transition:transform .5s .2s;
