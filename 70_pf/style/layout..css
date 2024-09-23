@@ -23,7 +23,7 @@ nav section {
     align-items: center;
 }
 
-nav li:first-child::after {
+nav li::before {
     content: "";
     display: inline-block;
     border-radius: 50px;
