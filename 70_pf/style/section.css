@@ -6,6 +6,12 @@ h3 {
 }
 
 footer{
-    background-color: rgba(155, 143, 137, 0.562);
-    height: 100px;
+    color:white;
+    background-color: rgb(0, 0, 0);
+    height: 150px;
+}
+
+/* to the top */
+footer div a{
+    color:white;
 }
