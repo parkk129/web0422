@@ -12,6 +12,14 @@ footer{
 }
 
 /* to the top */
+
+footer div{
+    border-radius:5px;
+    margin:0 auto;
+    width: 100px;
+    background:#fff;
+}
+
 footer div a{
-    color:white;
+    text-decoration: none;
 }
