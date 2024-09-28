@@ -1,6 +1,10 @@
 @charset "utf-8";
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css);
 
+body{
+    overflow-x: hidden;
+}
+
 /* 헤더 */
 .top {
     font-size: 15px;
@@ -585,13 +589,11 @@ span {
     color:#1C1C1B;
 }
 
-/* footer */
-
+/* 푸터 */
 .footer {
-    margin:0 auto;
     width: 100%;
     height: 253.5px;
-    position: relative;
+    position: absolute;
     background: #212121;
     margin-bottom: 0;
 
@@ -605,9 +607,6 @@ span {
 }
 
 .footer_line p {
-    color:#1C1C1B;
-    font-size:18px;
-    font-weight: 700;
     margin-left: 320px;
     margin-right: -290px;
 }
@@ -637,7 +636,15 @@ span {
     top: 100px;
 }
 
-
+.footer_right {
+    display: flex;
+    position: relative;
+    left: 1000px;
+    top: 50px;
+    margin: 10px;
+    color: #909090;
+    position: absolute;
+}
 
 .footer_right a {
     color: #909090;
