@@ -55,12 +55,9 @@ section h2{
     border-bottom: 1px solid #dfdfdf;
 }
 
-/* 섹션2 */
-
-/* 섹션3 */
-
 
 /* 폰 */
+
 nav {
     display:flex;
 }
@@ -68,25 +65,15 @@ nav {
 #sec1 span {
     display: none;
 }
-
-/* 지도 */
-iframe{
-    width:400px;
-    height: 300px;
-    margin-bottom: 20px;
+/* 섹션2 */
+#sec2 ul{
+    width: 100%;
+    flex-wrap: wrap;
 }
-/* 푸터 */
-footer{
-    background-color:#232323;
-    height: 200px;
-    text-align: center;
+#sec2 ul li{
+    margin:0px 5px;
 }
-footer p{
-    padding-top: 20px;
-}
-footer i{
-    margin: 0px 10px;
-}
+/* 섹션3 */
 #sec3 h2{
     border-bottom: 1px solid #dfdfdf;
 }
@@ -108,8 +95,36 @@ footer i{
     color:#fff;
     background: #232323;
 }
+
+/* 섹션4 */
+#sec4 form{
+    margin-top: 20px;
+}
+#sec4 input{
+    margin: 8px 0px;
+    width: 100%;
+    height: 50px;
+}
+#sec4 button{
+    width: 100%;
+    height: 50px;
+    margin-bottom:50px;
+}
 #sec4 h2{
     border-bottom: 1px solid #dfdfdf;
+}
+
+/* 푸터 */
+footer{
+    background-color:#232323;
+    height: 200px;
+    text-align: center;
+}
+footer p{
+    padding-top: 20px;
+}
+footer i{
+    margin: 0px 10px;
 }
 
 
@@ -131,25 +146,24 @@ footer i{
         width:calc(25% - 15px);
     }
 
-
-        /* 섹션2 */
-        #sec2 ul{
-            width: 700px;
-            display: flex;
-            flex-wrap: wrap;
-        }
-        /* 섹션3 */
-        #sec3 ul{
-            width:100%;
-            display: flex;
-        }
-        nav {
-            display:flex;
-        }
+    /* 섹션2 */
+    #sec2 ul{
+        width: 700px;
+        display: flex;
+    }
+    /* 섹션3 */
+    #sec3 ul{
+        width:100%;
+        display: flex;
+    }
+    nav {
+        display:flex;
+    }
 }
 
 /* 992이상: 데스크탑 */
 @media (min-width: 800px) {
+
     /* 섹션 공통 */
     section {
         /* 퍼센테이지 계산 */
@@ -168,14 +182,7 @@ footer i{
 
     /* 섹션2 */
     #sec2 ul{
-        margin:0 auto;
-        width:100%;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    #sec2 > ul > li{
-        width: 340px;
-        margin:6px;
+        width: 100%;
     }
     nav {
         display:flex;
@@ -214,10 +221,5 @@ footer i{
         width:30%;
         margin-top: 10px;
         margin-bottom: 40px;
-    }
-    iframe{
-        width:100%;
-        height: 700px;
-        margin-bottom: 20px;
     }
 }
