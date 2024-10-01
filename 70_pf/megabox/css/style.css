@@ -229,6 +229,7 @@ footer i{
         margin: 20px 0px;
     }
     #sec4 button{
+        cursor: pointer;
         background:#232323;
         height: 40px;
         width:30%;
