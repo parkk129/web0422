@@ -9,6 +9,13 @@
             margin: 0;
             padding: 0;
         }
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+        ul{
+            list-style: none;
+        }
         #wrap{
             width: 100%;
             display: flex;
@@ -28,11 +35,54 @@
             width: 100%;
             height: 550px;
             background: #c4b6b6;
+        }
+        .nav{
+            position: relative;
+            z-index:100000;
+        }
+        .nav > ul{
 
         }
+        .nav > ul > li{
+            position: relative;
+        }
+        .nav > ul > li > a{
+            display: block;
+            background: #ffadad;
+            padding: 10px;
+            text-align: center;
+        }
+        .nav > ul > li > ul{
+            display: none;
+            padding: 10px;
+            width: 600px;
+            position: absolute;
+            top:0;
+            right:-620px;
+        }
+        .nav > ul > li > ul > li{
+            display: inline;
+        }
+        .nav > ul > li > ul > li > a:hover{
+            width: 100%;
+            background: #4be637;
+        }
         #main{
+            position: relative;
             width:calc(100% - 200px);
             height: 650px;
+        }
+        #main::after{
+            content:'';
+            width:0%;
+            height: 200px;
+            position: absolute;
+            background: #d4d4d4;
+            left:0;
+            top:100px;
+        }
+        #main.on::after{
+            width: 100%;
         }
         #slider{
             width: 100%;
@@ -69,7 +119,48 @@
     <div id="wrap">
         <aside id="aside">
             <h1 class="logo"></h1>
-            <nav class="nav"></nav>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">메인메뉴1</a>
+                        <ul>
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴2</a></li>
+                            <li><a href="#">서브메뉴3</a></li>
+                            <li><a href="#">서브메뉴4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li><a href="#">메인메뉴2</a>
+                        <ul>
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴2</a></li>
+                            <li><a href="#">서브메뉴3</a></li>
+                            <li><a href="#">서브메뉴4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li><a href="#">메인메뉴3</a>
+                        <ul>
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴2</a></li>
+                            <li><a href="#">서브메뉴3</a></li>
+                            <li><a href="#">서브메뉴4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li><a href="#">메인메뉴4</a>
+                        <ul>
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴2</a></li>
+                            <li><a href="#">서브메뉴3</a></li>
+                            <li><a href="#">서브메뉴4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
         </aside>
         <main id="main">
             <article id="slider">
@@ -80,5 +171,19 @@
         </main>
         <footer id="footer"></footer>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(()=>{
+            $(".nav > ul > li").mouseover(function(){
+                $(".nav > ul > li > ul").stop().fadeIn();
+                $("#main").addClass("on");
+            });
+            $(".nav > ul > li").mouseout(function(){
+                $(".nav > ul > li > ul").stop().fadeOut();
+                $("#main").removeClass("on");
+            });
+        });
+    </script>
 </body>
 </html>

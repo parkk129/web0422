@@ -9,32 +9,114 @@
             margin: 0;
             padding: 0;
         }
+        a{
+            text-decoration: none;
+            color:#000
+        }
+        ul{
+            list-style:none;
+        }
         #wrap{
             width: 1200px;
             margin: 0 auto;
         }
         #header{
+            position: relative;
             display: flex;
             width: 100%;
             height: 100px;
+        }
+        #header::after{
+            height: 0;
+            transition: all 600ms;
+            top:80px;
+            position: absolute;
+            content:'';
+            width: 100%;
+            background: #555555;
+            z-index:1;
+        }
+        #header.on::after{
+            height: 170px;
         }
         #header .logo{
             width: 20%;
             /* 로고 높이 */
             height: 100px;
             background: #d6d6d6;
-
         }
+
         #header .nav{
             width: 80%;
             /* 네비 높이 */
             height: 100px;
             background: #d1bcbc;
         }
+        .nav{
+            justify-content: right;
+            align-items: center;
+            display: flex;
+            text-align: right;
+        }
+
+        /* 메인메뉴 박스 */
+        .nav > ul > li{
+            position: relative;
+        }
+        /* 메인메뉴 글자 */
+        .nav > ul > li > a{
+            background: #9b9b9b;
+            padding: 20px;
+        }
+        .nav > ul > li > a:hover{
+            background: #31ff2a;
+        }
+        /* 서브메뉴 통째로 */
+        .nav > ul > li > ul{
+            z-index:1000;
+            display: none;
+            width: 100%;
+            text-align: center;
+            top:40px;
+            position: absolute;
+        }
+
+        /* 서브메뉴 글자 */
+        .nav > ul > li > ul > li > a{
+            box-sizing: border-box;
+            display: inline-block;
+            padding: 10px;
+            width: 100%;
+        } 
+        .nav > ul > li > ul > li > a:hover{
+            background: #f4f72c;
+        }
+        /* 슬라이드 액자,틀 */
         #slider{
+            overflow: hidden;
             width: 100%;
             height: 300px;
             background: #a0a0a0;
+        }
+        .sliderWrap{
+        }
+        .sliderWrap > div{
+        }
+        .sliderWrap .slider{
+            position:relative;
+            left:0;
+            top:0;
+        }
+        .sliderWrap .slider img{
+            vertical-align: top;
+        }
+        .sliderWrap .slider span{
+            position: absolute;
+            left:50%;
+            top:50%;
+            background: #acabab;
+            padding: 20px;
+            transform: translate(-50%,-50%);
         }
         #contents{
             display: flex;
@@ -85,10 +167,66 @@
 
         <div id="header">
             <div class="logo"></div>
-            <div class="nav"></div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">메인메뉴1</a>
+                    <ul class="submenu">
+                        <li><a href="#">서브메뉴1</a></li>
+                        <li><a href="#">서브메뉴2</a></li>
+                        <li><a href="#">서브메뉴3</a></li>
+                        <li><a href="#">서브메뉴4</a></li>
+                    </ul>
+                </li>
+                </ul>
+                <ul>
+                    <li><a href="#">메인메뉴2</a>
+                    <ul class="submenu">
+                        <li><a href="#">서브메뉴1</a></li>
+                        <li><a href="#">서브메뉴2</a></li>
+                        <li><a href="#">서브메뉴3</a></li>
+                        <li><a href="#">서브메뉴4</a></li>
+                    </ul>
+                </li>
+                </ul>
+                <ul>
+                    <li><a href="#">메인메뉴3</a>
+                    <ul class="submenu">
+                        <li><a href="#">서브메뉴1</a></li>
+                        <li><a href="#">서브메뉴2</a></li>
+                        <li><a href="#">서브메뉴3</a></li>
+                        <li><a href="#">서브메뉴4</a></li>
+                    </ul>
+                </li>
+                </ul>
+                <ul>
+                    <li><a href="#">메인메뉴4</a>
+                    <ul class="submenu">
+                        <li><a href="#">서브메뉴1</a></li>
+                        <li><a href="#">서브메뉴2</a></li>
+                        <li><a href="#">서브메뉴3</a></li>
+                        <li><a href="#">서브메뉴4</a></li>
+                    </ul>
+                </li>
+                </ul>
+            </div>
         </div>
 
-        <div id="slider"></div>
+        <div id="slider">
+            <div class="sliderWrap">
+                <div class="slider s1">    
+                    <img src="../assets2/Frame 1 copy.png" alt="">
+                    <span>이미지1</span>
+                </div>
+                <div class="slider s2">    
+                    <img src="../assets2/Frame 2 copy.png" alt="">
+                    <span>이미지2</span>
+                </div>
+                <div class="slider s3">    
+                    <img src="../assets2/Frame 3.png" alt="">
+                    <span>이미지3</span>
+                </div>
+            </div>
+        </div>
 
         <!-- 복수 contents -->
         <div id="contents">
@@ -104,5 +242,26 @@
             <div class="footer3"></div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(() => {
+
+            let currentIndex = 0;
+            $(".sliderWrap").append($(".slider").first().clone(true));
+            
+            setInterval(function(){
+                currentIndex++;
+                $(".sliderWrap").animate({marginTop:-currentIndex * 100 + "%"}, 600);
+
+                if(currentIndex == 3){
+                    setTimeout(function(){
+                        $(".sliderWrap").animate({marginTop:0}, 0);
+                        currentIndex = 0;
+                    },700);
+                }
+
+            }, 3000);
+        }); 
+    </script>
 </body>
 </html>

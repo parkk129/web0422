@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #wrap{
+            width: 100%;
+        }
+        #header{
+            margin: 0 auto;
+            width: 1340px;
+            height: 100px;
+            background: #cacaca;
+        }
+        #slider{
+            height: 350px;
+            background: #b9b9b9;
+        }
+        #container{
+            width: 1340px;
+            margin: 0 auto;
+            position: relative;
+        }
+        #container .link{
+            top:-100px;
+            position: absolute;
+            margin: 0 auto;
+            width: 1340px;
+            height: 100px;
+            background: #a5a5a5;
+        }
+        #container .banner{
+            margin: 0 auto;
+            width: 1340px;
+            height: 200px;
+            background: #929292;
+        }
+        #container .board{
+            margin: 0 auto;
+            width: 1340px;
+            height: 300px;
+            background: #808080;
+        }
+        #footer{
+            margin: 0 auto;
+            width: 1340px;
+            height: 120px;
+            background: #555555;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <article id="slider"></article>
+        <div id="container">
+            <div class="link"></div>
+            <div class="banner"></div>
+            <div class="board"></div>
+        </div>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>
