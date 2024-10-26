@@ -88,6 +88,27 @@
             background: #202020;
 
         }
+
+        .tab-menu{
+
+        }
+        .tab-menu .tab-btn{
+
+        }
+        .tab-menu .tab-btn li{
+            display: inline-block;
+        }
+        .tab-menu .tab-btn li a{
+            display: block;
+            padding: 10px;
+            background: #ffa5a5;
+        }
+        .tab-menu .tab-cont{
+
+        }
+        .tab-menu .tab-cont div{
+            display: none;
+        }
     </style>
 </head>
 
@@ -100,7 +121,28 @@
         <main id="main">
             <article id="slider"></article>
             <section id="contents">
-                <article class="content1"></article>
+
+                <article class="content1">
+
+                    <div class="tab-menu">
+                        <ul>
+                            <li class="active"><a href="#">탭 메뉴1</a></li>
+                            <li><a href="#">탭 메뉴2</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-cont">
+                        <div>
+                            탭메뉴1 내용입니다.
+                        </div>
+                        
+                        <div>
+                            탭메뉴2 내용입니다.
+                        </div>
+                    </div>
+
+                </article>
+
                 <article class="content2"></article>
                 <article class="content3"></article>
             </section>
