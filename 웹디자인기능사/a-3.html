@@ -129,6 +129,22 @@
         background: #615858;
 
     }
+    
+    #slider{
+    width: 100%;
+    height: 300px;
+    background: #b9b9b9;
+    }
+    .sliderWrap{
+        display: flex;
+        position: relative;
+    }
+    .sliderWrap .slider{
+        width: 100%;
+        position: absolute;
+        left:0;
+        top:0;
+    }
 </style>
 <body>
     <div id="wrap">
@@ -178,10 +194,22 @@
             </nav>
         </header>
         <!-- header -->
-        <article id="slider"></article>
+        <article id="slider">
+            <div class="sliderWrap">
+                <div class="slider s1">
+                    <img src="../assets2/슬라이드 (1).png" alt="">
+                </div>
+                <div class="slider s2">
+                    <img src="../assets2/슬라이드 (2).png" alt="">
+                </div>
+                <div class="slider s3">
+                    <img src="../assets2/슬라이드 (3).png" alt="">
+                </div>
+            </div>
+        </article>
         <!-- slider -->
         <main id="main">
-            <section class="content1"></section>
+            <section class="content1"></section> 
             <section class="content2"></section>
             <section class="content3"></section>
         </main>
@@ -198,13 +226,36 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         $(()=>{
+
+
             $(".nav > ul > li").mouseover(function(){
                 $(".nav > ul > li > ul").stop().slideDown();
             });
             $(".nav > ul > li").mouseout(function(){
                 $(".nav > ul > li > ul").stop().slideUp();
             });
+
+            // 슬라이드
+
+            let currentIndex = 0;
+
+            $(".sliderWrap").append($(".slider").first().clone(true));
+
+            setInterval(function(){
+
+                currentIndex++;
+                
+                $(".sliderWrap").animate({marginLeft: -currentIndex * 100 + "%"},600)
+
+                if(currentIndex == 3){
+                    setTimeout(function(){
+                        $("sliderWrap").animate({marginLeft:0}, 0)
+                        currentIndex = 0;
+                    }, 700)
+                }
+            }, 3000);
+
         });
-    </script>
+    </script>  
 </body>
 </html>

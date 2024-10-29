@@ -35,12 +35,7 @@
         height: 100px;
         background: #a77d7d;
     }
-    #slider{
-        width:1200px;
-        height: 300px;
-        margin:0 auto;
-        background: #c0c0c0;
-    }
+
     #contents{
         width: 1200px;
         margin:0 auto;
@@ -91,6 +86,20 @@
         height: 50px;
         background: #726565;
     }
+
+    #slider{
+        overflow: hidden;
+        width:1200px;
+        height: 300px;
+        margin:0 auto;
+        background: #c0c0c0;
+    }
+    .sliderWrap{
+    }
+    .slider{
+        width: 1200px;
+        height: 300px;
+    }
 </style>
 <body>
     <div id="wrap">
@@ -101,7 +110,20 @@
             </div>
         </header>
 
-        <article id="slider"></article>
+        
+        <article id="slider">
+            <div class="sliderWrap">
+                <div class="slider s1">
+                    <img src="../assets2/슬라이드 (1).png" alt="">
+                </div>
+                <div class="slider s2">
+                    <img src="../assets2/슬라이드 (2).png" alt="">
+                </div>
+                <div class="slider s3">
+                    <img src="../assets2/슬라이드 (3).png" alt="">
+                </div>
+            </div>
+        </article>
 
         <main id="contents">
             <section class="content1"></section>
@@ -119,5 +141,31 @@
             </div>
         </footer>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(()=>{
+
+            // 시작
+            let currentIndex = 0;
+
+            // 첫번째 슬라이드 복제
+            $(".sliderWrap").append($(".slider").first().clone(true));
+
+            setInterval(function(){
+                
+                currentIndex++;
+
+                $(".sliderWrap").animate({marginTop: -currentIndex * 300 + "px"}, 600)
+
+                if(currentIndex == 3){
+                    setTimeout(function(){
+                        $(".sliderWrap").animate({marginLeft : 0}, 0);
+                        currentIndex = 0;
+                    }, 700);
+                }
+
+            }, 3000);
+        });
+    </script>
 </body>
 </html>

@@ -10,6 +10,7 @@
             padding: 0;
         }
         #wrap{
+            position: relative;
             width: 1200px;
             margin:0 auto;
         }
@@ -82,6 +83,56 @@
             background: #644e4e;
 
         }
+
+        /* 탭메뉴 */
+
+        .tab-btn{
+
+        }
+        .tab-btn ul{
+            list-style:none;
+            display: flex;
+        }
+        .tab-btn ul li{
+            background: #ffc1c1;
+            padding: 10px;
+        }
+        .tab-btn ul li.active a{
+            background: #ff9393;
+            padding: 10px;
+        }
+        .tab-btn ul li a{
+            text-decoration:none;
+        }
+        .tab-cont{
+            background: #d4f3ff;
+            padding: 10px;
+        }
+        .tab-cont div:nth-of-type(2){
+            display: none;
+        }
+
+        /* 팝업 */
+        .popup-btn{
+            background: #ff9393;
+        }
+        .popup-view{
+            display: none;
+            background: #fffc41;
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+        }
+        .popup-close{
+            margin:20px;
+            position: absolute;
+            bottom:0;
+            right:0;
+            background: #a3a3a3;
+        }
     </style>
 </head>
 <body>
@@ -94,9 +145,32 @@
         <article id="slider"></article>
 
         <main id="contents">
-            <section class="content1"></section>
-            <section class="content2"></section>
+            <section class="content1">
+
+                <div class="tab-menu">
+
+                    <div class="tab-btn">
+                        <ul>
+                            <!-- 탭버튼을 누르는 행동 -->
+                            <li class="active"><a href="#">탭버튼1</a></li>
+                            <li><a href="#">탭버튼2</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-cont">
+                        <div>탭버튼 1의 내용입니다</div>
+                        <div>탭버튼 2의 내용입니다</div>
+                    </div>
+
+                </div>
+
+            </section>
+            <section class="content2">
+                <a href="#" class="popup-btn">팝업</a>
+            </section>
             <section class="content3"></section>
+
+
+
         </main>
 
         <footer id="footer">
@@ -107,5 +181,48 @@
             <div class="footer2"></div>
         </footer>
     </div>
+
+    <div class="popup-view">
+        <a href="#" class="popup-close">닫기</a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(()=>{
+            
+            // 변수 대입
+            let tabBtn = $(".tab-btn > ul > li");
+            let tabCont = $(".tab-cont > div");
+            tabCont.hide().eq(0).show();
+
+            tabBtn.click(function(){
+
+                // 선택한것 순번 파악
+                const index = $(this).index();
+
+                // 선택되었다는 효과
+                // 임의의 것을 선택했을때 액티브 클래스 추가
+                // 다른 탭 버튼의 클래스는 지움
+                $(this).addClass("active").siblings().removeClass("active");
+
+                // 콘텐츠 보여주기 가리기
+                // 임의의 것을 선택했을때 콘텐츠 보여주기
+                // 다른 탭 버튼의 콘텐츠는 가림
+                tabCont.eq(index).show().siblings().hide();
+
+            });
+
+
+            $(".popup-btn").click(function(){
+                $(".popup-view").show();
+            });
+
+            $(".popup-close").click(function(){
+                $(".popup-view").hide();
+            });
+
+
+        });
+    </script>
 </body>
 </html>
