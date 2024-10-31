@@ -91,33 +91,6 @@
         .nav > ul > li > ul > li > a:hover{
             background: #f4f72c;
         }
-        /* 슬라이드 액자,틀 */
-        #slider{
-            overflow: hidden;
-            width: 100%;
-            height: 300px;
-            background: #a0a0a0;
-        }
-        .sliderWrap{
-        }
-        .sliderWrap > div{
-        }
-        .sliderWrap .slider{
-            position:relative;
-            left:0;
-            top:0;
-        }
-        .sliderWrap .slider img{
-            vertical-align: top;
-        }
-        .sliderWrap .slider span{
-            position: absolute;
-            left:50%;
-            top:50%;
-            background: #acabab;
-            padding: 20px;
-            transform: translate(-50%,-50%);
-        }
         #contents{
             display: flex;
             width: 100%;
@@ -127,7 +100,7 @@
             width: 33.3%;
             height: 200px;
             background: #838383;
-
+            
         }
         #contents .content2{
             width: 33.3%;
@@ -158,6 +131,30 @@
             width: 20%;
             height: 100px;
             background: #2b2a2a;
+        }
+        /* 슬라이드 */
+        #slider{
+            width: 100%;
+            height: 300px;
+            background: #a0a0a0;
+        }
+        .sliderWrap > div{
+        }
+        .sliderWrap .slider{
+            position:relative;
+            left:0;
+            top:0;
+        }
+        .sliderWrap .slider img{
+            vertical-align: top;
+        }
+        .sliderWrap .slider span{
+            position: absolute;
+            left:50%;
+            top:50%;
+            background: #acabab;
+            padding: 20px;
+            transform: translate(-50%,-50%);
         }
 
     </style>
@@ -244,24 +241,13 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-        $(() => {
+        $(()=>{
 
-            let currentIndex = 0;
-            $(".sliderWrap").append($(".slider").first().clone(true));
-            
-            setInterval(function(){
-                currentIndex++;
-                $(".sliderWrap").animate({marginTop:-currentIndex * 100 + "%"}, 600);
+        let currentIndex = 0;
 
-                if(currentIndex == 3){
-                    setTimeout(function(){
-                        $(".sliderWrap").animate({marginTop:0}, 0);
-                        currentIndex = 0;
-                    },700);
-                }
+        $(".sliderWrap").append($(".slider").first().clone(true));
 
-            }, 3000);
-        }); 
+        setInterval(
     </script>
 </body>
 </html>

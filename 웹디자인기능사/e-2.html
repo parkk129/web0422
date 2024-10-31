@@ -53,11 +53,6 @@
             background: #bd8383;
 
         }
-        #slider{
-            width: calc(100% - 600px);
-            height: 100%;
-            background: #aaaaaa;
-        }
         #footer{
             display: flex;
             width: 100%;
@@ -67,7 +62,7 @@
             width: 20%;
             height: 100px;
             background: #745c5c;
-
+            
         }
         #footer .footer2{
             width: 60%;
@@ -79,6 +74,45 @@
             height: 100px;
             background: #855050;
         }
+        /* slider */
+        #slider{
+            width: calc(100% - 600px);
+            height: 100%;
+            background: #aaaaaa;
+        }
+        /* fade는 슬라이더 랩 길이(w/h)가 필요하지 않다 */
+        .sliderWrap{
+            /* #slider 크기 그대로 가기 / 반응형 w 0r h 는 크기 지정 ㄴ */
+            position: relative;
+            height: 100%;
+        }
+        .sliderWrap > div{
+            display: none;
+        }
+        .sliderWrap > div:first-child{
+            display: block;
+        }
+        .sliderWrap .slider{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left:0;
+            top:0;
+            background-repeat: no-repeat;
+            background-position: center;
+            
+        }
+        .sliderWrap .slider.s1{
+            background-image: url(../assets2/bg\ \(4\).jpg);
+        }
+        .sliderWrap .slider.s1{
+            background-image: url(../assets2/bg\ \(5\).jpg);
+        }
+        .sliderWrap .slider.s1{
+            background-image: url(../assets2/bg\ \(6\).jpg);
+        }
+        
+
     </style>
 </head>
 <body>
@@ -96,7 +130,13 @@
                 <article class="link"></article>
             </section>
 
-            <article id="slider"></article>
+            <article id="slider">
+                <div class="sliderWrap">
+                    <div class="slider s1"></div>
+                    <div class="slider s2"></div>
+                    <div class="slider s3"></div>
+                </div>
+            </article>
         </main>
 
         <footer id="footer">
@@ -105,5 +145,39 @@
             <div class="footer3"></div>
         </footer>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(()=>{
+            
+            // 시작
+            let currentIndex = 0;
+
+            // 복제
+            $(".sliderWrap").append($(".slider").first().clone(true));
+
+            // 반복
+            setInterval(()=>{
+
+                // 인덱스 추가
+                currentIndex++;
+
+                // 방향 시간
+                $(".sliderWrap").animate({marginLeft: -100 * currentIndex + "%"}, 600);
+
+                // 원상복귀
+                if(currentIndex == 3){
+
+                    // 셋타임아웃
+                    setTimeout(()=>{
+                        $(".sliderWrap").animate({marginLeft:0},0)
+
+                        // 다시 시작
+                        currentIndex = 0;
+                    }, 700)
+                }
+            }, 3000);
+        });
+    </script>
 </body>
 </html>
