@@ -131,6 +131,7 @@
     }
     /* 슬라이더 */
     #slider{
+        overflow: hidden;
     width: 100%;
     height: 300px;
     background: #b9b9b9;
@@ -138,6 +139,50 @@
 
     .sliderWrap{
 
+    }
+
+    /* 탭 메뉴 */
+
+    .tab-btn{
+        display: flex;
+    }
+    .tab-btn ul{
+        display: flex;
+    }
+    .tab-btn li{
+        margin: 5px;
+        padding: 10px;
+        background: #ffc8c8;
+    }
+    .tab-cont{
+        background: #d3fd6f;
+        padding: 20px;
+    }
+    .tab-cont > div:nth-of-type(2){
+        display: none;
+    }
+    .tab-btn li.active a{
+        background: #ff9898;
+        padding: 10px;
+    }
+
+    /* 팝업 */
+    .popup-btn{
+        background: hsl(41, 100%, 71%);
+        padding: 10px;
+    }
+    .popup-view{
+        display: none;
+        position: absolute;
+        left:50%;
+        top:50%;
+        transform: translate(-50%, -50%);
+        background: #90e5ff;
+        width: 400px;
+        height: 400px;
+    }
+    .popup-close{
+        background: hsl(0, 0%, 97%);
     }
 
 </style>
@@ -204,8 +249,28 @@
         </article>
         <!-- slider -->
         <main id="main">
-            <section class="content1"></section> 
-            <section class="content2"></section>
+            <section class="content1">
+
+                <div class="tab-menu">
+
+                    <div class="tab-btn">
+                        <ul>
+                            <li class="active"><a href="#">버튼1</a></li>
+                            <li><a href="#">버튼2</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-cont">
+                        <div>버튼 1의 내용입니다.</div>
+                        <div>버튼 2의 내용입니다.</div>
+                    </div>
+
+                </div>
+
+            </section> 
+            <section class="content2">
+                <a href="#" class="popup-btn">팝업버튼</a>
+            </section>
             <section class="content3"></section>
         </main>
         <!-- main -->
@@ -218,29 +283,71 @@
         </footer>
         <!-- footer -->
     </div>
+
+    <div class="popup-view">
+        안녕하세요.팝업창입니다.
+        <a href="#" class="popup-close">닫기</a>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         $(()=>{
 
-            let currentIndex = 0;
+            // 변수 대입
+            let tabBtn = $(".tab-btn > ul > li");
+            let tabCont = $(".tab-cont > div");
 
-            $(".sliderWrap").append($(".slider").first().clone(true));
+            tabCont.hide().eq(0).show();
 
-            setInterval(()=>{
+            tabBtn.click(function(){
 
-                currentIndex++;
-                // alert(currentIndex);
-                $(".sliderWrap").animate({marginTop:-currentIndex * 100 + "%"},600);
+                // 선택한것 순번 파악
+                const index = $(this).index();
 
-                if(currentIndex == 3){
+                // 선택되었다는 효과
+                // 임의의 것을 선택했을때 액티브 클래스 추가
+                // 다른 탭 버튼의 클래스는 지움
+                $(this).addClass("active").siblings().removeClass("active");
 
-                    setTimeout(()=>{
-                        $(".sliderWrap").animate({marginTop:0},0);
-                    }, 700);
+                // 콘텐츠 보여주기 가리기
+                // 임의의 것을 선택했을때 콘텐츠 보여주기
+                // 다른 탭 버튼의 콘텐츠는 가림
+                tabCont.eq(index).show().siblings().hide();
 
-                    currentIndex = 0;
-                }
-            }, 3000);
+            });
+
+            $(".popup-btn").click(()=>{
+
+                $(".popup-view").show();
+
+            });
+
+            $(".popup-close").click(()=>{
+
+                $(".popup-view").hide();
+
+            });
+
+
+            // let currentIndex = 0;
+
+            // $(".sliderWrap").append($(".slider").first().clone(true));
+
+            // setInterval(()=>{
+
+            //     currentIndex++;
+            //     // alert(currentIndex);
+            //     $(".sliderWrap").animate({marginTop:-currentIndex * 100 + "%"},600);
+
+            //     if(currentIndex == 3){
+
+            //         setTimeout(()=>{
+            //             $(".sliderWrap").animate({marginTop:0},0);
+            //         }, 700);
+
+            //         currentIndex = 0;
+            //     }
+            // }, 3000);
         });
     </script>  
 </body>

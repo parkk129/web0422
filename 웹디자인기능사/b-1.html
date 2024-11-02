@@ -143,29 +143,7 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-        $(()=>{
-
-            // 시작
-            let currentIndex = 0;
-
-            // 첫번째 슬라이드 복제
-            $(".sliderWrap").append($(".slider").first().clone(true));
-
-            setInterval(function(){
-                
-                currentIndex++;
-
-                $(".sliderWrap").animate({marginTop: -currentIndex * 300 + "px"}, 600)
-
-                if(currentIndex == 3){
-                    setTimeout(function(){
-                        $(".sliderWrap").animate({marginLeft : 0}, 0);
-                        currentIndex = 0;
-                    }, 700);
-                }
-
-            }, 3000);
-        });
+        /
     </script>
 </body>
 </html>
