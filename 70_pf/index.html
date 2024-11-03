@@ -13,7 +13,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
+
     <body>
+        <div class="snow_wrap">
+            <div class="snow_div"><p>❅</p></div>
+            <div class="snow_div"><p>❅</p></div>
+            <div class="snow_div"><p>❅</p></div>
+            <div class="snow_div"><p>❅</p></div>
+            <div class="snow_div"><p>❅</p></div>
+            <div class="snow_div"><p>❅</p></div>
+            <div class="snow_div"><p>❅</p></div>
+            <div class="snow_div"><p>❅</p></div>
+            <div class="snow_div"><p>❅</p></div>
+            <div class="snow_div"><p>❅</p></div>
+            <div class="snow_div"><p>❅</p></div>
+            <div class="snow_div"><p>❅</p></div>
+            <div class="snow_div"><p>❅</p></div>
+            <div class="snow_div"><p>❅</p></div>
+            <div class="snow_div"><p>❅</p></div>
+            <div class="snow_div"><p>❅</p></div>
+            <div class="snow_div"><p>❅</p></div>
+            <div class="snow_div"><p>❅</p></div>
+            <div class="snow_div"><p>❅</p></div>
+          </div>
+        
         <nav>
             <section>
                 <ul>
@@ -92,7 +115,7 @@
                 <div class="home-card">
 
                     <div class="home-icon">
-                        <a href="../90_test/프로토타입제작및사용성테스트/index.html"><img src="../assets2/musina.png" alt="무신사 썸네일"></a>
+                        <a href="../90_test/프로토타입제작및사용성테스트/index.html"><img src="../assets2/ms_banner.png" alt="무신사 썸네일"></a>
                     </div>
                     
 
@@ -181,6 +204,31 @@
 
     </html>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+          var snowCount = 200; // 원하는 눈의 개수를 설정
+    
+          for (var i = 0; i < snowCount; i++) {
+            $('<div class="snow"></div>').appendTo('body');
+          }
+    
+          function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+              color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+          }
+    
+          var snowElements = document.getElementsByClassName('snow');
+          for (var i = 0; i < snowElements.length; i++) {
+            var snowElement = snowElements[i];
+            snowElement.style.setProperty('--snow-color', getRandomColor());
+          }
+        });
+      </script>
 </body>
 
 </html>

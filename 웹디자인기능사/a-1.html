@@ -157,6 +157,48 @@
             transform: translate(-50%,-50%);
         }
 
+        /* 탭메뉴 */
+        .tab-btn ul{
+            display: flex;
+        }
+        .tab-btn ul li{
+            margin: 5px;
+            padding: 10px;
+            background: #91e0ee;
+        }
+        .tab-btn ul li.active a{
+            box-sizing: border-box;
+            padding:5px;
+            background: #67a0aa;
+        }
+        .tab-cont{
+            height: 200px;
+            padding: 10px;
+            background: #ffbaba;
+        }
+        .tab-cont > div:nth-of-type(2){
+            display: none;
+        }
+
+        /* 팝업 */
+
+        .popup-btn{
+            background: #ffe5e5;
+        }
+        .popup-view{
+            display: none;
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: #7dffdf;
+            left:50%;
+            top:50%;
+            transform: translate(-50%, -50%);
+
+        }
+        .popup-close{
+            background: #f0bd60;
+        }
     </style>
 </head>
 <body>
@@ -214,22 +256,37 @@
                     <img src="../assets2/Frame 1 copy.png" alt="">
                     <span>이미지1</span>
                 </div>
-                <div class="slider s2">    
-                    <img src="../assets2/Frame 2 copy.png" alt="">
-                    <span>이미지2</span>
-                </div>
-                <div class="slider s3">    
-                    <img src="../assets2/Frame 3.png" alt="">
-                    <span>이미지3</span>
-                </div>
+                
             </div>
         </div>
 
         <!-- 복수 contents -->
         <div id="contents">
             <!-- 단수 content -->
-            <div class="content1"></div>
-            <div class="content2"></div>
+            
+            <div class="content1">
+
+                <div class="tab-menu">
+
+                    <div class="tab-btn">
+                        <ul>
+                            <li class="active"><a href="#">버튼1</a></li>
+                            <li><a href="#">버튼2</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-cont">
+                        <div>버튼1의 내용입니다.</div>
+                        <div>버튼2의 내용입니다.</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="content2">
+                <a href="#" class="popup-btn">팝업버튼</a>
+            </div>
             <div class="content3"></div>
         </div>
 
@@ -239,15 +296,40 @@
             <div class="footer3"></div>
         </div>
     </div>
+    <div class="popup-view">
+        <a href="#" class="popup-close">닫기</a>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         $(()=>{
 
-        let currentIndex = 0;
+            let tabBtn = $(".tab-btn > ul > li");
+            let tabCont = $(".tab-cont > div");
 
-        $(".sliderWrap").append($(".slider").first().clone(true));
+            tabCont.hide().eq(0).show();
 
-        setInterval(
+            tabBtn.click(function(){
+
+                const index = $(this).index();
+
+                tabBtn.eq(index).addClass("active").siblings().removeClass("active");
+
+                tabCont.eq(index).show().siblings().hide();
+
+                return false;
+
+            });
+
+            // 팝업
+
+            $(".popup-btn").click(function(){
+                $(".popup-view").show();
+            });
+
+            $(".popup-close").click(function(){
+                $(".popup-view").hide();
+            });
+        });
     </script>
 </body>
 </html>
