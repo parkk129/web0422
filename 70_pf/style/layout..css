@@ -3,6 +3,20 @@
 @import url(typo.css);
 @import url(section.css);
 
+/* 바로가기 버튼 */
+.baro{
+    border-radius:10px;
+    padding: 10px;
+    display: inline;
+    border:1px solid #222222;
+}
+.baro:hover{
+    background: #e7e7e7;
+}
+.baro a{
+    text-decoration: none;
+    cursor: pointer;
+}
 /* typo */
 img { width: 100vw; }
 .snow_wrap .snow_div {
@@ -138,6 +152,7 @@ h2 {
     font-style: italic;
     font-weight:700;
 }
+
 section>h2{
     padding: 50px 0px;
 }

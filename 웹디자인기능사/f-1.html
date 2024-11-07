@@ -11,100 +11,182 @@
         }
         #wrap{
             width: 100%;
+            margin: 0 auto;
         }
         #header{
-            margin: 0 auto;
             width: 1340px;
             height: 100px;
-            background: #cacaca;
-        }
-        #container{
-            width: 1340px;
             margin: 0 auto;
+            display: flex;
+        }
+        #header .logo{
+            width: 20%;
+            height: 100px;
+            background: #f3b8b8;
+        }
+        #header .nav{
+            width: 80%;
+            height: 100px;
+            background: #f58c8c;
+        }
+        .nav{
+            z-index:999999;
+        }
+        .nav > ul{
+            margin-top: 55px;
+            text-align: right;
+        }
+        .nav > ul > li{
+            display: inline-block;
             position: relative;
         }
-        #container .link{
-            top:-100px;
+        .nav > ul > li > a{
+            display:inline-block;
+            background: #90e1f0;
+            padding: 10px 25px;
+        }
+        .nav > ul > li > a:hover{
+            background: #75a9b3;
+        }
+        .nav > ul > li > ul{
+            display: none;
+            padding: 10px;
+            background: #a9f1a000;
             position: absolute;
+        }
+        .nav > ul > li > ul > li{
+            text-align: center;
+        }
+        .nav > ul > li > ul > li > a{
+            display: inline-block;
+            padding: 10px;
+        }
+        .nav > ul > li > ul > li > a:hover{
+            background: #7fda73;
+        }
+        ul{
+            list-style:none;
+        }
+        a{
+            color:black;
+            text-decoration: none;
+        }
+        #slider{
+            position: relative;
+            width: 100%;
+            height: 350px;
+            background: #a3a2a2;
+        }
+        #slider.on::after{
+            height: 200px;
+        }
+        #slider::after{
+            position: absolute;
+            left:0;
+            top:0;
+            content:'';
+            width: 100%;
+            height: 0px;
+            background: #00000079;
+        }
+        #contents{
+            top:100px;
+            width: 1340px;
+            height: 600px;
             margin: 0 auto;
+        }
+        #contents .link{
+            position: absolute;
+            top:350px;
             width: 1340px;
             height: 100px;
-            background: #a5a5a5;
+            margin: 0auto;
+            background: #e04343;
+
         }
-        #container .banner{
-            margin: 0 auto;
-            width: 1340px;
+        #contents .banner{
+            width: 100%;
             height: 200px;
-            background: #929292;
+            background: #8b7c7c;
+
         }
-        #container .board{
-            margin: 0 auto;
-            width: 1340px;
+        #contents .notice{
+            width: 100%;
             height: 300px;
-            background: #808080;
+            background: #a37878;
+
         }
         #footer{
             margin: 0 auto;
             width: 1340px;
             height: 120px;
-            background: #555555;
-            
+            background: #6d6c6c;
         }
-        #slider{
-            /* overflow hidden 꼭 쓰기!!! 아니면 망가짐 */
-            overflow: hidden;
-            width: 1903px;
-            height: 350px;
-            background: #b9b9b9;
-            position: relative;
-        }
-
-        .sliderWrap .slider{
-            position: absolute;
-            left:0;
-            top:0;
-            width: 100%;
-            height: 350px;
-        }
-
     </style>
 </head>
 <body>
     <div id="wrap">
-        <header id="header"></header>
-        <article id="slider">
-            <div class="sliderWrap">
-                <div class="slider s1"><img src="../assets2/적응형 슬라이드 (1).png" alt=""></div>
-                <div class="slider s2"><img src="../assets2/적응형 슬라이드 (2).png" alt=""></div>
-                <div class="slider s3"><img src="../assets2/적응형 슬라이드 (3).png" alt=""></div>
-            </div>
-        </article>
-        <div id="container">
+        <header id="header">
+            <h1 class="logo"></h1>
+            <nav class="nav">
+                <ul>
+                    <li class="submenu"><a href="#">메인메뉴1</a>
+                        <ul>
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴2</a></li>
+                            <li><a href="#">서브메뉴3</a></li>
+                            <li><a href="#">서브메뉴4</a></li>
+                        </ul>
+                    </li>
+                    <li class="submenu"><a href="#">메인메뉴2</a>
+                        <ul>
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴2</a></li>
+                            <li><a href="#">서브메뉴3</a></li>
+                            <li><a href="#">서브메뉴4</a></li>
+                        </ul>
+                    </li>
+                    <li class="submenu"><a href="#">메인메뉴3</a>
+                        <ul>
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴2</a></li>
+                            <li><a href="#">서브메뉴3</a></li>
+                            <li><a href="#">서브메뉴4</a></li>
+                        </ul>
+                    </li>
+                    <li class="submenu"><a href="#">메인메뉴4</a>
+                        <ul>
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴2</a></li>
+                            <li><a href="#">서브메뉴3</a></li>
+                            <li><a href="#">서브메뉴4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <article id="slider"></article>
+        <div id="contents">
             <div class="link"></div>
             <div class="banner"></div>
-            <div class="board"></div>
+            <div class="notice"></div>
+        <div id="footer"></div>
+
         </div>
-        <footer id="footer"></footer>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         $(()=>{
 
-            // 시작
-            let currentIndex = 0;
+            $(".nav > ul > li").mouseover(function(){
+                $(".nav > ul > li > ul").stop().fadeIn(300);
+                $("#slider").addClass("on");
+            });
 
-
-            // 반복
-            setInterval(()=>{
-
-                nextIndex = (currentIndex + 1) % 3;
-
-                $(".slider").eq(currentIndex).fadeOut(1200);
-                $(".slider").eq(nextIndex).fadeIn(1200);
-
-                    currentIndex = nextIndex;
-                    
-            }, 3000);
+            $(".nav > ul > li").mouseout(function(){
+                $(".nav > ul > li > ul").stop().fadeOut(300);
+                $("#slider").removeClass("on");
+            });
 
 
         });
