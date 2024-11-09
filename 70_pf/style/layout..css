@@ -20,8 +20,6 @@ body{
         background-position: 90% 90%;
     }
 }
-/* git */
-    
 /* 바로가기 버튼 */
 .baro{
     font-family: 'NanumSquareRound';
@@ -131,6 +129,7 @@ nav {
 }
 
 nav section {
+    
     align-items: center;
 }
 
@@ -149,6 +148,9 @@ nav li {
     font-style: italic;
     display: inline-block;
     line-height: 100px;
+}
+nav li a{
+    cursor: pointer;
 }
 
 header {
