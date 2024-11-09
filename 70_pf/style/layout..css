@@ -227,6 +227,11 @@ footer{
     text-align: center;
 }
 
+footer div a{
+    cursor: pointer;
+    padding:3px;
+}
+
 
 /* ////////////////////////////////////반응형css */
 
