@@ -32,6 +32,26 @@ body : 15px, line-height 1.5 23px (150~200%)
 /* 글자의 속성은 상속받는다 */
 html{font-size: 10px;}
 
+
+
+.syncopate-regular {
+    font-family: "Syncopate", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .syncopate-bold {
+    font-family: "Syncopate", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
 @font-face {
     font-family: 'Cafe24Ssurround';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
@@ -42,6 +62,12 @@ html{font-size: 10px;}
 @font-face {
     font-family: 'NanumSquareRound';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'YdestreetB';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/YdestreetB.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -62,12 +88,11 @@ p{
 a{
     color:#444;
     text-decoration: underline;
-    
 }
 
 h1 {
     font-size: 1.5rem;
-    color: white;
+    color:#ffffff;
     font-weight: 400;
 }
 
@@ -87,13 +112,15 @@ nav a {
 
 
 main h2{
-    color:#222;
-    font-family: 'Cafe24Ssurround';
+    color:#333;
+    font-family: 'YdestreetB';
+    font-weight: 700;
 }
 
 main p{
-    font-family: 'NanumSquareRound';
+    color:#333;
+    font-family: 'Pretendard-Regular';
 }
 nav li{
-    font-family: 'NanumSquareRound';
+    font-family: 'Pretendard-Regular';
 }
