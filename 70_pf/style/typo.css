@@ -100,6 +100,8 @@ h1 {
     font-size: 1.5rem;
     color:#ffffff;
     font-weight: 400;
+    text-shadow: -2px 0px #333, 0px 2px #333, 2px 0px #333, 0px -2px #333;
+
 }
 
 h2 {
@@ -115,18 +117,31 @@ nav a {
     color: #444444;
 }
 
-
+@font-face{
+    font-family:'DNFBitBitv2';
+    font-style:normal;font-weight:400;src:url('//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf')format('opentype')}
 
 main h2{
-    color:#333;
-    font-family: 'YdestreetB';
-    font-weight: 700;
+    color:#ffffff;
+    font-family:'DNFBitBitv2';
+    font-weight: 500;
+    text-shadow: -2px 0px #333, 0px 2px #333, 2px 0px #333, 0px -2px #333;
+}
+
+
+@font-face {
+    font-family: 'PFStardust';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/PFStardust.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 main p{
+    font-size:16px;
     color:#333;
-    font-family: 'Pretendard-Regular';
+    font-weight: 700;
+    font-family: 'PFStardust';
 }
 nav li{
-    font-family: 'Pretendard-Regular';
+    font-family: 'PFStardust';
 }
