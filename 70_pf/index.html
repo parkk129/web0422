@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="style/typo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 </head>
 
 
@@ -87,7 +91,7 @@
                     <div class="home-description">
                         <h2 class="figma"> 컴포즈커피 <span> (compose coffee)</span></h2>
                         <p>1차 팀 작업입니다.
-                            2depth 메뉴, 캐로셀, 슬라이드, 탭 기능을 반영한 적응형(AWD) 페이지 입니다.
+                            2depth 메뉴, 캐로셀, 슬라이드, 탭 기능을 반영한 적응형 (AWD) 페이지 입니다.
                         </p>
                         <p>작업기간 : 14일</p>
                         <p>기여도 : 헤더, 푸터, 메인 페이지, 회원가입 페이지 담당</p>
@@ -106,7 +110,7 @@
 
                     <div class="home-description">
                         <h2 class="figma"> 무신사 <span> (MUSINSA) </span></h2>
-                        <p>원페이지 스크롤(One-Page-Scroll) 기능을 반영한 적응형(AWD) 메인 페이지 입니다.</p>
+                        <p>원페이지 스크롤(One-Page-Scroll) 기능을 반영한 적응형 (AWD) 메인 페이지 입니다.</p>
                         <p>작업기간 : 1일</p>
                         <p>기여도 : 개인작업</p>
                         <p>해상도 : 1920 x 1080</p>
@@ -122,7 +126,7 @@
                     </div>
                     <div class="home-description">
                         <h2 class="figma"> 에이치픽스 <span> (HPIX) </span></h2>
-                        <p>BR Architects를 벤치마킹하여 제작한 반응형(RWD) 메인 페이지 입니다.</p>
+                        <p>BR Architects를 벤치마킹하여 제작한 반응형 (RWD) 메인 페이지 입니다.</p>
                         <p>작업기간 : 1일</p>
                         <p>기여도 : 개인작업</p>
                         <p>해상도 : 1920 x 1080</p>
@@ -138,7 +142,7 @@
                     <div class="home-description">
                         <h2 class="figma"> 서브웨이 <span> (SUBWAY)</span></h2>
                         <p>2차 팀 작업입니다.
-                            2depth 메뉴, 캐로셀, 슬라이드, 탭 기능을 반영한 반응형(RWD) 페이지 입니다.
+                            2depth 메뉴, 캐로셀, 슬라이드, 탭 기능을 반영한 반응형 (RWD) 페이지 입니다.
                         </p>
                         <p>작업기간 : 7일</p>
                         <p>기여도 : 새소식 - 이벤트 페이지, 로그인 페이지 담당</p>
@@ -183,6 +187,13 @@
             </section>
         </main>
 
+        <div class="autoplay">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
         <footer>
             <!-- #top은 #의 현재 -->
             <div><a href="#top">BACK TO TOP</a></div>
@@ -194,30 +205,22 @@
     </html>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
     <script>
-        $(document).ready(function() {
-          var snowCount = 200; // 원하는 눈의 개수를 설정
-    
-          for (var i = 0; i < snowCount; i++) {
-            $('<div class="snow"></div>').appendTo('body');
-          }
-    
-          function getRandomColor() {
-            var letters = '0123456789ABCDEF';
-            var color = '#';
-            for (var i = 0; i < 6; i++) {
-              color += letters[Math.floor(Math.random() * 16)];
-            }
-            return color;
-          }
-    
-          var snowElements = document.getElementsByClassName('snow');
-          for (var i = 0; i < snowElements.length; i++) {
-            var snowElement = snowElements[i];
-            snowElement.style.setProperty('--snow-color', getRandomColor());
-          }
+
+        $(function(){
+            
+$('.autoplay').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+});
         });
-      </script>
+
+    </script>
 </body>
 
 </html>
