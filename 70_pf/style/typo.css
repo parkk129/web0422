@@ -96,6 +96,7 @@ a{
     text-decoration: underline;
 }
 
+/* 포트폴리오 */
 h1 {
     font-size: 1.5rem;
     color:#ffffff;
@@ -121,6 +122,7 @@ nav a {
     font-family:'DNFBitBitv2';
     font-style:normal;font-weight:400;src:url('//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf')format('opentype')}
 
+/* 주제 */
 main h2{
     color:#ffffff;
     font-family:'DNFBitBitv2';
@@ -135,13 +137,17 @@ main h2{
     font-weight: normal;
     font-style: normal;
 }
-
+@font-face {
+    font-family: 'Ramche';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Ramche.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 설명 */
 main p{
     font-size:16px;
     color:#333;
     font-weight: 700;
-    font-family: 'PFStardust';
-}
-nav li{
-    font-family: 'Pretendard-Regular';
+    font-family: 'Ramche';
+    line-height:2;
 }
