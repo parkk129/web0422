@@ -3,6 +3,7 @@
 @import url(typo.css);
 @import url(section.css);
 
+body, html {cursor:url(../../assets2/cursor\ \(3\).cur), auto}
 
 body{
     width: 100%;
