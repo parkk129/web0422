@@ -9,13 +9,137 @@
             margin: 0;
             padding: 0;
         }
+        a{
+            color:black;
+            text-decoration: none;
+        }
+        li{
+            list-style:none;
+        }
         #wrap{
             width: 100%;
+            display: flex;
         }
         #aside{
             width: 200px;
             height: 850px;
-            background: #ff9797;
+        }
+        .header{
+            width: 100%;
+            height: 20%;
+            background: #f8bebe;
+        }
+        .nav{
+            position: relative;
+            width: 100%;
+            height: 80%;
+            background: #ca4f4f;
+            z-index:1000;
+        }
+        .nav > ul{
+            
+        }
+        .nav > ul > li{
+            position: relative;
+        }
+        .nav > ul > li > a{
+            /* a = inline block */
+            text-align: center;
+            display: inline-block;
+            background: #f0aeae;
+            width:180px;
+            padding: 10px 10px;
+            
+        }
+        .nav > ul > li > a:hover{
+            background: #e07070;
+        }
+        .nav > ul > li > ul{
+            display: none;
+            position: absolute;
+            right:-500px;
+            top:0;
+            width: 500px;
+            background: #b1aaaa00;
+        }
+        .nav > ul > li > ul > li{
+            display: inline;
+        }
+        .nav > ul > li > ul > li > a{
+            text-align: center;
+            /* a = inline block */
+            padding: 10px;
+            display: inline-block;
+        }
+        .nav > ul > li > ul > li > a:hover{
+            background-color:#f7f1f1;
+        }
+        #main{
+            width:calc(100% - 200px);
+            height: 850px;
+            /* position */
+            position: relative;
+        }
+        #main::after{
+            content:'';
+            width:0%;
+            height:220px;
+            background: #000;
+            /* position */
+            position: absolute;
+            left:0;
+            /* position : top */
+            top:170px;
+            transition: all 300ms;
+        }
+        #main.on::after{
+            content:'';
+            width: 100%;
+            height:220px;
+            background: #000;
+            /* position */
+            position: absolute;
+            left:0;
+            /* position : top */
+            top:170px;
+        }
+        .slider{
+            width: 100%;
+            height: 400px;
+            background: #b36161;
+        }
+
+        .banner{
+            width: 100%;
+            height: 200px;
+            background: #b60e0e;
+        }
+        .notice{
+            width: 100%;
+            height: 250px;
+            background: #614a4a;
+        }
+        #footer{
+            width: 100%;
+            height: 120px;
+            display: flex;
+        }
+        .footer1{
+            width: 20%;
+            background: #26c448;
+        }
+        .footer2{
+            width: 80%;
+        }
+        .footer2-1{
+            width: 100%;
+            height: 60px;
+            background: #0b8d28;
+        }
+        .footer2-2{
+            width: 100%;
+            height: 60px;
+            background: #529de2;
         }
     </style>
 </head>
@@ -24,7 +148,52 @@
     <div id="wrap">
         <div id="aside">
             <div class="header"></div>
-            <div class="nav"></div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">메인메뉴1</a>
+                        <ul>
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴1</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">메인메뉴2</a>
+                        <ul>
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴1</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">메인메뉴3</a>
+                        <ul>
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴1</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">메인메뉴4</a>
+                        <ul>
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴1</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">메인메뉴5</a>
+                        <ul>
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴1</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div><a href="#">로그인인</a> <a href="#">회원가입입</a></div>
         </div>
 
         <div id="main">
@@ -34,13 +203,28 @@
         </div>
     </div>
 
-    <div id="footer"></div>
+    <div id="footer">
+        <div class="footer1"></div>
+        <div class="footer2">
+            <div class="footer2-1"></div>
+            <div class="footer2-2"></div>
+        </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         $(()=>{
 
-            
+            $(".nav > ul > li").mouseover(function(){
+                $(".nav > ul > li > ul").stop().fadeIn();
+                $("#main").addClass("on");
+            })
+
+            $(".nav > ul > li").mouseout(function(){
+                $(".nav > ul > li > ul").stop().fadeOut();
+                $("#main").removeClass("on");
+            })
+
         });
     </script>
 </body>
