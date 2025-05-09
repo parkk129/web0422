@@ -8,7 +8,9 @@
         *{
             margin: 0;
             padding: 0;
+            color:#333;
         }
+    
         a{
             color:black;
             text-decoration: none;
@@ -104,11 +106,19 @@
             top:170px;
         }
         .slider{
+            position: relative;
             width: 100%;
             height: 400px;
             background: #b36161;
         }
-
+        .link{
+            position: absolute;
+            right: 0;
+            top:0;
+            width: 100px;
+            height: 200px;
+            background: #fffb00;
+        }
         .banner{
             width: 100%;
             height: 200px;
@@ -124,12 +134,13 @@
             padding: 20px;
         }
         .tab-btn{
-            display: inline-block;
         }
         .tab-btn > ul{
+            /* ul에 df */
             display: flex;
         }
         .tab-btn > ul > li{
+
             /* tab-btn li에 패딩 넣기기 */
             padding: 10px;
             background: #f83999;
@@ -139,6 +150,7 @@
             background: #c44747;
         }
         .tab-btn > ul > li > a{
+            display: block;
         }
 
         /* tab-cont */
@@ -228,7 +240,11 @@
         </div>
 
         <div id="main">
-            <div class="slider"></div>
+            <div class="slider">
+                <div class="link">
+                    
+                </div>
+            </div>
             <div class="banner"></div>
             <div class="notice">
                 <div class="tab-menu">
@@ -242,12 +258,15 @@
 
                     <div class="tab-cont">
                         <div>
-                            공지사항내용입니다<br>
-                            공지사항내용입니다<br>
-                            공지사항내용입니다<br>
-                            공지사항내용입니다<br>
+                            <ul>
+                                <li><a href="#">공지사항 알림입니다. 오늘의 공지사항은 어쩌구 저쩌구. <span>2024.05.17</span></a></li>
+                                <li><a href="#">공지사항 알림입니다. 오늘의 공지사항은 어쩌구 저쩌구. <span>2024.05.17</span></a></li>
+                                <li><a href="#">공지사항 알림입니다. 오늘의 공지사항은 어쩌구 저쩌구. <span>2024.05.17</span></a></li>
+                                <li><a href="#">공지사항 알림입니다. 오늘의 공지사항은 어쩌구 저쩌구. <span>2024.05.17</span></a></li>
+                                <li><a href="#">공지사항 알림입니다. 오늘의 공지사항은 어쩌구 저쩌구. <span>2024.05.17</span></a></li>
+                            </ul>
                         </div>
-                        
+
                         <div>
                             갤러리리내용입니다<br>
                             갤러리리내용입니다<br>
