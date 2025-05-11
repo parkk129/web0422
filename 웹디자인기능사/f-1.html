@@ -6,190 +6,242 @@
     <title>Document</title>
     <style>
         *{
-            padding: 0;
             margin: 0;
+            padding: 0;
+        }
+        a{
+            color:#000;
+            text-decoration: none;
+            list-style:none;
+        }
+        li{
+            list-style:none;
         }
         #wrap{
-            width: 100%;
-            margin: 0 auto;
-        }
-        #header{
-            width: 1340px;
-            height: 100px;
-            margin: 0 auto;
             display: flex;
+            width: 1000px;
+            height: 650px;
         }
-        #header .logo{
-            width: 20%;
-            height: 100px;
-            background: #f3b8b8;
+        #aside{
+            width: 200px;
+            height: 650px;
         }
-        #header .nav{
-            width: 80%;
-            height: 100px;
-            background: #f58c8c;
+        .logo{
+            width: 100%;
+            height: 20%;
+            background: #eca2a2;
+
         }
         .nav{
-            z-index:999999;
+            width: 100%;
+            height: 80%;
+            background: #f87b7b;
+
         }
+        /* 메인메뉴 덩어리리 */
         .nav > ul{
-            margin-top: 55px;
-            text-align: right;
+            text-align: center;
         }
         .nav > ul > li{
-            display: inline-block;
+            /* 주 포지션을 덩어리가 아닌 개개인에 두어야함! */
             position: relative;
+
         }
         .nav > ul > li > a{
-            display:inline-block;
-            background: #90e1f0;
-            padding: 10px 25px;
+            width:150px;
+            display: inline-block;
+            padding:10px 20px;
+            background: #7ecdf1;
         }
-        .nav > ul > li > a:hover{
-            background: #75a9b3;
-        }
+        /* 서브메뉴 덩어리리 */
         .nav > ul > li > ul{
             display: none;
-            padding: 10px;
-            background: #a9f1a000;
+            width: 200px;
             position: absolute;
+            right:-190px;
+            top:0;
         }
         .nav > ul > li > ul > li{
-            text-align: center;
+
         }
         .nav > ul > li > ul > li > a{
             display: inline-block;
-            padding: 10px;
+            width:150px;
+            padding:10px 20px;
+            background: #a440cc;
         }
-        .nav > ul > li > ul > li > a:hover{
-            background: #7fda73;
-        }
-        ul{
-            list-style:none;
-        }
-        a{
-            color:black;
-            text-decoration: none;
+        #main{
+            width: 800px;
+            height: 650px;
         }
         #slider{
-            position: relative;
             width: 100%;
             height: 350px;
-            background: #a3a2a2;
+            background: #e3eb75;
+            overflow: hidden;
         }
-        #slider.on::after{
-            height: 200px;
+        .sliderWrap{
+            display: flex;
+            width:400%;
+            height: 100%;
         }
-        #slider::after{
-            position: absolute;
-            left:0;
-            top:0;
-            content:'';
-            width: 100%;
-            height: 0px;
-            background: #00000079;
-        }
+
         #contents{
-            top:100px;
-            width: 1340px;
-            height: 600px;
-            margin: 0 auto;
-        }
-        #contents .link{
-            position: absolute;
-            top:350px;
-            width: 1340px;
-            height: 100px;
-            margin: 0auto;
-            background: #e04343;
-
-        }
-        #contents .banner{
+            display: flex;
             width: 100%;
             height: 200px;
-            background: #8b7c7c;
-
         }
-        #contents .notice{
-            width: 100%;
-            height: 300px;
-            background: #a37878;
-
+        .notice{
+            width: 33.3%;
+            height: 100%;
+            background: #a0a743;
+        }
+        .gallery{
+            width: 33.3%;
+            height: 100%;
+            background: #43a754;
+        }
+        .link{
+            width: 33.3%;
+            height: 100%;
+            background: #a743a2;
         }
         #footer{
-            margin: 0 auto;
-            width: 1340px;
-            height: 120px;
-            background: #6d6c6c;
+            width: 100%;
+            height: 100px;
+            display: flex;
         }
+        .footer1{
+            width: 20%;
+            height: 100%;
+            background: #64ddd7;
+
+        }
+        .footer2{
+            width: 60%;
+            height: 100%;
+            background: #267c78;
+        }
+        .footer3{
+            width: 20%;
+            height: 100%;
+            background: #075753;
+        }
+
     </style>
 </head>
 <body>
     <div id="wrap">
-        <header id="header">
-            <h1 class="logo"></h1>
-            <nav class="nav">
+        <div id="aside">
+            <div class="logo"></div>
+            <div class="nav">
                 <ul>
-                    <li class="submenu"><a href="#">메인메뉴1</a>
-                        <ul>
+                    <li><a href="#">메인메뉴1</a>
+                        <ul class="submenu">
                             <li><a href="#">서브메뉴1</a></li>
-                            <li><a href="#">서브메뉴2</a></li>
-                            <li><a href="#">서브메뉴3</a></li>
-                            <li><a href="#">서브메뉴4</a></li>
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴1</a></li>
                         </ul>
                     </li>
-                    <li class="submenu"><a href="#">메인메뉴2</a>
-                        <ul>
+                    <li><a href="#">메인메뉴2</a>
+                        <ul class="submenu">
                             <li><a href="#">서브메뉴1</a></li>
-                            <li><a href="#">서브메뉴2</a></li>
-                            <li><a href="#">서브메뉴3</a></li>
-                            <li><a href="#">서브메뉴4</a></li>
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴1</a></li>
                         </ul>
                     </li>
-                    <li class="submenu"><a href="#">메인메뉴3</a>
-                        <ul>
+                    <li><a href="#">메인메뉴3</a>
+                        <ul class="submenu">
                             <li><a href="#">서브메뉴1</a></li>
-                            <li><a href="#">서브메뉴2</a></li>
-                            <li><a href="#">서브메뉴3</a></li>
-                            <li><a href="#">서브메뉴4</a></li>
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴1</a></li>
                         </ul>
                     </li>
-                    <li class="submenu"><a href="#">메인메뉴4</a>
-                        <ul>
+                    <li><a href="#">메인메뉴4</a>
+                        <ul class="submenu">
                             <li><a href="#">서브메뉴1</a></li>
-                            <li><a href="#">서브메뉴2</a></li>
-                            <li><a href="#">서브메뉴3</a></li>
-                            <li><a href="#">서브메뉴4</a></li>
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴1</a></li>
                         </ul>
                     </li>
                 </ul>
-            </nav>
-        </header>
-        <article id="slider"></article>
-        <div id="contents">
-            <div class="link"></div>
-            <div class="banner"></div>
-            <div class="notice"></div>
-        <div id="footer"></div>
-
+            </div>
+        </div>
+        <div id="main">
+            <div id="slider">
+                <div class="sliderWrap">
+                    <div class="slider s1">
+                        <img src="../assets2/슬더 (1).png" alt="">
+                    </div>
+                    <div class="slider s2">
+                        <img src="../assets2/슬더 (2).png" alt="">
+                    </div>
+                    <div class="slider s3">
+                        <img src="../assets2/슬더 (3).png" alt="">
+                    </div>
+                    <div class="slider s1">
+                        <img src="../assets2/슬더 (1).png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div id="contents">
+                <div class="notice"></div>
+                <div class="gallery"></div>
+                <div class="link"></div>
+            </div>
+            <div id="footer">
+                <div class="footer1"></div>
+                <div class="footer2"></div>
+                <div class="footer3"></div>
+            </div>
         </div>
     </div>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         $(()=>{
 
+
+            // 슬라이드
+
+            let currentIndex = 0;
+            setInterval(()=>{
+
+                currentIndex++;
+
+                $(".sliderWrap").animate({marginLeft: -100 * currentIndex + "%"}, 600)
+
+                if(currentIndex == 3){
+
+                    setTimeout(()=>{
+                        
+                        $(".sliderWrap").animate({marginLeft:0}, 0)
+
+                    }, 700)
+
+                    currentIndex = 0;
+                }
+
+            }, 3000);
+
+
+            // 네비게이션션
             $(".nav > ul > li").mouseover(function(){
-                $(".nav > ul > li > ul").stop().fadeIn(300);
-                $("#slider").addClass("on");
-            });
+
+                $(this).find(".submenu").stop().slideDown();
+            })
 
             $(".nav > ul > li").mouseout(function(){
-                $(".nav > ul > li > ul").stop().fadeOut(300);
-                $("#slider").removeClass("on");
-            });
 
+                $(this).find(".submenu").stop().slideUp();
+            })
 
-        });
+            },600)
+
     </script>
 </body>
 </html>
