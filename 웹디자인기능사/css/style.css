@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    color:#333;
+}
+#wrap{
+    width: 100%;
+    display: flex;
+}
+
+#aside{
+    width: 200px;
+    /* 가로길이 세로길이 제대로 재기! */
+    height:850px;
+}
+
+.logo{
+    width: 100%;
+    height: 20%;
+    background: #ebcccc;
+}
+.nav{
+    width: 100%;
+    height: 80%;
+    background: #e0a9a9;
+}
+
+#main{
+    width:calc(100% - 200px);
+    height: 850px;
+}
+
+#slider{
+    width: 100%;
+    height: 400px;
+    background: #d38c8c;
+
+}
+.banner{
+    width: 100%;
+    height: 200px;
+    background: #cf7474;
+
+}
+.notice{
+    width: 100%;
+    height: 250px;
+    background: #d15f5f;
+
+}
+
+#footer{
+    width: 100%;
+    height: 120px;
+    background: #a13f3f;
+}
+.footer1{
+    width: 20%;
+    height:100%;
+    background: #aa3030;
+}
