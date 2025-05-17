@@ -6,6 +6,13 @@
     padding: 0;
     color:#333;
 }
+a{
+    list-style: none;
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
 #wrap{
     width: 100%;
     display: flex;
@@ -26,6 +33,37 @@
     width: 100%;
     height: 80%;
     background: #e0a9a9;
+}
+
+.nav > ul{
+    /* 윗부분 거리 줄때 p20 : 마진이 안된다 싶으면 패딩 넣기기 */
+    padding-top: 50px;
+    text-align: center;
+    position: relative;
+}
+.nav > ul > li{
+    
+}
+.nav > ul > li > a{
+    display: inline-block;
+    background: #fcff50;
+    width: 140px;;
+    padding: 10px 20px;
+}
+/* 서브메뉴뉴 */
+.nav > ul > li > ul{
+    padding-top: -20px;
+    position: absolute;
+    display: flex;
+    width: 500px;
+    right:-500px;
+}
+.nav > ul > li > ul > li{
+
+}
+.nav > ul > li > ul > li > a{
+    display: inline-block;
+    padding: 10px;
 }
 
 #main{
