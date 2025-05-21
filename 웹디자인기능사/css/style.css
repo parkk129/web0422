@@ -1,240 +1,98 @@
 @charset "utf-8";
 
-
 *{
     margin: 0;
     padding: 0;
     color:#333;
 }
-a{
-    list-style: none;
-    text-decoration: none;
-}
 li{
-    list-style: none;
+    list-style:none;
+}
+a{
+    text-decoration: none;
+    
 }
 #wrap{
-    width: 100%;
+    
+    width: 1000px;
+    height: 650px;
     display: flex;
 }
-
 #aside{
     width: 200px;
-    /* 가로길이 세로길이 제대로 재기! */
-    height:850px;
+    height: 650px;
 }
-
 .logo{
     width: 100%;
     height: 20%;
-    background: #ebcccc;
+    background: #fde5e5;
+
 }
 .nav{
     width: 100%;
     height: 80%;
-    background: #e0a9a9;
-
+    background: #fdc6c6;
 }
-
 .nav > ul{
-    padding-left:10px;
-    /* 윗부분 거리 줄때 p20 : 마진이 안된다 싶으면 패딩 넣기기 */
-    padding-top: 50px;
-    
+    padding: 10px;
 }
 .nav > ul > li{
-    /* position li에 둔다다 */
-    position:relative;
+    position: relative;
 }
 .nav > ul > li > a{
-    display: inline-block;
-    background: #fcff50;
-    width: 140px;;
+    width:140px;
     padding: 10px 20px;
+    display: inline-block;
+    background: #eeff59;
 }
 .nav > ul > li > a:hover{
-    background: #50ff5f;
+    background: #59ff61;
 }
-/* 서브메뉴뉴 */
-.nav > ul > li  > ul{
-    display: none;  
-    z-index:99999;
-    /* 
-    의문 display : none ??? 적용안됨 >> display 한꺼번에 2개 쓰기 불가
-    display : flex (x) >> display:inline;   display:inline-block; (o)
-     */
-    padding-top: -100px;
+/* submenu */
+.nav > ul > li > ul{
+    display: none;
+    background: #ff4ee7;
     position: absolute;
-    width: 500px;
-    /* top : 0 쓰기기 */
     top:0;
-    right:-500px;
+    right:-180px;
 }
 .nav > ul > li > ul > li{
-    display: inline;
+
 }
 .nav > ul > li > ul > li > a{
+    width:140px;
+    padding: 10px 20px;
     display: inline-block;
-    padding: 10px;
+    background: #a16eff;
 }
 .nav > ul > li > ul > li > a:hover{
-    background: #50ff5f;
+    background: #15ff8a;
 }
-
-#aside > .footer1{
-    width: 100%;
-    height: 120px;
-    background: #863030;
-}
-
 #main{
-    position: relative;
-    width:calc(100% - 200px);
-    height: 850px;
+    width: 800px;
+    height: 650px;
 }
-/* 가상요소소 */
-#main::after{
-    position: absolute;
-    top:200px;  
-    left:0;
-    content:'';
-    width:0;
-    height:200px;
-    background: #00000081;
-    transition: all 300ms;
-}
-#main.on::after{
-    /* 위드냐 헤이트냐 상하로 내려오냐 좌우로 뜨냐냐 */
-    width: 100%;
-    
-}
-
+/* 슬라이드드 */
 #slider{
     width: 100%;
-    height: 400px;
-    background: #d38c8c;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-}
+    height: 350px;
+    background: #ffd8d8;
 
-.link{
-    position: absolute;
-    top:0;
-    right:0;
-    width: 100px;
-    height: 300px;
-    background: #62f5ff;
 }
-.link > ul > li{
-    padding: 30px 10px;
-}
-
 .sliderWrap{
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-.slider{
-    position: absolute;
-    top:0;
-    left:0;
-    width: 100%;
-    height: 100%;
-}
-
-/* 반응형일땐 이미지를 태그로 넣는것 xx css로 넣는것 oo */
-.slider.s1{
-    background-image: url(../../assets2/슬더\ \(1\).png);
-}
-.slider.s2{
-    background-image: url(../../assets2/슬더\ \(2\).png);
-}
-
-.slider.s3{
-    background-image: url(../../assets2/슬더\ \(3\).png);
-}
-
-.banner{
+    width: 400%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+.contents{
     width: 100%;
     height: 200px;
-    background: #cf7474;
+    background: #f18f8f;
 
 }
-
-/* 탭메뉴뉴 */
-.notice{
-    width: 100%;
-    height: 250px;
-    background: #d15f5f;
-
-}
-.tab-menu{
-    padding: 20px;
-}
-.tab-btn > ul{
-    display: flex;
-}
-.tab-btn > ul > li{
-    background: #ff2ed2;
-    padding: 10px 20px;
-}
-.tab-cont{
-    width: 100%;
-    height: 180px;
-    background: #26ff38;
-}
-/* css로 갤러리 가리기기 */
-.tab-cont > div{
-    display: none;
-}
-.tab-cont > div:first-child{
-    display: block;
-}
-.tab-cont > div > ul{
-    padding: 10px;
-}
-
-.tab-cont > div > ul > li{
-    padding: 8px 10px;
-    border-bottom:1px solid #000;
-}
-
 #footer{
     width: 100%;
-    height: 120px;
-}
+    height: 100px;
+    background: #f07676;
 
-.footer2-1{
-    width: 100%;
-    height: 60px;
-    background: #1cb7f5;
-}
-.footer2-1 > ul{
-    display: flex;
-    align-items: center;
-    padding-left:20px;
-}
-.footer2-1 > ul > li{
-    padding: 10px;
-    border-right:1px solid #000;
-}
-.footer2-1 > ul > li > a:hover{
-    text-decoration: underline;
-}
-.footer2-1 > ul > li:last-child{
-    border:none;
-}
-
-.footer2-2{
-    width: 100%;
-    height: 60px;
-    background: #057cac;
-    display: flex;
-    align-items: center;
-    padding-left:30px;
 }

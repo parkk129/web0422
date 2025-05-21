@@ -1,57 +1,22 @@
 $(()=>{
 
-    // @charset "utf-8";  ==  $(()=>{});  css js 작동 시작 명령어어
+    // nav
 
     $(".nav > ul > li").mouseover(function(){
 
-        $(".nav > ul > li > ul").stop().fadeIn(300);
-        $("#main").addClass("on");
-        
+        $(this).find(".submenu").stop().slideDown();
     });
-
-
-    $(".nav > ul > li").mouseout(function(){
-
-        $(".nav > ul > li > ul").stop().fadeOut(300);
-        $("#main").removeClass("on");
-
-    });
-
 
     // slide
 
-    let currentIndex = 0;
+    currentIndex = 0;
 
-    
     setInterval(()=>{
         
-        let nextIndex = (currentIndex + 1) % 3;
+        currentIndex++;
 
-        $(".slider").eq(currentIndex).fadeOut(1200);
-        $(".slider").eq(nextIndex).fadeIn(1200);
+        $(".sliderWrap").animate({marginLeft: - 100 * currentIndex + "%"},600);
 
-        currentIndex = nextIndex;
-
-    },3000);
-
-
-    // tab menu
-
-    // . 찍어서 클래스 표시 
-
-    // tabBtn tabCont >> let
-    let tabBtn = $(".tab-btn > ul > li");
-    let tabCont = $(".tab-cont > div");
-
-
-    tabBtn.click(function(){
-
-        // index >> const
-        const index = $(this).index();
-
-        // eq(index)
-        tabCont.eq(index).show().siblings().hide();
-
-    })
+    }, 3000);
 
 });
