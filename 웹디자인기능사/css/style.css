@@ -10,129 +10,81 @@ li{
 }
 a{
     text-decoration: none;
-    
 }
 #wrap{
-    
-    width: 1000px;
-    height: 650px;
-    display: flex;
-}
-#aside{
-    width: 200px;
-    height: 650px;
-}
-.logo{
     width: 100%;
-    height: 20%;
-    background: #fde5e5;
 
 }
+#header{
+    display: flex;
+    width: 1340px;
+    height: 100px;
+    margin: 0 auto;
+    background: #f3dbdb;
+}
+.logo{
+    width: 20%;
+    height: 100%;
+    background: #91f1fd;
+}
 .nav{
-    width: 100%;
-    height: 80%;
-    background: #fdc6c6;
+    width: 80%;
+    height: 100%;
+    background: #1b3b86;
 }
 .nav > ul{
-    padding: 10px;
+    padding-top: 56px;
+    justify-content: right;
+    display: flex;
 }
 .nav > ul > li{
-    position: relative;
+
 }
 .nav > ul > li > a{
-    width:140px;
-    padding: 10px 20px;
+    
     display: inline-block;
-    background: #eeff59;
+    padding: 10px 60px;
+    background: #fca1a1;
 }
 .nav > ul > li > a:hover{
-    background: #59ff61;
+    background: #f05a5a;
 }
 /* submenu */
 .nav > ul > li > ul{
-    display: none;
-    background: #ff4ee7;
-    position: absolute;
-    top:0;
-    right:-180px;
+    background: #000;
 }
 .nav > ul > li > ul > li{
 
 }
 .nav > ul > li > ul > li > a{
-    width:140px;
-    padding: 10px 20px;
     display: inline-block;
-    background: #a16eff;
+    padding: 10px 40px;
+    background: #ee5a5a;
 }
-.nav > ul > li > ul > li > a:hover{
-    background: #15ff8a;
-}
-#main{
-    width: 800px;
-    height: 650px;
-}
-/* 슬라이드드 */
+/* slider */
 #slider{
     width: 100%;
     height: 350px;
-    background: #ffd8d8;
-    overflow: hidden;
+    background: #f5c6c6;
 }
-.sliderWrap{
-    width: 400%;
-    display: flex;
+#container{
+    margin: 0 auto;
 }
-
-.contents{
-    width: 100%;
-    height: 200px;
-    display: flex;
+.link{
+    width: 1340px;
+    height: 100px;
+    background: #1b3b86;
 }
-.notice{
-    width: 33.3%;
-    height: 100%;
-    background: #f18f8f;
-    font-size:13px;
-}
-.gallery{
-    width: 33.3%;
-    height: 100%;
-    background: #c45a5a;
-
-}
-.banner{
-    width: 33.3%;
-    height: 100%;
-    background: #a71a1a;
+#contents{
+    margin: 0 auto;
+    width: 1340px;
+    height:600px;
+    background:#456ac0;
 
 }
 #footer{
-    width: 100%;
-    height: 100px;
-    display: flex;
-}
-.footer1{
-    width: 20%;
-    height: 100%;
-    background: #f07676;
-
-}
-.footer2{
-    width: 80%;
-    height: 100%;
-    background: #bb2d2d;
-
-}
-.footer2-1{
-    width:100%;
-    height:50px;
-    background: #2dbbaf;
-
-}
-.footer2-2{
-    width:100%;
-    height:50px;
-    background: #2d42bb;
-
+    margin: 0 auto;
+    width: 1340px;
+    height: 120px;
+    background: #1b3b86;
 }
