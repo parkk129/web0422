@@ -1,46 +1,28 @@
 $(()=>{
-
-    // nav
-
-    $(".nav > ul > li").mouseover(function(){
-
-        $(".submenu").stop().fadeIn();
-        $("#slider").addClass("on");
-
-    });
-
-    $(".nav > ul > li").mouseout(function(){
-
-        $(".submenu").stop().fadeOut();
-        $("#slider").removeClass("on");
-
-    });
-
-
-
-
-// slider
-
-let currentIndex = 0;
-
-setInterval(()=>{
-
-    currentIndex++;
-
-    $(".sliderWrap").animate({marginTop : - 350 * currentIndex + "px"}, 600);
     
-    if(currentIndex == 3){
+    // nav
+    $(".nav > ul > li").mouseover(function(){
+        $(this).find(".submenu").stop().slideDown();
+    })
+    $(".nav > ul > li").mouseout(function(){
+        $(this).find(".submenu").stop().slideUp();
+    })
 
-        setTimeout(()=>{
-            $(".sliderWrap").animate({marginTop:0 }, 0);
-        },700)
+    // slider
+    let currentIndex = 0;
+    setInterval(()=>{
+        currentIndex++;
 
-        currentIndex = 0;
-    }
+        $(".sliderWrap").animate({marginLeft:-100 * currentIndex + "%"},600);
 
+        if(currentIndex == 3){
 
-}, 3000)
+            setTimeout(()=>{
+                $(".sliderWrap").animate({marginLeft:0},0);
 
+                currentIndex = 0;
+            },700);
+        }
 
-
+    }, 3000);
 });

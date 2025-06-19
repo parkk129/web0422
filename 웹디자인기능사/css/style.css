@@ -14,35 +14,43 @@ a{
 #wrap{
     width: 100%;
 }
-#header{
+#main{
     display: flex;
-    margin: 0 auto;
-    width: 1340px;
-    height: 100px;
+    width: 100%;
+    height: 650px;
+    background: #ff9d9d;
+}
+#aside{
+    width: 200px;
+    height: 100%;
+    background: #ffcbcb;
 }
 .logo{
-    width: 20%;
-    height: 100%;
-    background: #fc5372;
+    width: 100%;
+    height: 20%;
+    background: #fc7171;
 }
 .nav{
-    z-index:999;
-    width: 80%;
-    height: 100%;
-    background: #e31a40;
+    width: 100%;
+    height: 80%;
+    background: #f85151;
 }
 .nav > ul{
-    display: flex;
-    justify-content: right;
-    padding-top: 56px;
+    padding-top: 20px;
+    text-align: center;
 }
 .nav > ul > li{
-
+    
 }
 .nav > ul > li > a{
+    
     display: inline-block;
-    padding: 10px 50px;
-    background: #f7b6c6;
+    width: 180px;
+    padding:10px 0px;
+    background: #ffcfcf;
+}
+.nav > ul > li > a:hover{
+    background: #fd8585;
 }
 .nav > ul > li > ul{
     display: none;
@@ -52,126 +60,63 @@ a{
 }
 .nav > ul > li > ul > li > a{
     display: inline-block;
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-    box-sizing: border-box;
-    background: #fdd6e000;
+    width: 180px;
+    padding:10px 0px;
+    background: #ff78d6;
 }
 .nav > ul > li > ul > li > a:hover{
-    background: #ffe4eb;
+    background: #ff37c3;
+}
+#contents{
+    width:calc(100% - 200px);
+    height: 100%;
+}
+.container{
+    display: flex;
 }
 #slider{
-    overflow: hidden;
-    width: 100%;
-    height: 350px;
-    background: #f77089;
+    width:calc(100% - 230px);
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
+    overflow: hidden;
 }
-#slider::after{
+.sliderWrap{
     position: absolute;
     top:0;
     left:0;
-    content:'';
-    width: 100%;
-    height:0;
-    background: #00000094;
-}
-#slider.on::after{
-    height: 180px;
-}
-.sliderWrap{
-    width: 100%;
-    height:8000px;
-    
+    display: flex;
+    width:400%;
+    height: 100%;
 }
 .sliderWrap > div{
-    vertical-align: top;
+    width:calc(400% / 4);
+    height: 100%;
 }
-#container{
-    margin: 0 auto;
-    width: 1340px;
-    height: 800px;
-    position: relative;
+.sliderWrap > div:first-child{
+    width:calc(400% / 4);
+    height: 100%;
 }
-.link{
-    display: flex;
-    align-items: center;
-    /* flex-grow: 3; */
-    position: absolute;
-    top:-100px;
-    width: 100%;
-    height: 100px;
-    background: #fda0b1;
-
+.slider.s1{
+    background-image: url(../../assets2/bg\ \(1\).jpg);
 }
-.link > ul > li{
-    padding: 45px;
-    flex-grow: 1;
-    display: flex;
+.slider.s2{
+    background-image: url(../../assets2/bg\ \(2\).jpg);
+}
+.slider.s3{
+    background-image: url(../../assets2/bg\ \(3\).jpg);
 }
 .banner{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 200px;
-    background: #d44e64;
-
-}
-.imgBox{
-    padding-left: 20px;
-    flex-grow: 1;
-}
-.txtBox{
-    flex-grow: 1;
-}
-.arrow{
-    flex-grow: 1;
-}
-
-.board{
-    display: flex;
-    width: 100%;
+    width: 230px;
     height: 400px;
-    background: #f77089;
+    background: #aa721d;
 }
-.board > div{
-    width: 50%;
-    padding: 20px;
-}
-.notice h2{
-    text-align: center;
-    width: 100px;
-    background:#e31a40;
-    color:#fff;
-}
-.notice ul{
-}
-.notice ul li{
-    border-bottom: 1px solid #000;
-    padding: 20px;
-    font-size:20px;
-}
-.notice ul li a span{
-    padding: 40px;
-}
-.gallery h2{
-    text-align: center;
-    width: 100px;
-    background:#e31a40;
-    color:#fff;
-}
-.gallery ul{
-    display: flex;
-    flex-grow: 1;
-    padding-left: -20px;
-}
-.gallery ul li{
-    padding: 20px;
-    text-align: center;
-}
-.gallery ul li span{
-    text-align: center;
+.board{
+    width: 100%;
+    height: 250px;
+    background: #7c4d06;
 }
 #footer{
     display: flex;
@@ -181,26 +126,15 @@ a{
 .footer1{
     width: 20%;
     height: 100%;
-    background: #e6506c;
-
+    background: #e68c8c;
 }
 .footer2{
     width: 60%;
     height: 100%;
-    background: #e31a40;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: #e06969;
 }
 .footer3{
     width: 20%;
     height: 100%;
-    background: #960721;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.footer3 select{
-    width: 200px;
-    height: 50px;
+    background: #db4040;
 }
